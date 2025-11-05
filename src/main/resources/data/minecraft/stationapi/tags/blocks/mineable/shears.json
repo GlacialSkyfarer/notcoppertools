@@ -16,7 +16,10 @@
     "gamma173:blue_wool",
     "gamma173:purple_wool",
     "gamma173:magenta_wool",
-    "gamma173:pink_wool"
+    "gamma173:pink_wool",
+    "gamma173:oak_leaves",
+    "gamma173:birch_leaves",
+    "gamma173:spruce_leaves"
 
   ]
 }

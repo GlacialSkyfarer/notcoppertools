@@ -2,6 +2,7 @@ package io.github.GlacialSkyfarer.gamma173.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 
@@ -18,7 +19,10 @@ public class Blocks {
             OAK_SLAB,
             STONE_SLAB,
             COBBLESTONE_SLAB,
-            SANDSTONE_SLAB;
+            SANDSTONE_SLAB,
+            OAK_LEAVES,
+            SPRUCE_LEAVES,
+            BIRCH_LEAVES;
     //Gamma
     public static Block COPPER_BLOCK,
             COPPER_ORE,
@@ -38,7 +42,10 @@ public class Blocks {
             SANDSTONE_BRICKS,
             CHISELED_SANDSTONE,
             CARVED_SANDSTONE,
-            SANDSTONE_BRICK_SLAB;
+            SANDSTONE_BRICK_SLAB,
+            NETHERRACK_BRICKS,
+            CARVED_NETHERRACK,
+            NETHERRACK_BRICK_SLAB;
 
     public static void registerBlocks(BlockRegistryEvent event) {
 
@@ -80,68 +87,6 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("sandstone_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.8f);
-        //endregion
-        //Gamma
-        COPPER_BLOCK = new TemplateBlock(NAMESPACE.id("copper_block"), Material.METAL)
-                .setTranslationKey(NAMESPACE.id("copper_block"))
-                .setSoundGroup(Block.METAL_SOUND_GROUP)
-                .setHardness(3.0f)
-                .setResistance(10.0f);
-        COPPER_TILES = new TemplateBlock(NAMESPACE.id("copper_tiles"), Material.METAL)
-                .setTranslationKey(NAMESPACE.id("copper_tiles"))
-                .setSoundGroup(Block.METAL_SOUND_GROUP)
-                .setHardness(3.0f)
-                .setResistance(7.0f);
-        COPPER_ORE = new TemplateBlock(NAMESPACE.id("copper_ore"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("copper_ore"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(3.0f)
-                .setResistance(5.0f);
-        COAL_BLOCK = new TemplateBlock(NAMESPACE.id("coal_block"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("coal_block"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(2.5f)
-                .setResistance(7.0f);
-        REDSTONE_BLOCK = new RedstoneBlock(NAMESPACE.id("redstone_block"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("redstone_block"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(3.0f)
-                .setResistance(7.0f);
-        ANVIL = new AnvilBlock(NAMESPACE.id("anvil"), Material.METAL)
-                .setTranslationKey(NAMESPACE.id("anvil"))
-                .setSoundGroup(Block.METAL_SOUND_GROUP)
-                .setHardness(7.0f)
-                .setResistance(10.0f);
-        STONECUTTER = new StonecutterBlock(NAMESPACE.id("stonecutter"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("stonecutter"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(5.0f)
-                .setResistance(10.0f);
-        BRICK_SLAB = new GammaSlabBlock(NAMESPACE.id("brick_slab"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("brick_slab"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(2.0f)
-                .setResistance(10.0f);
-        STONE_BRICKS = new TemplateBlock(NAMESPACE.id("stone_bricks"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("stone_bricks"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(2.4f)
-                .setResistance(10.0f);
-        CHISELED_STONE = new TemplateBlock(NAMESPACE.id("chiseled_stone"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("chiseled_stone"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(2.0f)
-                .setResistance(10.0f);
-        CARVED_STONE = new TemplateBlock(NAMESPACE.id("carved_stone"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("carved_stone"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(2.0f)
-                .setResistance(10.0f);
-        STONE_BRICK_SLAB = new GammaSlabBlock(NAMESPACE.id("stone_brick_slab"), Material.STONE)
-                .setTranslationKey(NAMESPACE.id("stone_brick_slab"))
-                .setSoundGroup(Block.STONE_SOUND_GROUP)
-                .setHardness(2.4f)
-                .setResistance(10.0f);
         //region wool
         WHITE_WOOL = new TemplateBlock(NAMESPACE.id("white_wool"), Material.WOOL)
                 .setTranslationKey(NAMESPACE.id("white_wool"))
@@ -208,6 +153,87 @@ public class Blocks {
                 .setSoundGroup(Block.WOOL_SOUND_GROUP)
                 .setHardness(0.8f);
         //endregion
+        OAK_LEAVES = new GammaLeavesBlock(NAMESPACE.id("oak_leaves"), Material.LEAVES)
+                .setColorType(GammaLeavesBlock.ColorType.OAK)
+                .setSapling(Item.STICK)
+                .setRareDrop(Item.APPLE)
+                .setTranslationKey(NAMESPACE.id("oak_leaves"))
+                .setSoundGroup(Block.LEAVES.soundGroup)
+                .setHardness(0.2f);
+        SPRUCE_LEAVES = new GammaLeavesBlock(NAMESPACE.id("spruce_leaves"), Material.LEAVES)
+                .setColorType(GammaLeavesBlock.ColorType.SPRUCE)
+                .setSapling(Item.STICK)
+                .setTranslationKey(NAMESPACE.id("spruce_leaves"))
+                .setSoundGroup(Block.LEAVES.soundGroup)
+                .setHardness(0.2f);
+        BIRCH_LEAVES = new GammaLeavesBlock(NAMESPACE.id("birch_leaves"), Material.LEAVES)
+                .setColorType(GammaLeavesBlock.ColorType.BIRCH)
+                .setSapling(Item.STICK)
+                .setTranslationKey(NAMESPACE.id("birch_leaves"))
+                .setSoundGroup(Block.LEAVES.soundGroup)
+                .setHardness(0.2f);
+        //endregion
+        //Gamma
+        COPPER_BLOCK = new TemplateBlock(NAMESPACE.id("copper_block"), Material.METAL)
+                .setTranslationKey(NAMESPACE.id("copper_block"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(10.0f);
+        COPPER_TILES = new TemplateBlock(NAMESPACE.id("copper_tiles"), Material.METAL)
+                .setTranslationKey(NAMESPACE.id("copper_tiles"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(7.0f);
+        COPPER_ORE = new TemplateBlock(NAMESPACE.id("copper_ore"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("copper_ore"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(5.0f);
+        COAL_BLOCK = new TemplateBlock(NAMESPACE.id("coal_block"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("coal_block"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.5f)
+                .setResistance(7.0f);
+        REDSTONE_BLOCK = new RedstoneBlock(NAMESPACE.id("redstone_block"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("redstone_block"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(7.0f);
+        ANVIL = new AnvilBlock(NAMESPACE.id("anvil"), Material.METAL)
+                .setTranslationKey(NAMESPACE.id("anvil"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(7.0f)
+                .setResistance(10.0f);
+        STONECUTTER = new StonecutterBlock(NAMESPACE.id("stonecutter"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("stonecutter"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(5.0f)
+                .setResistance(10.0f);
+        BRICK_SLAB = new GammaSlabBlock(NAMESPACE.id("brick_slab"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("brick_slab"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f)
+                .setResistance(10.0f);
+        STONE_BRICKS = new TemplateBlock(NAMESPACE.id("stone_bricks"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("stone_bricks"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.4f)
+                .setResistance(10.0f);
+        CHISELED_STONE = new TemplateBlock(NAMESPACE.id("chiseled_stone"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("chiseled_stone"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f)
+                .setResistance(10.0f);
+        CARVED_STONE = new TemplateBlock(NAMESPACE.id("carved_stone"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("carved_stone"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f)
+                .setResistance(10.0f);
+        STONE_BRICK_SLAB = new GammaSlabBlock(NAMESPACE.id("stone_brick_slab"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("stone_brick_slab"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.4f)
+                .setResistance(10.0f);
         SANDSTONE_BRICKS = new TemplateBlock(NAMESPACE.id("sandstone_bricks"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("sandstone_bricks"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
@@ -224,5 +250,17 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("sandstone_brick_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(1.2f);
+        NETHERRACK_BRICKS = new TemplateBlock(NAMESPACE.id("netherrack_bricks"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("netherrack_bricks"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(0.8f);
+        CARVED_NETHERRACK = new TemplateBlock(NAMESPACE.id("carved_netherrack"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("carved_netherrack"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(0.8f);
+        NETHERRACK_BRICK_SLAB = new GammaSlabBlock(NAMESPACE.id("netherrack_brick_slab"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("netherrack_brick_slab"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(0.8f);
     }
 }

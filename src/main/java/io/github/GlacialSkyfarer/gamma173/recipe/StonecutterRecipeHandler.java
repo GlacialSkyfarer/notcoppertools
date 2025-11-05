@@ -61,6 +61,13 @@ public abstract class StonecutterRecipeHandler {
         register(new StonecutterRecipe(Blocks.STONE_BRICKS.asItem(), new ItemStack[]{
                 new ItemStack(Blocks.STONE_BRICK_SLAB, 2)
         }));
+        register(new StonecutterRecipe(Block.NETHERRACK.asItem(), new ItemStack[]{
+                new ItemStack(Blocks.NETHERRACK_BRICKS),
+                new ItemStack(Blocks.CARVED_NETHERRACK)
+        }));
+        register(new StonecutterRecipe(Blocks.NETHERRACK_BRICKS.asItem(), new ItemStack[]{
+                new ItemStack(Blocks.NETHERRACK_BRICK_SLAB, 2)
+        }));
     }
 
 }

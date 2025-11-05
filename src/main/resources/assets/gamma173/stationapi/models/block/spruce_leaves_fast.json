@@ -1,0 +1,6 @@
+{
+  "parent": "gamma173:block/leaves",
+  "textures": {
+    "all": "block/spruce_leaves_fast"
+  }
+}

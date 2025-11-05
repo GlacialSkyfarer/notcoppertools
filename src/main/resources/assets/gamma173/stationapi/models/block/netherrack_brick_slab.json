@@ -1,0 +1,12 @@
+{
+
+  "parent": "gamma173:block/slab",
+  "textures": {
+
+    "top": "gamma173:block/netherrack_bricks",
+    "bottom": "gamma173:block/netherrack_bricks",
+    "side": "gamma173:block/netherrack_bricks"
+
+  }
+
+}

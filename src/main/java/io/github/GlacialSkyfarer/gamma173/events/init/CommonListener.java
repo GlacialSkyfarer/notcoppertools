@@ -13,6 +13,8 @@ import io.github.GlacialSkyfarer.gamma173.recipe.AnvilRecipeHandler;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.modificationstation.stationapi.api.client.color.block.BlockColorProvider;
+import net.modificationstation.stationapi.api.client.event.color.block.BlockColorsRegisterEvent;
 import net.modificationstation.stationapi.api.event.block.entity.BlockEntityRegisterEvent;
 import net.modificationstation.stationapi.api.event.mod.InitEvent;
 import net.modificationstation.stationapi.api.event.network.packet.PacketRegisterEvent;
@@ -22,6 +24,8 @@ import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.registry.PacketTypeRegistry;
 import net.modificationstation.stationapi.api.registry.Registry;
+
+import java.awt.*;
 
 import static io.github.GlacialSkyfarer.gamma173.Gamma173.NAMESPACE;
 import static io.github.GlacialSkyfarer.gamma173.Util.setRepairMaterial;
