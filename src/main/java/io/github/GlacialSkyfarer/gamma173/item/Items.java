@@ -34,7 +34,8 @@ public class Items {
         MAGENTA_DYE, PINK_DYE,
 
         BAGWORM_SILK,
-        SPRUCE_RESIN;
+        SPRUCE_RESIN,
+        APPLE_PIE;
 
     public static final ToolMaterial ROSE_GOLD_MATERIAL = ToolMaterialFactory.create(
             "rose_gold",
@@ -117,6 +118,8 @@ public class Items {
                 .setTranslationKey(Gamma173.NAMESPACE.id("spruce_resin"));
         BAGWORM_SILK = new TemplateItem(Gamma173.NAMESPACE.id("bagworm_silk"))
                 .setTranslationKey(Gamma173.NAMESPACE.id("bagworm_silk"));
+        APPLE_PIE = new ApplePieItem(Gamma173.NAMESPACE.id("apple_pie"))
+                .setTranslationKey(Gamma173.NAMESPACE.id("apple_pie"));
 
     }
 

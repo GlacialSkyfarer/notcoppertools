@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "A": {
+        "item": "minecraft:apple"
+      },
+      "W": {
+        "item": "minecraft:wheat"
+      },
+      "S": {
+        "item": "minecraft:sugar"
+      }
+
+  },
+  "pattern": [
+    "SWS",
+    "AAA",
+    "WWW"
+  ],
+  "result": {
+    "item": "gamma173:apple_pie",
+    "count": 1
+  }
+}

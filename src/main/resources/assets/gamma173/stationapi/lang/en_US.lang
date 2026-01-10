@@ -88,7 +88,7 @@ item.@.bagworm_silk.name=Bagworm Silk
 item.@.bagworm_silk.desc=Durable silk harvested from a birch tree.
 
 item.@.apple_pie.name=Apple Pie
-item.@.apple_pie.desc=A delectable pastry made from baked apples.\n§2+6 Health\n§2Contains 3 servings.
+item.@.apple_pie.desc=A delectable pastry made from baked apples.\n§2+7 Health\n§2Contains 2 servings.
 
 # Vanilla changes
 tile.stone.desc=A block of hard stone.\nFor Karl!

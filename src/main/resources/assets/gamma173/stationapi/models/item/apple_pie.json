@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "gamma173:item/apple_pie"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "gamma173:half": 1
+      },
+      "model": "gamma173:item/apple_pie_half"
+    }
+  ]
+}

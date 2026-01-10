@@ -11,9 +11,9 @@
 
   },
   "pattern": [
-    "III",
+    "iII",
     " i ",
-    "iii"
+    "iIi"
   ],
   "result": {
     "item": "gamma173:anvil",

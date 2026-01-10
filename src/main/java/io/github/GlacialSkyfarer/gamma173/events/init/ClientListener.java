@@ -7,6 +7,7 @@ import io.github.GlacialSkyfarer.gamma173.block.entity.AnvilBlockEntity;
 import io.github.GlacialSkyfarer.gamma173.block.entity.StonecutterBlockEntity;
 import io.github.GlacialSkyfarer.gamma173.gui.AnvilScreen;
 import io.github.GlacialSkyfarer.gamma173.gui.StonecutterScreen;
+import io.github.GlacialSkyfarer.gamma173.item.Items;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.mine_diver.unsafeevents.listener.EventListener;
@@ -19,6 +20,7 @@ import net.modificationstation.stationapi.api.client.color.item.ItemColorProvide
 import net.modificationstation.stationapi.api.client.event.color.block.BlockColorsRegisterEvent;
 import net.modificationstation.stationapi.api.client.event.color.item.ItemColorsRegisterEvent;
 import net.modificationstation.stationapi.api.client.event.render.model.BlockModelPredicateProviderRegistryEvent;
+import net.modificationstation.stationapi.api.client.event.render.model.ItemModelPredicateProviderRegistryEvent;
 import net.modificationstation.stationapi.api.client.gui.screen.GuiHandler;
 import net.modificationstation.stationapi.api.event.registry.GuiHandlerRegistryEvent;
 
@@ -45,6 +47,13 @@ public class ClientListener {
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.OAK_LEAVES);
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.BIRCH_LEAVES);
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.CONIFER_LEAVES);
+
+    }
+
+    @EventListener
+    public static void registerItemModelPredicates(ItemModelPredicateProviderRegistryEvent event) {
+
+        event.register(Items.APPLE_PIE.id, Gamma173.NAMESPACE.id("half"), (itemStack, clientWorld, livingEntity, seed) -> itemStack.getStationNbt().getBoolean("half") ? 1.0F : 0.0F);
 
     }
 
