@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "w": {
+        "tag": "stone_crafting_materials"
+      }
+
+  },
+  "pattern": [
+    "www",
+    "w w",
+    "www"
+  ],
+  "result": {
+    "item": "furnace",
+    "count": 1
+  }
+}

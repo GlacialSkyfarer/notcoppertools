@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+      {
+        "item": "piston"
+      },
+      {
+        "tag": "gamma173:sticky"
+      }
+
+  ],
+  "result": {
+    "item": "sticky_piston",
+    "count": 1
+  }
+}

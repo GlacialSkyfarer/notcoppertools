@@ -5,16 +5,20 @@ import io.github.GlacialSkyfarer.gamma173.Gamma173;
 import io.github.GlacialSkyfarer.gamma173.block.Blocks;
 import io.github.GlacialSkyfarer.gamma173.block.entity.AnvilBlockEntity;
 import io.github.GlacialSkyfarer.gamma173.block.entity.StonecutterBlockEntity;
+import io.github.GlacialSkyfarer.gamma173.config.Gamma173Config;
 import io.github.GlacialSkyfarer.gamma173.item.Items;
 import io.github.GlacialSkyfarer.gamma173.packet.SoundPacket;
 import io.github.GlacialSkyfarer.gamma173.recipe.StonecutterRecipeHandler;
 import io.github.GlacialSkyfarer.gamma173.reef_biome.block.ReefBiomeBlocks;
 import io.github.GlacialSkyfarer.gamma173.recipe.AnvilRecipeHandler;
+import net.glasslauncher.mods.gcapi3.api.ConfigRoot;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
-import net.modificationstation.stationapi.api.client.color.block.BlockColorProvider;
-import net.modificationstation.stationapi.api.client.event.color.block.BlockColorsRegisterEvent;
+import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.CraftingRecipe;
+import net.minecraft.recipe.CraftingRecipeManager;
+import net.minecraft.recipe.ShapelessRecipe;
 import net.modificationstation.stationapi.api.event.block.entity.BlockEntityRegisterEvent;
 import net.modificationstation.stationapi.api.event.mod.InitEvent;
 import net.modificationstation.stationapi.api.event.network.packet.PacketRegisterEvent;
@@ -22,10 +26,13 @@ import net.modificationstation.stationapi.api.event.recipe.RecipeRegisterEvent;
 import net.modificationstation.stationapi.api.event.registry.AfterBlockAndItemRegisterEvent;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
+import net.modificationstation.stationapi.api.item.ItemConvertible;
 import net.modificationstation.stationapi.api.registry.PacketTypeRegistry;
 import net.modificationstation.stationapi.api.registry.Registry;
+import net.modificationstation.stationapi.api.util.Identifier;
 
-import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 import static io.github.GlacialSkyfarer.gamma173.Gamma173.NAMESPACE;
 import static io.github.GlacialSkyfarer.gamma173.Util.setRepairMaterial;
@@ -122,20 +129,30 @@ public class CommonListener {
 
     @EventListener
     public static void registerRecipes(RecipeRegisterEvent event) {
-        CraftingHelper.removeRecipe(Item.WOODEN_DOOR);
-        CraftingHelper.removeRecipe(Block.TRAPDOOR);
-        CraftingHelper.removeRecipe(Block.SLAB);
-        CraftingHelper.removeRecipe(Block.FENCE);
-        CraftingHelper.removeRecipe(Block.STONE_PRESSURE_PLATE);
-        CraftingHelper.removeRecipe(Block.WOODEN_PRESSURE_PLATE);
-        CraftingHelper.removeRecipe(Block.COBBLESTONE_STAIRS);
-        CraftingHelper.removeRecipe(Block.WOODEN_STAIRS);
-        CraftingHelper.removeRecipe(Block.WOOL);
-
         AnvilRecipeHandler.registerRecipes();
         StonecutterRecipeHandler.registerRecipes();
-    }
 
+        if (!Gamma173.CONFIG.removeVanillaRecipes) return;
+
+        List<ItemConvertible> recipeRemovals = List.of(
+                Item.WOODEN_DOOR,
+                Block.TRAPDOOR,
+                Block.WOOL,
+                Block.COBBLESTONE_STAIRS,
+                Block.WOODEN_STAIRS,
+                Block.SLAB,
+                Item.DYE,
+                Block.STONE_PRESSURE_PLATE,
+                Block.WOODEN_PRESSURE_PLATE,
+                Block.FENCE,
+                Block.BUTTON,
+                Item.IRON_DOOR
+        );
+
+        for (ItemConvertible recipeItem : recipeRemovals) {
+            CraftingHelper.removeRecipe(recipeItem.asItem());
+        }
+    }
     @EventListener
     public static void registerBlockEntities(BlockEntityRegisterEvent event) {
         event.register(AnvilBlockEntity.class, NAMESPACE.id("anvil").toString());

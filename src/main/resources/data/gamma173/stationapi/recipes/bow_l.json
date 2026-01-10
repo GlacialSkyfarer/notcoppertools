@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "S": {
+        "tag": "gamma173:string"
+      },
+      "s": {
+        "item": "stick"
+      }
+
+  },
+  "pattern": [
+    " sS",
+    "s S",
+    " sS"
+  ],
+  "result": {
+    "item": "bow",
+    "count": 1
+  }
+}

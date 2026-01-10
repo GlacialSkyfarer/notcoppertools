@@ -10,6 +10,12 @@ Added Carved, Chiseled stone, and stone bricks.
 
 Added Carved, Chiseled sandstone, and sandstone bricks. Also retextured sandstone slabs.
 
+Added Carved netherrack and netherrack bricks.
+
+Oak trees now drop apples, spruce trees now drop spruce resin, and birch trees now drop bagworm silk.
+
+Changed log top textures to reflect their wood type.
+
 Added copper ingot, block, tiles, ore.
 
 Added rose gold tools.

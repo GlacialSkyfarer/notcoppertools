@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "p": {
+        "item": "gamma173:lapis_lazuli"
+      }
+
+  },
+  "pattern": [
+    "ppp",
+    "ppp",
+    "ppp"
+  ],
+  "result": {
+    "item": "lapis_block",
+    "count": 1
+  }
+}

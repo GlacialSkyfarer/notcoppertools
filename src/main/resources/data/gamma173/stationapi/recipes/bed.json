@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "p": {
+        "tag": "planks"
+      },
+      "w": {
+        "tag": "gamma173:wool"
+      }
+
+  },
+  "pattern": [
+    "www",
+    "ppp"
+  ],
+  "result": {
+    "item": "red_bed",
+    "count": 1
+  }
+}

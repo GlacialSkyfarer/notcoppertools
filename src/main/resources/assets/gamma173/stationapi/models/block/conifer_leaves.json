@@ -8,13 +8,13 @@
       "predicate": {
         "gamma173:graphics": 0
       },
-      "model": "gamma173:block/spruce_leaves_fast"
+      "model": "gamma173:block/conifer_leaves_fast"
     },
     {
       "predicate": {
         "gamma173:graphics": 1
       },
-      "model": "gamma173:block/spruce_leaves_fancy"
+      "model": "gamma173:block/conifer_leaves_fancy"
     }
   ]
 }

@@ -1,5 +1,6 @@
 package io.github.GlacialSkyfarer.gamma173.block;
 
+import io.github.GlacialSkyfarer.gamma173.item.Items;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -12,7 +13,7 @@ public class Blocks {
 
     //Vanilla replacements
     public static Block OAK_LOG,
-            SPRUCE_LOG,
+            CONIFER_LOG,
             BIRCH_LOG,
             OAK_DOOR,
             OAK_TRAPDOOR,
@@ -21,7 +22,7 @@ public class Blocks {
             COBBLESTONE_SLAB,
             SANDSTONE_SLAB,
             OAK_LEAVES,
-            SPRUCE_LEAVES,
+            CONIFER_LEAVES,
             BIRCH_LEAVES;
     //Gamma
     public static Block COPPER_BLOCK,
@@ -45,7 +46,9 @@ public class Blocks {
             SANDSTONE_BRICK_SLAB,
             NETHERRACK_BRICKS,
             CARVED_NETHERRACK,
-            NETHERRACK_BRICK_SLAB;
+            NETHERRACK_BRICK_SLAB,
+            CONIFER_PLANKS,
+            BIRCH_PLANKS;
 
     public static void registerBlocks(BlockRegistryEvent event) {
 
@@ -54,8 +57,8 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("oak_log"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f);
-        SPRUCE_LOG = new TemplateBlock(NAMESPACE.id("spruce_log"), Material.WOOD)
-                .setTranslationKey(NAMESPACE.id("spruce_log"))
+        CONIFER_LOG = new TemplateBlock(NAMESPACE.id("conifer_log"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("conifer_log"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f);
         BIRCH_LOG = new TemplateBlock(NAMESPACE.id("birch_log"), Material.WOOD)
@@ -160,15 +163,17 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("oak_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
                 .setHardness(0.2f);
-        SPRUCE_LEAVES = new GammaLeavesBlock(NAMESPACE.id("spruce_leaves"), Material.LEAVES)
+        CONIFER_LEAVES = new GammaLeavesBlock(NAMESPACE.id("conifer_leaves"), Material.LEAVES)
                 .setColorType(GammaLeavesBlock.ColorType.SPRUCE)
                 .setSapling(Item.STICK)
-                .setTranslationKey(NAMESPACE.id("spruce_leaves"))
+                .setRareDrop(Items.SPRUCE_RESIN)
+                .setTranslationKey(NAMESPACE.id("conifer_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
                 .setHardness(0.2f);
         BIRCH_LEAVES = new GammaLeavesBlock(NAMESPACE.id("birch_leaves"), Material.LEAVES)
                 .setColorType(GammaLeavesBlock.ColorType.BIRCH)
                 .setSapling(Item.STICK)
+                .setRareDrop(Items.BAGWORM_SILK)
                 .setTranslationKey(NAMESPACE.id("birch_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
                 .setHardness(0.2f);
@@ -262,5 +267,16 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("netherrack_brick_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.8f);
+        CONIFER_PLANKS = new TemplateBlock(NAMESPACE.id("conifer_planks"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("conifer_planks"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.0f)
+                .setResistance(5.0f);
+        BIRCH_PLANKS = new TemplateBlock(NAMESPACE.id("birch_planks"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("birch_planks"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.0f)
+                .setResistance(5.0f);
+
     }
 }

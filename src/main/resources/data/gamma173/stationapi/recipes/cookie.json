@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "w": {
+        "item": "wheat"
+      },
+      "c": {
+        "item": "gamma173:cocoa_beans"
+      }
+
+  },
+  "pattern": [
+    "wcw"
+  ],
+  "result": {
+    "item": "cookie",
+    "count": 8
+  }
+}

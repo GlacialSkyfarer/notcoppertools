@@ -1,12 +1,15 @@
 package io.github.GlacialSkyfarer.gamma173.mixin.feature;
 
+import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
+import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import io.github.GlacialSkyfarer.gamma173.block.Blocks;
 import io.github.GlacialSkyfarer.gamma173.block.GammaLeavesBlock;
-import net.minecraft.block.LeavesBlock;
+import net.minecraft.block.Block;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.PineTreeFeature;
-import org.objectweb.asm.Opcodes;
+import net.modificationstation.stationapi.api.registry.tag.BlockTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -20,30 +23,34 @@ public abstract class PineTreeFeatureMixin {
     @ModifyArgs(method = "generate", at = @At(value="INVOKE", target="Lnet/minecraft/world/World;setBlockWithoutNotifyingNeighbors(IIIII)Z", ordinal=1))
     public void swapLogId(Args args) {
 
-        args.set(3, Blocks.SPRUCE_LOG.id);
+        args.set(3, Blocks.CONIFER_LOG.id);
         args.set(4, 0);
 
     }
     @ModifyArgs(method = "generate", at = @At(value="INVOKE", target="Lnet/minecraft/world/World;setBlockWithoutNotifyingNeighbors(IIIII)Z", ordinal=0))
     public void swapLeavesId(Args args) {
 
-        args.set(3, Blocks.SPRUCE_LOG.id);
+        args.set(3, Blocks.CONIFER_LEAVES.id);
         args.set(4, 0);
 
     }
-//    @Inject(method = "generate", at = @At(value="INVOKE", target="Lnet/minecraft/world/World;setBlockWithoutNotifyingNeighbors(IIII)Z", ordinal=0, shift = At.Shift.AFTER))
-//    public void setLeavesDistance(World world, Random random, int x, int y, int z, CallbackInfoReturnable<Boolean> cir, @Local(ordinal = 7) int blockX, @Local(ordinal = 9) int blockY, @Local(ordinal = 11) int blockZ) {
-//
-//        world.setBlockState(blockX,blockY,blockZ,world.getBlockState(blockX,blockY,blockZ).with(GammaLeavesBlock.DISTANCE, Math.abs(x-blockX) + Math.abs(z-blockZ)));
-//
-//    }
-    @Redirect(method = "generate", at = @At(value = "FIELD", target = "Lnet/minecraft/block/LeavesBlock;id:I", ordinal=0, opcode = Opcodes.GETFIELD))
-    private int swapLeavesCheck(LeavesBlock instance) {
-        return Blocks.SPRUCE_LEAVES.id;
+    @Inject(method="generate", at = @At(value="RETURN"))
+    public void updateTipLeaf(World world, Random random, int x, int y, int z, CallbackInfoReturnable<Boolean> cir, @Local(index=6) int yOffset) {
+        if (cir.getReturnValue()) {
+            Block block = world.getBlockState(x, y+yOffset, z).getBlock();
+            if (block instanceof GammaLeavesBlock template) {
+                template.updateDistance(world, new BlockPos(x,y+yOffset,z), false);
+            }
+        }
     }
-    @Redirect(method = "generate", at = @At(value = "FIELD", target = "Lnet/minecraft/block/LeavesBlock;id:I", ordinal=2, opcode = Opcodes.GETFIELD))
-    private int swapLeavesCheck2(LeavesBlock instance) {
-        return Blocks.SPRUCE_LEAVES.id;
+    @WrapOperation(method = "generate", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;getBlockId(III)I", ordinal=0))
+    private int swapLeavesCheck(World world, int x, int y, int z, Operation<Integer> original) {
+        return world.getBlockState(x,y,z).isIn(BlockTags.LEAVES) ? 0 : original.call(world, x, y, z);
+    }
+
+    @WrapOperation(method = "generate", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;getBlockId(III)I", ordinal=3))
+    private int swapLeavesCheck2(World world, int x, int y, int z, Operation<Integer> original) {
+        return world.getBlockState(x,y,z).isIn(BlockTags.LEAVES) ? 0 : original.call(world, x, y, z);
     }
 
 }

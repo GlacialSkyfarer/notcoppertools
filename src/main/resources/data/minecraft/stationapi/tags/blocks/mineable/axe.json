@@ -7,14 +7,13 @@
     "gamma173:reefwood_trapdoor",
     "gamma173:reefwood_slab",
     "gamma173:oak_log",
-    "gamma173:spruce_log",
+    "gamma173:conifer_log",
     "gamma173:birch_log",
     "gamma173:oak_door",
     "gamma173:oak_trapdoor",
     "gamma173:oak_slab",
-    "gamma173:stone_slab",
-    "gamma173:cobblestone_slab",
-    "gamma173:sandstone_slab"
+    "gamma173:conifer_planks",
+    "gamma173:birch_planks"
 
   ]
 }

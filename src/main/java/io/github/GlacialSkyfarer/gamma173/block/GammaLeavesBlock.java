@@ -16,6 +16,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.modificationstation.stationapi.api.block.BlockState;
+import net.modificationstation.stationapi.api.block.States;
 import net.modificationstation.stationapi.api.item.ItemPlacementContext;
 import net.modificationstation.stationapi.api.registry.tag.BlockTags;
 import net.modificationstation.stationapi.api.state.StateManager;
@@ -33,9 +34,19 @@ import java.util.Random;
 
 public class GammaLeavesBlock extends TemplateBlock {
 
+    public enum ColorType {
+        NONE,
+        OAK,
+        BIRCH,
+        SPRUCE
+    }
+
+    public static final IntProperty DISTANCE = IntProperty.of("distance", 0, 7);
+    public static final BooleanProperty PERSISTENT = BooleanProperty.of("persistent");
+
     public GammaLeavesBlock(Identifier identifier, Material material) {
         super(identifier, material);
-        setDefaultState(getStateManager().getDefaultState().with(PERSISTENT, false).with(DISTANCE, 7));
+        setDefaultState(getStateManager().getDefaultState().with(PERSISTENT, false).with(DISTANCE, 0));
         setTickRandomly(true);
     }
 
@@ -95,16 +106,6 @@ public class GammaLeavesBlock extends TemplateBlock {
         }
     }
 
-    public enum ColorType {
-        NONE,
-        OAK,
-        BIRCH,
-        SPRUCE
-    }
-
-    public static final IntProperty DISTANCE = IntProperty.of("distance", 1, 7);
-    public static final BooleanProperty PERSISTENT = BooleanProperty.of("persistent");
-
     @Override
     public void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 
@@ -121,7 +122,7 @@ public class GammaLeavesBlock extends TemplateBlock {
     @Override
     public void onPlaced(World world, int x, int y, int z) {
         super.onPlaced(world, x, y, z);
-        updateDistance(world.getBlockState(x,y,z), world, new BlockPos(x,y,z));
+        updateDistance(world, new BlockPos(x,y,z), false);
     }
 
     @Override
@@ -131,17 +132,13 @@ public class GammaLeavesBlock extends TemplateBlock {
 
     @Override
     public boolean isOpaque() {
-        return !Minecraft.isFancyGraphicsEnabled();
+        return false;
     }
 
     @Override
     public void onTick(World world, int x, int y, int z, Random random) {
         super.onTick(world,x,y,z,random);
-        updateDistance(world.getBlockState(x,y,z), world, new BlockPos(x,y,z));
-        if (decaying(world.getBlockState(x,y,z))) {
-            world.setBlock(x,y,z,0);
-            this.dropStacks(world, x,y,z, 0);
-        }
+        updateDistance(world, new BlockPos(x,y,z), true);
     }
 
     @Override
@@ -151,7 +148,7 @@ public class GammaLeavesBlock extends TemplateBlock {
         if (!(state.getBlock() instanceof GammaLeavesBlock)) return;
         if (state.get(PERSISTENT)) return;
 
-        updateDistance(state, world, new BlockPos(x,y,z));
+        if (!world.isRemote) updateDistance(world, new BlockPos(x,y,z), false);
     }
 
     @Override
@@ -168,51 +165,52 @@ public class GammaLeavesBlock extends TemplateBlock {
         Random r = world.random;
         List<ItemStack> drops = new ArrayList<>();
 
-        if (sapling != null && r.nextInt(0, 10) == 0) drops.add(new ItemStack(sapling, 1));
-        if (rareDrop != null && r.nextInt(0, 15) == 0) drops.add(new ItemStack(rareDrop, 1));
+        if (sapling != null && r.nextInt(0, 20) == 0) drops.add(new ItemStack(sapling, 1));
+        if (rareDrop != null && r.nextInt(0, 30) == 0) drops.add(new ItemStack(rareDrop, 1));
 
         return drops;
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
-        return this.getDefaultState().with(PERSISTENT, true).with(DISTANCE, 7);
+        return this.getDefaultState().with(PERSISTENT, true).with(DISTANCE, 0);
     }
+    public void updateDistance(World world, BlockPos blockPos, boolean doDecay) {
+        BlockState state = world.getBlockState(blockPos);
 
-    protected static boolean decaying(BlockState blockState) {
-        return !blockState.get(PERSISTENT) && blockState.get(DISTANCE) == 7;
-    }
+        if (!(state.getBlock() instanceof GammaLeavesBlock) || state.get(PERSISTENT)) return;
 
-    private static void updateDistance(BlockState blockState, World world, BlockPos blockPos) {
-        int i = 7;
-        MutableBlockPos mutableBlockPos = blockPos.mutableCopy();
+        int distance = 7;
 
         for(Direction direction : Direction.values()) {
-
-            i = Math.min(i, getDistanceAt(world.getBlockState(mutableBlockPos.offset(direction))) + 1);
-            if (i == 1) {
+            distance = Math.min(distance, getDistanceAt(world.getBlockState(blockPos.offset(direction))));
+            if (distance == 1) {
                 break;
             }
         }
 
-        if (i != blockState.get(DISTANCE)) {
-            world.setBlockState(blockPos, blockState.with(DISTANCE, i));
+        if (doDecay && distance == 7) {
+            decay(world, blockPos);
+            return;
+        }
+
+        if (distance != state.get(DISTANCE)) {
+            world.setBlockState(blockPos, state.with(DISTANCE, distance));
             for (Direction direction : Direction.values()) {
-                BlockPos offsetPos = mutableBlockPos.offset(direction);
-                if (world.getBlockState(offsetPos).contains(DISTANCE)) updateDistance(world.getBlockState(offsetPos), world, offsetPos);
+                BlockPos offsetPos = blockPos.offset(direction);
+                if (world.getBlockState(offsetPos).contains(DISTANCE)) updateDistance(world, offsetPos, false);
             }
         }
     }
-
-    private static int getDistanceAt(BlockState blockState) {
-        return getOptionalDistanceAt(blockState).orElse(7);
+    public void decay(World world, BlockPos pos) {
+        world.setBlockStateWithNotify(pos, States.AIR.get());
+        this.dropStacks(world, pos.x, pos.y, pos.z, 0);
     }
-
-    public static OptionalInt getOptionalDistanceAt(BlockState blockState) {
+    public static int getDistanceAt(BlockState blockState) {
         if (blockState.isIn(BlockTags.LOGS)) {
-            return OptionalInt.of(0);
+            return 1;
         } else {
-            return blockState.contains(DISTANCE) ? OptionalInt.of(blockState.get(DISTANCE)) : OptionalInt.empty();
+            return blockState.contains(DISTANCE) ? blockState.get(DISTANCE) + 1 : 7;
         }
     }
 

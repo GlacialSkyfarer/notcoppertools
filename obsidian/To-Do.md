@@ -4,7 +4,6 @@ More copper blocks (Tile stairs, doors)
 Replace stairs
 replace pressure plate
 replace button
-replace leaves
 replace saplings
 replace iron doors
 Netherrack bricks, carved netherrack, chiseled netherrack
@@ -12,7 +11,6 @@ Add other music discs
 Better anvil model
 Falling anvil
 Anvil sounds
-Replace wool
 Hardened clay
 farmable pumpkins/melons/cocoa beans
 Wood variant planks, doors, etc

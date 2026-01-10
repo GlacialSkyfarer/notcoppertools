@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "p": {
+        "item": "stick"
+      },
+      "w": {
+        "tag": "gamma173:wool"
+      }
+
+  },
+  "pattern": [
+    "ppp",
+    "pwp",
+    "ppp"
+  ],
+  "result": {
+    "item": "painting",
+    "count": 1
+  }
+}

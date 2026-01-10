@@ -44,7 +44,7 @@ public class ClientListener {
         BlockColorProvider leavesBlockProvider = GammaLeavesBlock::getBlockColor;
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.OAK_LEAVES);
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.BIRCH_LEAVES);
-        event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.SPRUCE_LEAVES);
+        event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.CONIFER_LEAVES);
 
     }
 
@@ -54,7 +54,7 @@ public class ClientListener {
         ItemColorProvider leavesItemProvider = GammaLeavesBlock::getItemColor;
         event.itemColors.register(leavesItemProvider, Blocks.OAK_LEAVES.asItem());
         event.itemColors.register(leavesItemProvider, Blocks.BIRCH_LEAVES.asItem());
-        event.itemColors.register(leavesItemProvider, Blocks.SPRUCE_LEAVES.asItem());
+        event.itemColors.register(leavesItemProvider, Blocks.CONIFER_LEAVES.asItem());
 
     }
 
@@ -71,7 +71,7 @@ public class ClientListener {
                 (blockState, blockView, blockPos, i) -> Minecraft.isFancyGraphicsEnabled() ? 1.0F : 0.0F
         );
         event.registry.register(
-                Blocks.SPRUCE_LEAVES,
+                Blocks.CONIFER_LEAVES,
                 Gamma173.NAMESPACE.id("graphics"),
                 (blockState, blockView, blockPos, i) -> Minecraft.isFancyGraphicsEnabled() ? 1.0F : 0.0F
         );

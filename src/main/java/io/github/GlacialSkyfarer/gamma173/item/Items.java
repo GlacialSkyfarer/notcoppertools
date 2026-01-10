@@ -31,7 +31,10 @@ public class Items {
         COCOA_BEANS,
         GRAY_DYE, LIGHT_GRAY_DYE, ROSE_RED, DANDELION_YELLOW, ORANGE_DYE,
         LIME_DYE, CACTUS_GREEN, CYAN_DYE, LIGHT_BLUE_DYE, PURPLE_DYE,
-        MAGENTA_DYE, PINK_DYE;
+        MAGENTA_DYE, PINK_DYE,
+
+        BAGWORM_SILK,
+        SPRUCE_RESIN;
 
     public static final ToolMaterial ROSE_GOLD_MATERIAL = ToolMaterialFactory.create(
             "rose_gold",
@@ -42,9 +45,6 @@ public class Items {
     ).toolLevel(ToolLevel.getNumeric(2));
 
     public static void registerItems(ItemRegistryEvent event) {
-
-
-        Gamma173.LOGGER.info(ROSE_GOLD_MATERIAL.getMiningLevel());
 
         COPPER_INGOT = new TemplateItem(Gamma173.NAMESPACE.id("copper_ingot"))
                 .setTranslationKey(Gamma173.NAMESPACE.id("copper_ingot"));
@@ -112,6 +112,11 @@ public class Items {
                 .setTranslationKey(Gamma173.NAMESPACE.id("magenta_dye"));
         PINK_DYE = new GammaDyeItem(Gamma173.NAMESPACE.id("pink_dye"), 9)
                 .setTranslationKey(Gamma173.NAMESPACE.id("pink_dye"));
+
+        SPRUCE_RESIN = new TemplateItem(Gamma173.NAMESPACE.id("spruce_resin"))
+                .setTranslationKey(Gamma173.NAMESPACE.id("spruce_resin"));
+        BAGWORM_SILK = new TemplateItem(Gamma173.NAMESPACE.id("bagworm_silk"))
+                .setTranslationKey(Gamma173.NAMESPACE.id("bagworm_silk"));
 
     }
 

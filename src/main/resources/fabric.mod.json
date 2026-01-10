@@ -3,7 +3,7 @@
   "id": "gamma173",
   "version": "${version}",
 
-  "name": "GAMMA 173",
+  "name": "It's Not Copper Tools",
   "description": "GlacialSkyfarer's mod.",
   "authors": [
     "GlacialSkyfarer"
@@ -26,6 +26,9 @@
     ],
     "stationapi:event_bus_server": [
       "io.github.GlacialSkyfarer.gamma173.events.init.ServerListener"
+    ],
+    "gcapi3": [
+      "io.github.GlacialSkyfarer.gamma173.Gamma173"
     ]
   },
   "accessWidener": "gamma173.accesswidener",
