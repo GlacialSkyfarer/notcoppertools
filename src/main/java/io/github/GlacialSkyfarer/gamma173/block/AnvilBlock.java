@@ -32,4 +32,14 @@ public class AnvilBlock extends TemplateBlockWithEntity {
 
         return false;
     }
+
+    @Override
+    public boolean isFullCube() {
+        return false;
+    }
+
+    @Override
+    public boolean isOpaque() {
+        return false;
+    }
 }

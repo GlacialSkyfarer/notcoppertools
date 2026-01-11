@@ -81,7 +81,7 @@ public class Items {
         setRepairMaterial(ROSE_GOLD_LEGGINGS, Item.GOLD_INGOT);
         setRepairMaterial(ROSE_GOLD_BOOTS, Item.GOLD_INGOT);
 
-        BONE_MEAL = new GammaDyeItem(Gamma173.NAMESPACE.id("bone_meal"), 15)
+        BONE_MEAL = new GammaBonemealItem(Gamma173.NAMESPACE.id("bone_meal"), 15)
                 .setTranslationKey(Gamma173.NAMESPACE.id("bone_meal"));
         INK_SAC = new GammaDyeItem(Gamma173.NAMESPACE.id("ink_sac"), 0)
                 .setTranslationKey(Gamma173.NAMESPACE.id("ink_sac"));

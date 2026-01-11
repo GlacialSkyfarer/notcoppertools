@@ -1,4 +1,4 @@
-ALPHA 1.0
+11ALPHA 1.0
 
 More copper blocks (Tile stairs, doors)
 Replace stairs
