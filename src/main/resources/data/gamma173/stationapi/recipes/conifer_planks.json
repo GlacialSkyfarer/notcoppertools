@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "gamma173:conifer_log"
+      "item": "notcoppertools:conifer_log"
     }
   ],
   "result": {
-    "item": "gamma173:conifer_planks",
+    "item": "notcoppertools:conifer_planks",
     "count": 4
   }
 }

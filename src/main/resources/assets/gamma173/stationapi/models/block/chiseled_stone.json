@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "gamma173:block/chiseled_stone_side",
-    "end": "gamma173:block/chiseled_stone_top"
-  }
-}

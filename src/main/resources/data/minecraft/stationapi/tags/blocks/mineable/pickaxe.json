@@ -1,25 +1,25 @@
 {
   "values": [
 
-    "gamma173:copper_block",
-    "gamma173:copper_tiles",
-    "gamma173:copper_ore",
-    "gamma173:redstone_block",
-    "gamma173:coal_block",
-    "gamma173:stone_slab",
-    "gamma173:cobblestone_slab",
-    "gamma173:sandstone_slab",
-    "gamma173:anvil",
-    "gamma173:brick_slab",
-    "gamma173:stonecutter",
-    "gamma173:stone_bricks",
-    "gamma173:chiseled_stone",
-    "gamma173:carved_stone",
-    "gamma173:stone_brick_slab",
-    "gamma173:sandstone_bricks",
-    "gamma173:sandstone_brick_slab",
-    "gamma173:chiseled_sandstone",
-    "gamma173:carved_sandstone"
+    "notcoppertools:copper_block",
+    "notcoppertools:copper_tiles",
+    "notcoppertools:copper_ore",
+    "notcoppertools:redstone_block",
+    "notcoppertools:coal_block",
+    "notcoppertools:stone_slab",
+    "notcoppertools:cobblestone_slab",
+    "notcoppertools:sandstone_slab",
+    "notcoppertools:anvil",
+    "notcoppertools:brick_slab",
+    "notcoppertools:stonecutter",
+    "notcoppertools:stone_bricks",
+    "notcoppertools:chiseled_stone",
+    "notcoppertools:carved_stone",
+    "notcoppertools:stone_brick_slab",
+    "notcoppertools:sandstone_bricks",
+    "notcoppertools:sandstone_brick_slab",
+    "notcoppertools:chiseled_sandstone",
+    "notcoppertools:carved_sandstone"
 
   ]
 }

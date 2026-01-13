@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "type=bottom": { "model": "gamma173:block/netherrack_brick_slab" },
-    "type=top": { "model": "gamma173:block/netherrack_brick_slab_top" },
-    "type=double": { "model": "gamma173:block/netherrack_bricks" }
-  }
-}

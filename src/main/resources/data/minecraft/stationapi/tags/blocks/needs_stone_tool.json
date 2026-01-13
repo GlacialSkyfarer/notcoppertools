@@ -1,9 +1,9 @@
 {
   "values": [
 
-      "gamma173:copper_ore",
-      "gamma173:copper_block",
-      "gamma173:copper_tiles"
+      "notcoppertools:copper_ore",
+      "notcoppertools:copper_block",
+      "notcoppertools:copper_tiles"
 
     ]
 }

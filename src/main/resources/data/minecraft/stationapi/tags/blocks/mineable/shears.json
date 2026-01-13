@@ -1,25 +1,25 @@
 {
   "values": [
 
-    "gamma173:white_wool",
-    "gamma173:black_wool",
-    "gamma173:gray_wool",
-    "gamma173:light_gray_wool",
-    "gamma173:brown_wool",
-    "gamma173:red_wool",
-    "gamma173:orange_wool",
-    "gamma173:yellow_wool",
-    "gamma173:lime_wool",
-    "gamma173:green_wool",
-    "gamma173:cyan_wool",
-    "gamma173:light_blue_wool",
-    "gamma173:blue_wool",
-    "gamma173:purple_wool",
-    "gamma173:magenta_wool",
-    "gamma173:pink_wool",
-    "gamma173:oak_leaves",
-    "gamma173:birch_leaves",
-    "gamma173:conifer_leaves"
+    "notcoppertools:white_wool",
+    "notcoppertools:black_wool",
+    "notcoppertools:gray_wool",
+    "notcoppertools:light_gray_wool",
+    "notcoppertools:brown_wool",
+    "notcoppertools:red_wool",
+    "notcoppertools:orange_wool",
+    "notcoppertools:yellow_wool",
+    "notcoppertools:lime_wool",
+    "notcoppertools:green_wool",
+    "notcoppertools:cyan_wool",
+    "notcoppertools:light_blue_wool",
+    "notcoppertools:blue_wool",
+    "notcoppertools:purple_wool",
+    "notcoppertools:magenta_wool",
+    "notcoppertools:pink_wool",
+    "notcoppertools:oak_leaves",
+    "notcoppertools:birch_leaves",
+    "notcoppertools:conifer_leaves"
 
   ]
 }

@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "type=bottom": { "model": "gamma173:block/oak_slab" },
-    "type=top": { "model": "gamma173:block/oak_slab_top" },
-    "type=double": { "model": "gamma173:block/oak_planks" }
-  }
-}

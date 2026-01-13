@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "notcoppertools:item/apple_pie"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "notcoppertools:half": 1
+      },
+      "model": "notcoppertools:item/apple_pie_half"
+    }
+  ]
+}

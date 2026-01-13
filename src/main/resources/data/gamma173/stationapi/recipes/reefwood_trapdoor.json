@@ -3,7 +3,7 @@
   "key": {
 
       "P": {
-        "item": "gamma173:reefwood_planks"
+        "item": "notcoppertools:reefwood_planks"
       }
 
   },
@@ -12,7 +12,7 @@
     "PPP"
   ],
   "result": {
-    "item": "gamma173:reefwood_trapdoor",
+    "item": "notcoppertools:reefwood_trapdoor",
     "count": 2
   }
 }

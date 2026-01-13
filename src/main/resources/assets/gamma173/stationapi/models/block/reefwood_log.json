@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "gamma173:block/reefwood_log",
-    "end": "gamma173:block/reefwood_log_top"
-  }
-}

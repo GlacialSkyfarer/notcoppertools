@@ -3,7 +3,7 @@
   "key": {
 
       "I": {
-        "item": "gamma173:copper_ingot"
+        "item": "notcoppertools:copper_ingot"
       }
 
   },
@@ -13,7 +13,7 @@
     "III"
   ],
   "result": {
-    "item": "gamma173:copper_block",
+    "item": "notcoppertools:copper_block",
     "count": 1
   }
 }

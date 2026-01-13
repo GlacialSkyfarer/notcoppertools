@@ -1,0 +1,12 @@
+{
+
+  "parent": "notcoppertools:block/slab",
+  "textures": {
+
+    "top": "block/smooth_stone",
+    "bottom": "block/smooth_stone",
+    "side": "block/smooth_stone_slab_side"
+
+  }
+
+}

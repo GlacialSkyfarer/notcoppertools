@@ -1,10 +1,10 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "gamma173:copper_ore"
+    "item": "notcoppertools:copper_ore"
   },
   "result": {
-    "item": "gamma173:copper_ingot",
+    "item": "notcoppertools:copper_ingot",
     "count": 1
   }
 }

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "gamma173:oak_log"
+      "item": "notcoppertools:oak_log"
     }
   ],
   "result": {

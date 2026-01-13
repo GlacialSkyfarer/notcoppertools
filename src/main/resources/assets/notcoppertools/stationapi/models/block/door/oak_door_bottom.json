@@ -1,0 +1,6 @@
+{
+  "parent": "notcoppertools:block/door/door_bottom",
+  "textures": {
+    "bottom": "block/oak_door_bottom"
+  }
+}

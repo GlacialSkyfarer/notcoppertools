@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "notcoppertools:block/chiseled_sandstone_side",
+    "end": "notcoppertools:block/chiseled_sandstone_top"
+  }
+}

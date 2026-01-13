@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "notcoppertools:block/stone_slab" },
+    "type=top": { "model": "notcoppertools:block/stone_slab_top" },
+    "type=double": { "model": "notcoppertools:block/stone_double_slab" }
+  }
+}

@@ -1,19 +1,19 @@
 {
   "values": [
 
-    "gamma173:reefwood_log",
-    "gamma173:reefwood_planks",
-    "gamma173:reefwood_door",
-    "gamma173:reefwood_trapdoor",
-    "gamma173:reefwood_slab",
-    "gamma173:oak_log",
-    "gamma173:conifer_log",
-    "gamma173:birch_log",
-    "gamma173:oak_door",
-    "gamma173:oak_trapdoor",
-    "gamma173:oak_slab",
-    "gamma173:conifer_planks",
-    "gamma173:birch_planks"
+    "notcoppertools:reefwood_log",
+    "notcoppertools:reefwood_planks",
+    "notcoppertools:reefwood_door",
+    "notcoppertools:reefwood_trapdoor",
+    "notcoppertools:reefwood_slab",
+    "notcoppertools:oak_log",
+    "notcoppertools:conifer_log",
+    "notcoppertools:birch_log",
+    "notcoppertools:oak_door",
+    "notcoppertools:oak_trapdoor",
+    "notcoppertools:oak_slab",
+    "notcoppertools:conifer_planks",
+    "notcoppertools:birch_planks"
 
   ]
 }

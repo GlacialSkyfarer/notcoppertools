@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "gamma173:reefwood_log"
+      "item": "notcoppertools:reefwood_log"
     }
   ],
   "result": {
-    "item": "gamma173:reefwood_planks",
+    "item": "notcoppertools:reefwood_planks",
     "count": 4
   }
 }

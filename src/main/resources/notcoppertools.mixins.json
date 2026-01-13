@@ -1,0 +1,41 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.GlacialSkyfarer.notcoppertools.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ExampleMixin",
+    "block.BlockMixin",
+    "entity.PlayerEntityMixin",
+    "entity.SheepEntityMixin",
+    "feature.BirchTreeFeatureMixin",
+    "feature.LargeOakTreeFeatureMixin",
+    "feature.OakTreeFeatureMixin",
+    "feature.PineTreeFeatureMixin",
+    "feature.SpruceTreeFeatureMixin",
+    "item.ArmorItemMixin",
+    "item.AxeItemMixin",
+    "item.FishingRodItemMixin",
+    "item.FlintAndSteelMixin",
+    "item.ItemMixin",
+    "item.PickaxeItemMixin",
+    "item.ShearsItemMixin",
+    "item.ShovelItemMixin",
+    "item.SwordItemMixin",
+    "item.ToolItemMixin",
+    "recipe.DyeRecipesMixin",
+    "recipe.FoodRecipesMixin",
+    "recipe.SmeltingRecipeManagerMixin",
+    "recipe.StorageBlockRecipesMixin",
+    "recipe.ToolRecipesMixin",
+    "worldgen.BiomeBuilderMixin",
+    "worldgen.OverworldChunkGeneratorMixin"
+  ],
+  "server": [
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

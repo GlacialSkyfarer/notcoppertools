@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "side": "notcoppertools:block/reefwood_log",
+    "end": "notcoppertools:block/reefwood_log_top"
+  }
+}

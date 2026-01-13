@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "gamma173:birch_log"
+      "item": "notcoppertools:birch_log"
     }
   ],
   "result": {
-    "item": "gamma173:birch_planks",
+    "item": "notcoppertools:birch_planks",
     "count": 4
   }
 }

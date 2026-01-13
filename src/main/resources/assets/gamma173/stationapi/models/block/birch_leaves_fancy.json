@@ -1,6 +1,0 @@
-{
-  "parent": "gamma173:block/leaves",
-  "textures": {
-    "all": "block/oak_leaves"
-  }
-}

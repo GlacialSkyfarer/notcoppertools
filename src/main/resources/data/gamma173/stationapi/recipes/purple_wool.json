@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "gamma173:wool"
+      "tag": "notcoppertools:wool"
     },
     {
-      "item": "gamma173:purple_dye"
+      "item": "notcoppertools:purple_dye"
     }
   ],
   "result": {
-    "item": "gamma173:purple_wool",
+    "item": "notcoppertools:purple_wool",
     "count": 1
   }
 }

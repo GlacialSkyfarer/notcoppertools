@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "id": "gamma173",
+  "id": "notcoppertools",
   "version": "${version}",
 
   "name": "It's Not Copper Tools",
-  "description": "GlacialSkyfarer's mod.",
+  "description": "A mod that adds things that aren't copper tools.",
   "authors": [
     "GlacialSkyfarer"
   ],
@@ -14,26 +14,26 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/gamma173/icon.png",
+  "icon": "assets/notcoppertools/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
-      "io.github.GlacialSkyfarer.gamma173.events.init.CommonListener"
+      "io.github.GlacialSkyfarer.notcoppertools.events.init.CommonListener"
     ],
     "stationapi:event_bus_client": [
-      "io.github.GlacialSkyfarer.gamma173.events.init.ClientListener"
+      "io.github.GlacialSkyfarer.notcoppertools.events.init.ClientListener"
     ],
     "stationapi:event_bus_server": [
-      "io.github.GlacialSkyfarer.gamma173.events.init.ServerListener"
+      "io.github.GlacialSkyfarer.notcoppertools.events.init.ServerListener"
     ],
     "gcapi3": [
-      "io.github.GlacialSkyfarer.gamma173.Gamma173"
+      "io.github.GlacialSkyfarer.notcoppertools.NotCopperTools"
     ]
   },
-  "accessWidener": "gamma173.accesswidener",
+  "accessWidener": "notcoppertools.accesswidener",
   "mixins": [
-    "gamma173.mixins.json"
+    "notcoppertools.mixins.json"
   ],
 
   "depends": {

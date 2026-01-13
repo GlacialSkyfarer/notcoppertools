@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "gamma173:item/rose_gold_hoe"
-  }
-}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "notcoppertools:block/oak_slab" },
+    "type=top": { "model": "notcoppertools:block/oak_slab_top" },
+    "type=double": { "model": "notcoppertools:block/oak_planks" }
+  }
+}

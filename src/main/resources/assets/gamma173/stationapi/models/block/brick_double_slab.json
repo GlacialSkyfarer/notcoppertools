@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "gamma173:block/brick_slab_side",
-    "end": "gamma173:block/brick_slab_top"
-  }
-}

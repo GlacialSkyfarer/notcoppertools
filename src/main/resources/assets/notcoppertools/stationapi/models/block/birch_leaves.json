@@ -1,0 +1,20 @@
+{
+  "parent": "notcoppertools:block/leaves",
+  "textures": {
+    "all": "block/oak_leaves"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "notcoppertools:graphics": 0
+      },
+      "model": "notcoppertools:block/birch_leaves_fast"
+    },
+    {
+      "predicate": {
+        "notcoppertools:graphics": 1
+      },
+      "model": "notcoppertools:block/birch_leaves_fancy"
+    }
+  ]
+}

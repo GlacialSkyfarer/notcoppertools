@@ -1,7 +1,7 @@
 {
   "values": [
     "minecraft:oak_planks",
-    "gamma173:conifer_planks",
-    "gamma173:birch_planks"
+    "notcoppertools:conifer_planks",
+    "notcoppertools:birch_planks"
   ]
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "notcoppertools:block/leaves",
+  "textures": {
+    "all": "block/spruce_leaves"
+  }
+}

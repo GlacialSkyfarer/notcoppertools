@@ -1,0 +1,12 @@
+{
+
+  "parent": "notcoppertools:block/slab_top",
+  "textures": {
+
+    "top": "notcoppertools:block/netherrack_bricks",
+    "bottom": "notcoppertools:block/netherrack_bricks",
+    "side": "notcoppertools:block/netherrack_bricks"
+
+  }
+
+}

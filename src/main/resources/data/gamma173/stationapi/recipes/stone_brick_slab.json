@@ -3,7 +3,7 @@
   "key": {
 
       "P": {
-        "item": "gamma173:stone_bricks"
+        "item": "notcoppertools:stone_bricks"
       }
 
   },
@@ -11,7 +11,7 @@
       "PPP"
   ],
   "result": {
-    "item": "gamma173:stone_brick_slab",
+    "item": "notcoppertools:stone_brick_slab",
     "count": 6
   }
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_bottom_top",
-  "textures": {
-    "side": "gamma173:block/stonecutter_side",
-    "top": "gamma173:block/stonecutter_top",
-    "bottom": "block/piston_bottom"
-  }
-}

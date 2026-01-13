@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "s":{
-      "tag": "gamma173:string"
+      "tag": "notcoppertools:string"
     }
   },
   "pattern": [
@@ -10,7 +10,7 @@
     "ss"
   ],
   "result": {
-    "item": "gamma173:white_wool",
+    "item": "notcoppertools:white_wool",
     "count": 1
   }
 }

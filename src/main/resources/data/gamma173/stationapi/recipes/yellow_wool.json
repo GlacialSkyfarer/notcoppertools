@@ -2,14 +2,14 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "gamma173:wool"
+      "tag": "notcoppertools:wool"
     },
     {
-      "item": "gamma173:dandelion_yellow"
+      "item": "notcoppertools:dandelion_yellow"
     }
   ],
   "result": {
-    "item": "gamma173:yellow_wool",
+    "item": "notcoppertools:yellow_wool",
     "count": 1
   }
 }
