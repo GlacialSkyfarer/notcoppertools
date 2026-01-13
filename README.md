@@ -1,1 +1,1 @@
-My personal template for StationAPI mods
+A standalone content mod for beta 1.7.3
