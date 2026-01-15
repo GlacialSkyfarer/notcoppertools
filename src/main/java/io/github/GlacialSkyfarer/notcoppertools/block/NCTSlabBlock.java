@@ -38,7 +38,7 @@ public class NCTSlabBlock extends TemplateBlock {
 
     public void updateBoundingBox(World world, int x, int y, int z) {
 
-        if (world.getBlockId(x,y,z)!=id) { setBoundingBox(0, 0, 0, 1, 2, 1); return; }
+        if (world.getBlockId(x,y,z)!=id) { setBoundingBox(0, 0, 0, 1, 1, 1); return; }
         BlockState state = world.getBlockState(x,y,z);
         switch (state.get(TYPE)) {
 

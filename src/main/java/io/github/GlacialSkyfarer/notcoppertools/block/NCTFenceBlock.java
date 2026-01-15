@@ -72,7 +72,7 @@ public class NCTFenceBlock extends TemplateBlock {
     @Override
     public void addIntersectingBoundingBox(World world, int x, int y, int z, Box box, ArrayList boxes) {
         BlockState state = world.getBlockState(x,y,z);
-        if (!(state.getBlock() instanceof NCTFenceBlock)) return;
+        if (!(state.isOf(this))) return;
         float beforeDistance = (1f - width) / 2f;
         float afterDistance = beforeDistance + width;
         setBoundingBox(beforeDistance, 0f, beforeDistance, afterDistance, height, afterDistance);

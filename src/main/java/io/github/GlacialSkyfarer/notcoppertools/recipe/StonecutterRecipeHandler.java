@@ -35,18 +35,17 @@ public abstract class StonecutterRecipeHandler {
                 new ItemStack(Blocks.STONE_BRICKS),
                 new ItemStack(Blocks.CARVED_STONE),
                 new ItemStack(Blocks.CHISELED_STONE),
-                new ItemStack(Blocks.STONE_SLAB, 2)
+                new ItemStack(Blocks.STONE_SLAB, 2),
+                new ItemStack(Blocks.STONE_STAIRS)
             }
         ));
         register(new StonecutterRecipe(Blocks.CARVED_STONE.asItem(), new ItemStack[] {
-                new ItemStack(Blocks.STONE_SLAB, 2)
-        }));
-        register(new StonecutterRecipe(Block.COBBLESTONE.asItem(), new ItemStack[]{
-                new ItemStack(Blocks.COBBLESTONE_SLAB, 2),
-                new ItemStack(Block.COBBLESTONE_STAIRS)
+                new ItemStack(Blocks.STONE_SLAB, 2),
+                new ItemStack(Blocks.STONE_STAIRS)
         }));
         register(new StonecutterRecipe(Block.BRICKS.asItem(), new ItemStack[]{
-                new ItemStack(Blocks.BRICK_SLAB, 2)
+                new ItemStack(Blocks.BRICK_SLAB, 2),
+                new ItemStack(Blocks.BRICK_STAIRS)
         }));
         register(new StonecutterRecipe(Block.SANDSTONE.asItem(), new ItemStack[]{
                 new ItemStack(Blocks.SANDSTONE_BRICKS),
@@ -54,11 +53,17 @@ public abstract class StonecutterRecipeHandler {
                 new ItemStack(Blocks.CHISELED_SANDSTONE),
                 new ItemStack(Blocks.SANDSTONE_SLAB, 2)
         }));
+        register(new StonecutterRecipe(Blocks.CARVED_SANDSTONE.asItem(), new ItemStack[]{
+                new ItemStack(Blocks.SANDSTONE_SLAB, 2),
+                new ItemStack(Blocks.SANDSTONE_STAIRS)
+        }));
         register(new StonecutterRecipe(Blocks.SANDSTONE_BRICKS.asItem(), new ItemStack[]{
-                new ItemStack(Blocks.SANDSTONE_BRICK_SLAB, 2)
+                new ItemStack(Blocks.SANDSTONE_BRICK_SLAB, 2),
+                new ItemStack(Blocks.SANDSTONE_BRICK_STAIRS)
         }));
         register(new StonecutterRecipe(Blocks.STONE_BRICKS.asItem(), new ItemStack[]{
-                new ItemStack(Blocks.STONE_BRICK_SLAB, 2)
+                new ItemStack(Blocks.STONE_BRICK_SLAB, 2),
+                new ItemStack(Blocks.STONE_BRICK_STAIRS)
         }));
         register(new StonecutterRecipe(Block.NETHERRACK.asItem(), new ItemStack[]{
                 new ItemStack(Blocks.NETHERRACK_BRICKS),

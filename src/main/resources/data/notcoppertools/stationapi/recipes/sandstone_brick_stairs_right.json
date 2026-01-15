@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "P": {
+        "item": "notcoppertools:sandstone_bricks"
+      }
+
+  },
+  "pattern": [
+    "  P",
+    " PP",
+    "PPP"
+  ],
+  "result": {
+    "item": "notcoppertools:sandstone_brick_stairs",
+    "count": 6
+  }
+}

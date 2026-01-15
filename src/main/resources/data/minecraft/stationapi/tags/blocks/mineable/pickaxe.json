@@ -22,7 +22,13 @@
     "notcoppertools:carved_sandstone",
     "notcoppertools:iron_grating",
     "notcoppertools:gold_grating",
-    "notcoppertools:copper_grating"
+    "notcoppertools:copper_grating",
+    "notcoppertools:cobblestone_stairs",
+    "notcoppertools:stone_stairs",
+    "notcoppertools:sandstone_stairs",
+    "notcoppertools:stone_brick_stairs",
+    "notcoppertools:sandstone_brick_stairs",
+    "notcoppertools:brick_stairs"
 
   ]
 }

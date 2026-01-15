@@ -1,0 +1,8 @@
+{
+    "parent": "notcoppertools:block/stairs",
+    "textures": {
+        "bottom": "notcoppertools:block/sandstone_slab_side",
+        "top": "notcoppertools:block/carved_sandstone",
+        "side": "notcoppertools:block/sandstone_slab_side"
+    }
+}

@@ -1,0 +1,12 @@
+{
+
+  "parent": "notcoppertools:block/slab",
+  "textures": {
+
+    "top": "notcoppertools:block/conifer_planks",
+    "bottom": "notcoppertools:block/conifer_planks",
+    "side": "notcoppertools:block/conifer_planks"
+
+  }
+
+}

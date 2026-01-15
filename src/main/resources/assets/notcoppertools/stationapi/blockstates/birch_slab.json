@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "notcoppertools:block/birch_slab" },
+    "type=top": { "model": "notcoppertools:block/birch_slab_top" },
+    "type=double": { "model": "notcoppertools:block/birch_planks" }
+  }
+}

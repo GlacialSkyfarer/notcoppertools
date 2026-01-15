@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "type=bottom": { "model": "notcoppertools:block/conifer_slab" },
+    "type=top": { "model": "notcoppertools:block/conifer_slab_top" },
+    "type=double": { "model": "notcoppertools:block/conifer_planks" }
+  }
+}

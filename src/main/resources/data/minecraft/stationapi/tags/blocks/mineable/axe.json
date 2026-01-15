@@ -16,7 +16,10 @@
     "notcoppertools:birch_planks",
     "notcoppertools:oak_fence",
     "notcoppertools:conifer_fence",
-    "notcoppertools:birch_fence"
+    "notcoppertools:birch_fence",
+    "notcoppertools:oak_stairs",
+    "notcoppertools:conifer_stairs",
+    "notcoppertools:birch_stairs"
 
   ]
 }

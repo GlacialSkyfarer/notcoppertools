@@ -4,9 +4,11 @@ import net.modificationstation.stationapi.api.util.math.Direction;
 
 public abstract class Directions {
 
-    public static Direction NORTH = Direction.NORTH.rotateYClockwise();
-    public static Direction SOUTH = Direction.SOUTH.rotateYClockwise();
-    public static Direction EAST = Direction.EAST.rotateYClockwise();
-    public static Direction WEST = Direction.WEST.rotateYClockwise();
+    public static final Direction NORTH = Direction.EAST;
+    public static final Direction SOUTH = Direction.WEST;
+    public static final Direction EAST = Direction.SOUTH;
+    public static final Direction WEST = Direction.NORTH;
+
+    public static Direction toModern(Direction direction) { return direction.rotateYClockwise(); }
 
 }

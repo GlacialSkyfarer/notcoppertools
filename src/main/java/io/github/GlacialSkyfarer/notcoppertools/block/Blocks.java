@@ -19,6 +19,8 @@ public class Blocks {
             OAK_DOOR,
             OAK_TRAPDOOR,
             OAK_SLAB,
+            CONIFER_SLAB,
+            BIRCH_SLAB,
             STONE_SLAB,
             COBBLESTONE_SLAB,
             SANDSTONE_SLAB,
@@ -55,7 +57,16 @@ public class Blocks {
             BIRCH_PLANKS,
             IRON_GRATING,
             COPPER_GRATING,
-            GOLD_GRATING;
+            GOLD_GRATING,
+            OAK_STAIRS,
+            CONIFER_STAIRS,
+            BIRCH_STAIRS,
+            COBBLESTONE_STAIRS,
+            STONE_STAIRS,
+            SANDSTONE_STAIRS,
+            STONE_BRICK_STAIRS,
+            SANDSTONE_BRICK_STAIRS,
+            BRICK_STAIRS;
 
     public static void registerBlocks(BlockRegistryEvent event) {
 
@@ -85,6 +96,14 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("oak_slab"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f);
+        CONIFER_SLAB = new NCTSlabBlock(NAMESPACE.id("conifer_slab"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("conifer_slab"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.0f);
+        BIRCH_SLAB = new NCTSlabBlock(NAMESPACE.id("birch_slab"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("birch_slab"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.0f);
         STONE_SLAB = new NCTSlabBlock(NAMESPACE.id("stone_slab"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("stone_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
@@ -97,6 +116,22 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("sandstone_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.8f);
+        OAK_STAIRS = new NCTStairsBlock(NAMESPACE.id("oak_stairs"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("oak_stairs"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.0f);
+        CONIFER_STAIRS = new NCTStairsBlock(NAMESPACE.id("conifer_stairs"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("conifer_stairs"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.0f);
+        BIRCH_STAIRS = new NCTStairsBlock(NAMESPACE.id("birch_stairs"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("birch_stairs"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(2.0f);
+        COBBLESTONE_STAIRS = new NCTStairsBlock(NAMESPACE.id("cobblestone_stairs"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("cobblestone_stairs"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
         OAK_FENCE = new NCTFenceBlock(NAMESPACE.id("oak_fence"), Material.WOOD, NCTBlockTags.FENCE_CONNECTED, 0.25f, 1.5f)
                 .setTranslationKey(NAMESPACE.id("oak_fence"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
@@ -286,6 +321,28 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("netherrack_brick_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.8f);
+        STONE_STAIRS = new NCTStairsBlock(NAMESPACE.id("stone_stairs"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("stone_stairs"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(1.5f);
+        SANDSTONE_STAIRS = new NCTStairsBlock(NAMESPACE.id("sandstone_stairs"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("sandstone_stairs"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(0.8f);
+        STONE_BRICK_STAIRS = new NCTStairsBlock(NAMESPACE.id("stone_brick_stairs"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("stone_brick_stairs"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.4f)
+                .setResistance(10.0f);
+        SANDSTONE_BRICK_STAIRS = new NCTStairsBlock(NAMESPACE.id("sandstone_brick_stairs"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("sandstone_brick_stairs"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(1.2f);
+        BRICK_STAIRS = new NCTStairsBlock(NAMESPACE.id("brick_stairs"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("brick_stairs"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f)
+                .setResistance(10.0f);
         CONIFER_PLANKS = new TemplateBlock(NAMESPACE.id("conifer_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("conifer_planks"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
