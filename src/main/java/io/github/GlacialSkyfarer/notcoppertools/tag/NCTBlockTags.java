@@ -8,7 +8,8 @@ import net.modificationstation.stationapi.api.tag.TagKey;
 public class NCTBlockTags {
 
     public static final TagKey<Block>
-            FENCE_CONNECTED = of("fence_connected");
+            FENCE_CONNECTED = of("fence_connected"),
+            GRATING_CONNECTED = of("grating_connected");
 
     private static TagKey<Block> of(String id) {
         return TagKey.of(BlockRegistry.KEY, NotCopperTools.NAMESPACE.id(id));

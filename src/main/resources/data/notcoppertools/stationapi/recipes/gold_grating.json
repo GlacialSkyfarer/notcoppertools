@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "I": {
+        "item": "gold_ingot"
+      }
+
+  },
+  "pattern": [
+    "I I",
+    " I ",
+    "I I"
+  ],
+  "result": {
+    "item": "notcoppertools:gold_grating",
+    "count": 16
+  }
+}

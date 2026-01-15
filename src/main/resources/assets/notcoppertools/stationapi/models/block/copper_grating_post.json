@@ -1,0 +1,6 @@
+{
+    "parent": "notcoppertools:block/grating_post",
+    "textures": {
+        "texture": "notcoppertools:block/copper_grating"
+    }
+}

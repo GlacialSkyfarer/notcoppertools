@@ -59,6 +59,13 @@ tile.@.conifer_planks.desc=Planks fashioned from conifer wood.\nThe good one.
 tile.@.birch_planks.name=Birch Planks
 tile.@.birch_planks.desc=Planks fashioned from birch wood.\nCan't watch me now, can you!
 
+tile.@.iron_grating.name=Iron Grating
+tile.@.iron_grating.desc=Sturdy iron bars arranged neatly.\nLET ME INNN!
+tile.@.gold_grating.name=Gold Grating
+tile.@.gold_grating.desc=Flashy gold bars arranged neatly.
+tile.@.copper_grating.name=Copper Grating
+tile.@.copper_grating.desc=Reliable copper bars arranged neatly.
+
 item.@.copper_ingot.name=Copper Ingot
 item.@.copper_ingot.desc=A solid ingot of copper.\nCannot be used to make tools.
 

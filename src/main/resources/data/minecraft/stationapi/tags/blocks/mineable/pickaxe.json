@@ -19,7 +19,10 @@
     "notcoppertools:sandstone_bricks",
     "notcoppertools:sandstone_brick_slab",
     "notcoppertools:chiseled_sandstone",
-    "notcoppertools:carved_sandstone"
+    "notcoppertools:carved_sandstone",
+    "notcoppertools:iron_grating",
+    "notcoppertools:gold_grating",
+    "notcoppertools:copper_grating"
 
   ]
 }

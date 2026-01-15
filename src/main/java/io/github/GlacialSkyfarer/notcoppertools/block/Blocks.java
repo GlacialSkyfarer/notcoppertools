@@ -52,7 +52,10 @@ public class Blocks {
             CARVED_NETHERRACK,
             NETHERRACK_BRICK_SLAB,
             CONIFER_PLANKS,
-            BIRCH_PLANKS;
+            BIRCH_PLANKS,
+            IRON_GRATING,
+            COPPER_GRATING,
+            GOLD_GRATING;
 
     public static void registerBlocks(BlockRegistryEvent event) {
 
@@ -293,6 +296,21 @@ public class Blocks {
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f)
                 .setResistance(5.0f);
+        IRON_GRATING = new NCTFenceBlock(NAMESPACE.id("iron_grating"), Material.METAL, NCTBlockTags.GRATING_CONNECTED, 0.125f, 1f)
+                .setTranslationKey(NAMESPACE.id("iron_grating"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(12.0f);
+        GOLD_GRATING = new NCTFenceBlock(NAMESPACE.id("gold_grating"), Material.METAL, NCTBlockTags.GRATING_CONNECTED, 0.125f, 1f)
+                .setTranslationKey(NAMESPACE.id("gold_grating"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(8.0f);
+        COPPER_GRATING = new NCTFenceBlock(NAMESPACE.id("copper_grating"), Material.METAL, NCTBlockTags.GRATING_CONNECTED, 0.125f, 1f)
+                .setTranslationKey(NAMESPACE.id("copper_grating"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(10.0f);
 
     }
 }

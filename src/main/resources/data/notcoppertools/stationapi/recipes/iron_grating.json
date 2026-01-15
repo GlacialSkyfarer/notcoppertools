@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "I": {
+        "item": "iron_ingot"
+      }
+
+  },
+  "pattern": [
+    "I I",
+    " I ",
+    "I I"
+  ],
+  "result": {
+    "item": "notcoppertools:iron_grating",
+    "count": 16
+  }
+}
