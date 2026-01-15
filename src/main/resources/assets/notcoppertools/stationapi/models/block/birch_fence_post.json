@@ -1,0 +1,6 @@
+{
+    "parent": "notcoppertools:block/fence_post",
+    "textures": {
+        "texture": "notcoppertools:block/birch_planks"
+    }
+}

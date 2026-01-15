@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "notcoppertools:block/anvil" }
+    "facing=north": { "model": "notcoppertools:block/anvil" },
+    "facing=east": { "model": "notcoppertools:block/anvil", "y": 90},
+    "facing=south": { "model": "notcoppertools:block/anvil", "y": 180},
+    "facing=west": { "model": "notcoppertools:block/anvil", "y": 270}
   }
 }

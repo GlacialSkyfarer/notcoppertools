@@ -2,11 +2,11 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:bone"
+      "item": "minecraft:lapis_block"
     }
   ],
   "result": {
-    "item": "gamma173:bone_meal",
-    "count": 3
+    "item": "notcoppertools:lapis_lazuli",
+    "count": 9
   }
 }

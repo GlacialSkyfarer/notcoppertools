@@ -1,6 +1,6 @@
-package io.github.GlacialSkyfarer.gamma173.mixin.entity;
+package io.github.GlacialSkyfarer.notcoppertools.mixin.entity;
 
-import io.github.GlacialSkyfarer.gamma173.item.Items;
+import io.github.GlacialSkyfarer.notcoppertools.item.Items;
 import net.minecraft.entity.passive.SquidEntity;
 import net.minecraft.item.Item;
 import org.objectweb.asm.Opcodes;

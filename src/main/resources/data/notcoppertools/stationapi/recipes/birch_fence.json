@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "w": {
+        "item": "notcoppertools:birch_planks"
+      },
+      "s": {
+        "item": "stick"
+      }
+
+  },
+  "pattern": [
+    "sws",
+    "sws"
+  ],
+  "result": {
+    "item": "notcoppertools:birch_fence",
+    "count": 3
+  }
+}

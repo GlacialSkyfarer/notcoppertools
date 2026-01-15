@@ -1,0 +1,6 @@
+{
+    "parent": "notcoppertools:block/fence_side",
+    "textures": {
+        "texture": "block/oak_planks"
+    }
+}

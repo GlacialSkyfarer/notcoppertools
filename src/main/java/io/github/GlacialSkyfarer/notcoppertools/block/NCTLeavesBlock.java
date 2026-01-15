@@ -11,7 +11,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ShearsItem;
-import net.minecraft.stat.Stats;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
@@ -25,14 +24,12 @@ import net.modificationstation.stationapi.api.state.property.IntProperty;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 import net.modificationstation.stationapi.api.util.Identifier;
 import net.modificationstation.stationapi.api.util.math.Direction;
-import net.modificationstation.stationapi.api.util.math.MutableBlockPos;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.OptionalInt;
 import java.util.Random;
 
-public class GammaLeavesBlock extends TemplateBlock {
+public class NCTLeavesBlock extends TemplateBlock {
 
     public enum ColorType {
         NONE,
@@ -44,7 +41,7 @@ public class GammaLeavesBlock extends TemplateBlock {
     public static final IntProperty DISTANCE = IntProperty.of("distance", 0, 7);
     public static final BooleanProperty PERSISTENT = BooleanProperty.of("persistent");
 
-    public GammaLeavesBlock(Identifier identifier, Material material) {
+    public NCTLeavesBlock(Identifier identifier, Material material) {
         super(identifier, material);
         setDefaultState(getStateManager().getDefaultState().with(PERSISTENT, false).with(DISTANCE, 0));
         setTickRandomly(true);
@@ -52,7 +49,7 @@ public class GammaLeavesBlock extends TemplateBlock {
 
     @Environment(EnvType.CLIENT)
     public static int getBlockColor(BlockState blockState, BlockView blockView, BlockPos blockPos, int i) {
-        if (!(blockState.getBlock() instanceof GammaLeavesBlock block)) return -1;
+        if (!(blockState.getBlock() instanceof NCTLeavesBlock block)) return -1;
         if (block.colorType == ColorType.SPRUCE) {
             return FoliageColors.getSpruceColor();
         } else if (block.colorType == ColorType.BIRCH) {
@@ -69,7 +66,7 @@ public class GammaLeavesBlock extends TemplateBlock {
     @Environment(EnvType.CLIENT)
     public static int getItemColor(ItemStack stack, int index) {
 
-        if (!(stack.getItem() instanceof BlockItem blockItem) || !(blockItem.getBlock() instanceof GammaLeavesBlock leaves)) return -1;
+        if (!(stack.getItem() instanceof BlockItem blockItem) || !(blockItem.getBlock() instanceof NCTLeavesBlock leaves)) return -1;
         return switch (leaves.colorType) {
             case NONE -> -1;
             case OAK -> FoliageColors.getDefaultColor();
@@ -91,7 +88,7 @@ public class GammaLeavesBlock extends TemplateBlock {
 
     @Override
     public int getColorMultiplier(BlockView blockView, int x, int y, int z) {
-        if (!(BLOCKS[blockView.getBlockId(x,y,z)] instanceof GammaLeavesBlock block)) return -1;
+        if (!(BLOCKS[blockView.getBlockId(x,y,z)] instanceof NCTLeavesBlock block)) return -1;
         if (block.colorType == ColorType.SPRUCE) {
             return FoliageColors.getSpruceColor();
         } else if (block.colorType == ColorType.BIRCH) {
@@ -145,7 +142,7 @@ public class GammaLeavesBlock extends TemplateBlock {
     public void neighborUpdate(World world, int x, int y, int z, int id) {
         super.neighborUpdate(world,x,y,z,id);
         BlockState state = world.getBlockState(x,y,z);
-        if (!(state.getBlock() instanceof GammaLeavesBlock)) return;
+        if (!(state.getBlock() instanceof NCTLeavesBlock)) return;
         if (state.get(PERSISTENT)) return;
 
         if (!world.isRemote) updateDistance(world, new BlockPos(x,y,z), false);
@@ -178,7 +175,7 @@ public class GammaLeavesBlock extends TemplateBlock {
     public void updateDistance(World world, BlockPos blockPos, boolean doDecay) {
         BlockState state = world.getBlockState(blockPos);
 
-        if (!(state.getBlock() instanceof GammaLeavesBlock) || state.get(PERSISTENT)) return;
+        if (!(state.getBlock() instanceof NCTLeavesBlock) || state.get(PERSISTENT)) return;
 
         int distance = 7;
 
@@ -214,8 +211,8 @@ public class GammaLeavesBlock extends TemplateBlock {
         }
     }
 
-    public GammaLeavesBlock setColorType(ColorType value) { this.colorType = value; return this; }
-    public GammaLeavesBlock setRareDrop(Item value) { this.rareDrop = value; return this; }
-    public GammaLeavesBlock setSapling(Item value) { this.sapling = value; return this; }
+    public NCTLeavesBlock setColorType(ColorType value) { this.colorType = value; return this; }
+    public NCTLeavesBlock setRareDrop(Item value) { this.rareDrop = value; return this; }
+    public NCTLeavesBlock setSapling(Item value) { this.sapling = value; return this; }
 
 }

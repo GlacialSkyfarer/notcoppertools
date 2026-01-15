@@ -19,11 +19,11 @@ import net.modificationstation.stationapi.api.util.Identifier;
 
 import java.util.List;
 
-public class GammaSlabBlock extends TemplateBlock {
+public class NCTSlabBlock extends TemplateBlock {
 
     public static final EnumProperty<SlabType> TYPE = EnumProperty.of("type", SlabType.class);
 
-    public GammaSlabBlock(Identifier identifier, Material material) {
+    public NCTSlabBlock(Identifier identifier, Material material) {
         super(identifier, material);
     }
 

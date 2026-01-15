@@ -1,8 +1,8 @@
 package io.github.GlacialSkyfarer.notcoppertools.reef_biome.block;
 
-import io.github.GlacialSkyfarer.notcoppertools.block.GammaDoorBlock;
-import io.github.GlacialSkyfarer.notcoppertools.block.GammaSlabBlock;
-import io.github.GlacialSkyfarer.notcoppertools.block.GammaTrapdoorBlock;
+import io.github.GlacialSkyfarer.notcoppertools.block.NCTDoorBlock;
+import io.github.GlacialSkyfarer.notcoppertools.block.NCTSlabBlock;
+import io.github.GlacialSkyfarer.notcoppertools.block.NCTTrapdoorBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
@@ -29,17 +29,17 @@ public class ReefBiomeBlocks {
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f)
                 .setResistance(5.0f);
-        ReefwoodDoor = new GammaDoorBlock(NAMESPACE.id("reefwood_door"), Material.WOOD)
+        ReefwoodDoor = new NCTDoorBlock(NAMESPACE.id("reefwood_door"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("reefwood_door"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(3.0f)
                 .disableTrackingStatistics();
-        ReefwoodTrapdoor = new GammaTrapdoorBlock(NAMESPACE.id("reefwood_trapdoor"), Material.WOOD)
+        ReefwoodTrapdoor = new NCTTrapdoorBlock(NAMESPACE.id("reefwood_trapdoor"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("reefwood_trapdoor"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(3.0f)
                 .disableTrackingStatistics();
-        ReefwoodSlab = new GammaSlabBlock(NAMESPACE.id("reefwood_slab"), Material.WOOD)
+        ReefwoodSlab = new NCTSlabBlock(NAMESPACE.id("reefwood_slab"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("reefwood_slab"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f);

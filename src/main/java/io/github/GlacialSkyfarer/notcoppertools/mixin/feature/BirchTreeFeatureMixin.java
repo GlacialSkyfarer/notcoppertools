@@ -4,19 +4,16 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
-import io.github.GlacialSkyfarer.notcoppertools.block.GammaLeavesBlock;
+import io.github.GlacialSkyfarer.notcoppertools.block.NCTLeavesBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.BirchTreeFeature;
 import net.modificationstation.stationapi.api.registry.tag.BlockTags;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyArgs;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import org.spongepowered.asm.mixin.injection.invoke.arg.Args;
 
@@ -43,7 +40,7 @@ public abstract class BirchTreeFeatureMixin {
     public void updateTipLeaf(World world, Random random, int x, int y, int z, CallbackInfoReturnable<Boolean> cir, @Local(index=6) int yOffset) {
         if (cir.getReturnValue()) {
             Block block = world.getBlockState(x, y+yOffset, z).getBlock();
-            if (block instanceof GammaLeavesBlock template) {
+            if (block instanceof NCTLeavesBlock template) {
                 template.updateDistance(world, new BlockPos(x,y+yOffset,z), false);
             }
         }

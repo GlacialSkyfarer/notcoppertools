@@ -19,7 +19,7 @@ public abstract class ItemMixin implements IGetTranslatedDescription, CustomTool
     public abstract String getTranslationKey();
 
     @Override
-    public String gamma_173$getTranslatedDescription() {
+    public String notcoppertools$getTranslatedDescription() {
         return I18n.getTranslation(getTranslationKey() + ".desc");
     }
 
@@ -27,7 +27,7 @@ public abstract class ItemMixin implements IGetTranslatedDescription, CustomTool
     public String[] getTooltip(ItemStack stack, String originalTooltip) {
         return ArrayUtils.addAll(
                 new String[]{originalTooltip},
-                Util.separateLines(((IGetTranslatedDescription)stack.getItem()).gamma_173$getTranslatedDescription(),
+                Util.separateLines(((IGetTranslatedDescription)stack.getItem()).notcoppertools$getTranslatedDescription(),
                         Formatting.GRAY + AMITextRenderer.ITALICS,
                         "")
         );

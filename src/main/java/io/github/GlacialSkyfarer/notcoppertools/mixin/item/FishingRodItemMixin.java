@@ -18,11 +18,11 @@ public abstract class FishingRodItemMixin extends Item implements IHasRepairMate
     }
 
     @Override
-    public Item gamma_173$getRepairMaterial() {
+    public Item notcoppertools$getRepairMaterial() {
         return repairItem;
     }
     @Override
-    public Item gamma_173$setRepairMaterial(Item material) {
+    public Item notcoppertools$setRepairMaterial(Item material) {
         this.repairItem = material;
         return this;
     }

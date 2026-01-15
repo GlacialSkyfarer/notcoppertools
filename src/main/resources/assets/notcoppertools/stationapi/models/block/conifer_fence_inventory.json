@@ -1,0 +1,6 @@
+{
+    "parent": "notcoppertools:block/fence_inventory",
+    "textures": {
+        "texture": "notcoppertools:block/conifer_planks"
+    }
+}

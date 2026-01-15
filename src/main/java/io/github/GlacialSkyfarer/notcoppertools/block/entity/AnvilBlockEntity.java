@@ -151,7 +151,7 @@ public class AnvilBlockEntity extends BlockEntity implements Inventory {
     }
 
     private boolean tryUseMaterial (ItemStack gear, Item gearItem, Item materialItem) {
-        if (gearItem instanceof IHasRepairMaterial hasRepairMaterial && materialItem == hasRepairMaterial.gamma_173$getRepairMaterial()) {
+        if (gearItem instanceof IHasRepairMaterial hasRepairMaterial && materialItem == hasRepairMaterial.notcoppertools$getRepairMaterial()) {
             float repairAmount = getRepairAmount(gearItem);
             if (repairAmount == 0f) return false;
             inventory[2] = gear.copy();

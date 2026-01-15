@@ -1,7 +1,6 @@
 package io.github.GlacialSkyfarer.notcoppertools.recipe;
 
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
-import io.github.GlacialSkyfarer.notcoppertools.item.Items;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

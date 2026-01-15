@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "w": {
+        "item": "notcoppertools:conifer_planks"
+      },
+      "s": {
+        "item": "stick"
+      }
+
+  },
+  "pattern": [
+    "sws",
+    "sws"
+  ],
+  "result": {
+    "item": "notcoppertools:conifer_fence",
+    "count": 3
+  }
+}

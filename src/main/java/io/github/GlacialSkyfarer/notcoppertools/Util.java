@@ -43,7 +43,7 @@ public abstract class Util {
 
     public static Item setRepairMaterial(Item item, Item material) {
         if (item instanceof IHasRepairMaterial iCanHas) {
-            return iCanHas.gamma_173$setRepairMaterial(material);
+            return iCanHas.notcoppertools$setRepairMaterial(material);
         }
         return item;
     }

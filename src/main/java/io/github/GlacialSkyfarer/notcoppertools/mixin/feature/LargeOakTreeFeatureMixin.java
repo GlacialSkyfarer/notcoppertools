@@ -4,14 +4,12 @@ import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import com.llamalad7.mixinextras.sugar.Local;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
-import io.github.GlacialSkyfarer.notcoppertools.block.GammaLeavesBlock;
+import io.github.GlacialSkyfarer.notcoppertools.block.NCTLeavesBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.LeavesBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.LargeOakTreeFeature;
 import net.modificationstation.stationapi.api.registry.tag.BlockTags;
-import org.objectweb.asm.Opcodes;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.*;
@@ -49,7 +47,7 @@ public abstract class LargeOakTreeFeatureMixin {
     public void updateTipLeaf(World world, Random random, int x, int y, int z, CallbackInfoReturnable<Boolean> cir) {
         if (cir.getReturnValue()) {
             Block block = world.getBlockState(x, y+this.height, z).getBlock();
-            if (block instanceof GammaLeavesBlock template) {
+            if (block instanceof NCTLeavesBlock template) {
                 template.updateDistance(world, new BlockPos(x,y+this.height,z), false);
             }
         }

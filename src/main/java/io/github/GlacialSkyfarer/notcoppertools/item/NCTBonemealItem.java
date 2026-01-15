@@ -1,19 +1,15 @@
-package io.github.GlacialSkyfarer.gamma173.item;
+package io.github.GlacialSkyfarer.notcoppertools.item;
 
-import io.github.GlacialSkyfarer.gamma173.interfaces.IDyeableEntity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.DyeItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.modificationstation.stationapi.api.block.BlockState;
 import net.modificationstation.stationapi.api.bonemeal.BonemealAPI;
-import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.util.Identifier;
 
-public class GammaBonemealItem extends GammaDyeItem {
+public class NCTBonemealItem extends NCTDyeItem {
 
-    public GammaBonemealItem(Identifier identifier, int color) {
+    public NCTBonemealItem(Identifier identifier, int color) {
         super(identifier, color);
     }
 

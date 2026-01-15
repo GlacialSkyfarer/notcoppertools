@@ -2,7 +2,7 @@ package io.github.GlacialSkyfarer.notcoppertools.events.init;
 
 import io.github.GlacialSkyfarer.notcoppertools.NotCopperTools;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
-import io.github.GlacialSkyfarer.notcoppertools.block.GammaLeavesBlock;
+import io.github.GlacialSkyfarer.notcoppertools.block.NCTLeavesBlock;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.AnvilBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.StonecutterBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.gui.AnvilScreen;
@@ -43,7 +43,7 @@ public class ClientListener {
     @EventListener
     public static void registerBlockColors(BlockColorsRegisterEvent event) {
 
-        BlockColorProvider leavesBlockProvider = GammaLeavesBlock::getBlockColor;
+        BlockColorProvider leavesBlockProvider = NCTLeavesBlock::getBlockColor;
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.OAK_LEAVES);
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.BIRCH_LEAVES);
         event.blockColors.registerColorProvider(leavesBlockProvider, Blocks.CONIFER_LEAVES);
@@ -60,7 +60,7 @@ public class ClientListener {
     @EventListener
     public static void registerItemColors(ItemColorsRegisterEvent event) {
 
-        ItemColorProvider leavesItemProvider = GammaLeavesBlock::getItemColor;
+        ItemColorProvider leavesItemProvider = NCTLeavesBlock::getItemColor;
         event.itemColors.register(leavesItemProvider, Blocks.OAK_LEAVES.asItem());
         event.itemColors.register(leavesItemProvider, Blocks.BIRCH_LEAVES.asItem());
         event.itemColors.register(leavesItemProvider, Blocks.CONIFER_LEAVES.asItem());

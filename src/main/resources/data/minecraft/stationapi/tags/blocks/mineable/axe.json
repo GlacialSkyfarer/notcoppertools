@@ -13,7 +13,10 @@
     "notcoppertools:oak_trapdoor",
     "notcoppertools:oak_slab",
     "notcoppertools:conifer_planks",
-    "notcoppertools:birch_planks"
+    "notcoppertools:birch_planks",
+    "notcoppertools:oak_fence",
+    "notcoppertools:conifer_fence",
+    "notcoppertools:birch_fence"
 
   ]
 }

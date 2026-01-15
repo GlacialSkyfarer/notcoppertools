@@ -2,8 +2,7 @@ package io.github.GlacialSkyfarer.notcoppertools.mixin.entity;
 
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
 import io.github.GlacialSkyfarer.notcoppertools.interfaces.IDyeableEntity;
-import io.github.GlacialSkyfarer.notcoppertools.item.GammaDyeItem;
-import net.minecraft.block.Block;
+import io.github.GlacialSkyfarer.notcoppertools.item.NCTDyeItem;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.SheepEntity;
 import net.minecraft.item.ItemStack;
@@ -33,7 +32,7 @@ public abstract class SheepEntityMixin implements IDyeableEntity {
 
     @Override
     public void notcoppertools$setColor(ItemStack stack, LivingEntity entity) {
-        if (!(stack.getItem() instanceof GammaDyeItem dye)) return;
+        if (!(stack.getItem() instanceof NCTDyeItem dye)) return;
         int color = 15 - dye.getColorId();
         if (!this.isSheared() && this.notcoppertools$getColor() != color) {
             this.setColor(color);

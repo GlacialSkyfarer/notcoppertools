@@ -7,11 +7,11 @@ import net.minecraft.item.ItemStack;
 import net.modificationstation.stationapi.api.template.item.TemplateItem;
 import net.modificationstation.stationapi.api.util.Identifier;
 
-public class GammaDyeItem extends TemplateItem {
+public class NCTDyeItem extends TemplateItem {
 
     protected final int colorId;
 
-    public GammaDyeItem(Identifier identifier, int color) {
+    public NCTDyeItem(Identifier identifier, int color) {
         super(identifier);
         this.colorId = color;
     }

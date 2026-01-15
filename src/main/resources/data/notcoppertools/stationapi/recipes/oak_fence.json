@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+
+      "w": {
+        "item": "minecraft:oak_planks"
+      },
+      "s": {
+        "item": "stick"
+      }
+
+  },
+  "pattern": [
+    "sws",
+    "sws"
+  ],
+  "result": {
+    "item": "notcoppertools:oak_fence",
+    "count": 3
+  }
+}

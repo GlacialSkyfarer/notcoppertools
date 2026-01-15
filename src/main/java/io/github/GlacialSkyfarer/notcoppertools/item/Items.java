@@ -67,13 +67,13 @@ public class Items {
         setRepairMaterial(ROSE_GOLD_SHOVEL, Item.GOLD_INGOT);
         setRepairMaterial(ROSE_GOLD_HOE, Item.GOLD_INGOT);
 
-        ROSE_GOLD_HELMET = new GammaArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_helmet"), 20, 0, "rose_gold")
+        ROSE_GOLD_HELMET = new NCTArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_helmet"), 20, 0, "rose_gold")
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("rose_gold_helmet"));
-        ROSE_GOLD_CHESTPLATE = new GammaArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_chestplate"), 20, 1, "rose_gold")
+        ROSE_GOLD_CHESTPLATE = new NCTArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_chestplate"), 20, 1, "rose_gold")
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("rose_gold_chestplate"));
-        ROSE_GOLD_LEGGINGS = new GammaArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_leggings"), 20, 2, "rose_gold")
+        ROSE_GOLD_LEGGINGS = new NCTArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_leggings"), 20, 2, "rose_gold")
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("rose_gold_leggings"));
-        ROSE_GOLD_BOOTS = new GammaArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_boots"), 20, 3, "rose_gold")
+        ROSE_GOLD_BOOTS = new NCTArmorItem(NotCopperTools.NAMESPACE.id("rose_gold_boots"), 20, 3, "rose_gold")
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("rose_gold_boots"));
 
         setRepairMaterial(ROSE_GOLD_HELMET, Item.GOLD_INGOT);
@@ -81,37 +81,37 @@ public class Items {
         setRepairMaterial(ROSE_GOLD_LEGGINGS, Item.GOLD_INGOT);
         setRepairMaterial(ROSE_GOLD_BOOTS, Item.GOLD_INGOT);
 
-        BONE_MEAL = new GammaDyeItem(NotCopperTools.NAMESPACE.id("bone_meal"), 15)
+        BONE_MEAL = new NCTDyeItem(NotCopperTools.NAMESPACE.id("bone_meal"), 15)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("bone_meal"));
-        INK_SAC = new GammaDyeItem(NotCopperTools.NAMESPACE.id("ink_sac"), 0)
+        INK_SAC = new NCTDyeItem(NotCopperTools.NAMESPACE.id("ink_sac"), 0)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("ink_sac"));
-        LAPIS_LAZULI = new GammaDyeItem(NotCopperTools.NAMESPACE.id("lapis_lazuli"), 4)
+        LAPIS_LAZULI = new NCTDyeItem(NotCopperTools.NAMESPACE.id("lapis_lazuli"), 4)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("lapis_lazuli"));
-        COCOA_BEANS = new GammaDyeItem(NotCopperTools.NAMESPACE.id("cocoa_beans"), 3)
+        COCOA_BEANS = new NCTDyeItem(NotCopperTools.NAMESPACE.id("cocoa_beans"), 3)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("cocoa_beans"));
-        GRAY_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("gray_dye"), 8)
+        GRAY_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("gray_dye"), 8)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("gray_dye"));
-        LIGHT_GRAY_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("light_gray_dye"), 7)
+        LIGHT_GRAY_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("light_gray_dye"), 7)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("light_gray_dye"));
-        ROSE_RED = new GammaDyeItem(NotCopperTools.NAMESPACE.id("rose_red"), 1)
+        ROSE_RED = new NCTDyeItem(NotCopperTools.NAMESPACE.id("rose_red"), 1)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("rose_red"));
-        ORANGE_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("orange_dye"), 14)
+        ORANGE_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("orange_dye"), 14)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("orange_dye"));
-        DANDELION_YELLOW = new GammaDyeItem(NotCopperTools.NAMESPACE.id("dandelion_yellow"), 11)
+        DANDELION_YELLOW = new NCTDyeItem(NotCopperTools.NAMESPACE.id("dandelion_yellow"), 11)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("dandelion_yellow"));
-        LIME_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("lime_dye"), 10)
+        LIME_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("lime_dye"), 10)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("lime_dye"));
-        CACTUS_GREEN = new GammaDyeItem(NotCopperTools.NAMESPACE.id("cactus_green"), 2)
+        CACTUS_GREEN = new NCTDyeItem(NotCopperTools.NAMESPACE.id("cactus_green"), 2)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("cactus_green"));
-        CYAN_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("cyan_dye"), 6)
+        CYAN_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("cyan_dye"), 6)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("cyan_dye"));
-        LIGHT_BLUE_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("light_blue_dye"), 12)
+        LIGHT_BLUE_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("light_blue_dye"), 12)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("light_blue_dye"));
-        PURPLE_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("purple_dye"), 5)
+        PURPLE_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("purple_dye"), 5)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("purple_dye"));
-        MAGENTA_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("magenta_dye"), 13)
+        MAGENTA_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("magenta_dye"), 13)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("magenta_dye"));
-        PINK_DYE = new GammaDyeItem(NotCopperTools.NAMESPACE.id("pink_dye"), 9)
+        PINK_DYE = new NCTDyeItem(NotCopperTools.NAMESPACE.id("pink_dye"), 9)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("pink_dye"));
 
         SPRUCE_RESIN = new TemplateItem(NotCopperTools.NAMESPACE.id("spruce_resin"))

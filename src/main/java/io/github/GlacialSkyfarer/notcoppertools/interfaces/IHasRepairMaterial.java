@@ -4,7 +4,7 @@ import net.minecraft.item.Item;
 
 public interface IHasRepairMaterial {
 
-    default Item gamma_173$getRepairMaterial() { return null; }
-    default Item gamma_173$setRepairMaterial(Item material) {return null;}
+    default Item notcoppertools$getRepairMaterial() { return null; }
+    default Item notcoppertools$setRepairMaterial(Item material) {return null;}
 
 }
