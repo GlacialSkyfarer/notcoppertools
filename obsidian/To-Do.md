@@ -8,7 +8,7 @@ replace saplings
 replace iron doors
 Netherrack bricks, carved netherrack, chiseled netherrack
 Add other music discs
-Better anvil model
+Better anvil baseModel
 Falling anvil
 Anvil sounds
 Hardened clay

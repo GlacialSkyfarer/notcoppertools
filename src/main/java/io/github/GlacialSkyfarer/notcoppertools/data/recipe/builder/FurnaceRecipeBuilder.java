@@ -1,18 +1,16 @@
 package io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder;
 
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.github.EmmaTheMartian.ItemStackHelpers;
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IRecipeIngredient;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.modificationstation.stationapi.api.util.Identifier;
 
-import java.util.*;
-
-public class FurnaceRecipeBuilder implements IRecipeBuilder {
+public class FurnaceRecipeBuilder implements IJsonBuilder {
     public static final Identifier TYPE_ID = Identifier.of("minecraft:smelting");
 
     protected IRecipeIngredient ingredient;

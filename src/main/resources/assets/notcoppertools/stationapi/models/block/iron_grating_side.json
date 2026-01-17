@@ -1,6 +1,0 @@
-{
-    "parent": "notcoppertools:block/grating_side",
-    "textures": {
-        "texture": "notcoppertools:block/iron_grating"
-    }
-}

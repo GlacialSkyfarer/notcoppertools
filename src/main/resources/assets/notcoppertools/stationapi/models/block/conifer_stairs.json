@@ -1,8 +1,0 @@
-{
-    "parent": "notcoppertools:block/stairs",
-    "textures": {
-        "bottom": "notcoppertools:block/conifer_planks",
-        "top": "notcoppertools:block/conifer_planks",
-        "side": "notcoppertools:block/conifer_planks"
-    }
-}

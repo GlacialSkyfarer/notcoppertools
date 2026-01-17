@@ -1,13 +1,13 @@
 package io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder;
 
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IRecipeIngredient;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ItemIngredient;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class OreRecipeSetBuilder implements IRecipeBuilder {
+public class OreRecipeSetBuilder implements IJsonBuilder {
 
     protected ItemStack ore;
     protected ItemStack ingot;

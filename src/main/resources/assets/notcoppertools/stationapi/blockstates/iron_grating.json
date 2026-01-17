@@ -1,6 +1,13 @@
 {
     "multipart": [
-        {   "apply": { "model": "notcoppertools:block/iron_grating_post" }},
+        {   "when": {
+            "north": "false",
+            "east": "false",
+            "west": "false",
+            "south": "false"
+        },
+            "apply": { "model": "notcoppertools:block/iron_grating_post" }
+        },
         {   "when": { "north": "true" },
             "apply": { "model": "notcoppertools:block/iron_grating_side", "uvlock": true }
         },

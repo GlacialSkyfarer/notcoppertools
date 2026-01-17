@@ -273,6 +273,7 @@ public class Blocks {
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(2.0f)
                 .setResistance(10.0f);
+
         STONE_BRICKS = new TemplateBlock(NAMESPACE.id("stone_bricks"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("stone_bricks"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
@@ -293,6 +294,7 @@ public class Blocks {
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(2.4f)
                 .setResistance(10.0f);
+
         SANDSTONE_BRICKS = new TemplateBlock(NAMESPACE.id("sandstone_bricks"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("sandstone_bricks"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
@@ -305,10 +307,11 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("chiseled_sandstone"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.8f);
-        SANDSTONE_BRICK_SLAB = new TemplateBlock(NAMESPACE.id("sandstone_brick_slab"), Material.STONE)
+        SANDSTONE_BRICK_SLAB = new NCTSlabBlock(NAMESPACE.id("sandstone_brick_slab"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("sandstone_brick_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(1.2f);
+
         NETHERRACK_BRICKS = new TemplateBlock(NAMESPACE.id("netherrack_bricks"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("netherrack_bricks"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
@@ -321,6 +324,7 @@ public class Blocks {
                 .setTranslationKey(NAMESPACE.id("netherrack_brick_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(0.8f);
+
         STONE_STAIRS = new NCTStairsBlock(NAMESPACE.id("stone_stairs"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("stone_stairs"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
@@ -343,6 +347,7 @@ public class Blocks {
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(2.0f)
                 .setResistance(10.0f);
+
         CONIFER_PLANKS = new TemplateBlock(NAMESPACE.id("conifer_planks"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("conifer_planks"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
@@ -353,6 +358,7 @@ public class Blocks {
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f)
                 .setResistance(5.0f);
+
         IRON_GRATING = new NCTFenceBlock(NAMESPACE.id("iron_grating"), Material.METAL, NCTBlockTags.GRATING_CONNECTED, 0.125f, 1f)
                 .setTranslationKey(NAMESPACE.id("iron_grating"))
                 .setSoundGroup(Block.METAL_SOUND_GROUP)

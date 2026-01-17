@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.github.EmmaTheMartian.ItemStackHelpers;
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IRecipeIngredient;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -12,7 +13,7 @@ import net.modificationstation.stationapi.api.util.Identifier;
 
 import java.util.*;
 
-public class ShapedRecipeBuilder implements IRecipeBuilder {
+public class ShapedRecipeBuilder implements IJsonBuilder {
     public static final Identifier TYPE_ID = Identifier.of("minecraft:crafting_shaped");
 
     protected List<String> pattern = new ArrayList<>();

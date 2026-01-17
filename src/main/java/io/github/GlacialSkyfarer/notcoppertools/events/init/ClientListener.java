@@ -5,7 +5,7 @@ import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
 import io.github.GlacialSkyfarer.notcoppertools.block.NCTLeavesBlock;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.AnvilBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.StonecutterBlockEntity;
-import io.github.GlacialSkyfarer.notcoppertools.data.NCTData;
+import io.github.GlacialSkyfarer.notcoppertools.data.NCTDatagen;
 import io.github.GlacialSkyfarer.notcoppertools.gui.AnvilScreen;
 import io.github.GlacialSkyfarer.notcoppertools.gui.StonecutterScreen;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
@@ -90,7 +90,7 @@ public class ClientListener {
 
     @EventListener
     public void runDatagen(AfterBlockAndItemRegisterEvent event) {
-        NCTData.dataGen();
+        NCTDatagen.dataGen();
     }
 
 }
