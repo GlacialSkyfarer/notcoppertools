@@ -6,8 +6,10 @@ import io.github.GlacialSkyfarer.notcoppertools.NotCopperTools;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ItemIngredient;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.IRecipeBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.OreRecipeSetBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.SlabRecipeBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.StairsRecipeBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.item.Items;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
@@ -166,9 +168,16 @@ public abstract class NCTData {
         );
         recipeBuilders.add(
                 new SlabRecipeBuilder(
-                        ItemIngredient.of(Blocks.CARVED_STONE),
+                        ItemIngredient.of(Block.STONE),
                         new ItemStack(Blocks.STONE_SLAB, 6),
                         "stone_slab"
+                )
+        );
+        recipeBuilders.add(
+                new SlabRecipeBuilder(
+                        ItemIngredient.of(Blocks.CARVED_STONE),
+                        new ItemStack(Blocks.STONE_SLAB, 6),
+                        "stone_slab_from_carved"
                 )
         );
         recipeBuilders.add(
@@ -178,8 +187,33 @@ public abstract class NCTData {
                         "sandstone_slab"
                 )
         );
+        recipeBuilders.add(
+                new SlabRecipeBuilder(
+                        ItemIngredient.of(Blocks.STONE_BRICKS),
+                        new ItemStack(Blocks.STONE_BRICK_SLAB, 6),
+                        "stone_brick_slab"
+                )
+        );
+        recipeBuilders.add(
+                new SlabRecipeBuilder(
+                        ItemIngredient.of(Blocks.SANDSTONE_BRICKS),
+                        new ItemStack(Blocks.SANDSTONE_BRICK_SLAB, 6),
+                        "sandstone_brick_slab"
+                )
+        );
+        recipeBuilders.add(
+                new SlabRecipeBuilder(
+                        ItemIngredient.of(Block.BRICKS),
+                        new ItemStack(Blocks.BRICK_SLAB, 6),
+                        "brick_slab"
+                )
+        );
         //endregion
-
+        //region ores
+        recipeBuilders.add(
+                new OreRecipeSetBuilder(Blocks.COPPER_ORE, Items.COPPER_INGOT, Blocks.COPPER_BLOCK, "copper")
+        );
+        //endregion
         for (IRecipeBuilder recipe : recipeBuilders) {
             JsonFile[] files = recipe.getFiles();
 

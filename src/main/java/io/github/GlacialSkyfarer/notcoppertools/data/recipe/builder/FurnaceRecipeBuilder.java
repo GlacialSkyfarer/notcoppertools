@@ -10,48 +10,39 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.modificationstation.stationapi.api.util.Identifier;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
-public class ShapelessRecipeBuilder implements IRecipeBuilder {
-    public static final Identifier TYPE_ID = Identifier.of("minecraft:crafting_shapeless");
+public class FurnaceRecipeBuilder implements IRecipeBuilder {
+    public static final Identifier TYPE_ID = Identifier.of("minecraft:smelting");
 
-    protected List<IRecipeIngredient> ingredients = new ArrayList<>();
+    protected IRecipeIngredient ingredient;
     protected ItemStack result;
     protected String baseName;
 
-    public ShapelessRecipeBuilder addIngredient(IRecipeIngredient ingredient) {
-        ingredients.add(ingredient);
+    public FurnaceRecipeBuilder setIngredient(IRecipeIngredient ingredient) {
+        this.ingredient = ingredient;
         return this;
     }
-    public ShapelessRecipeBuilder setResult(ItemStack result) {
+    public FurnaceRecipeBuilder setResult(ItemStack result) {
         this.result = result.copy();
         return this;
     }
-    public ShapelessRecipeBuilder setResult(Item result) {
+    public FurnaceRecipeBuilder setResult(Item result) {
         return this.setResult(new ItemStack(result, 6));
     }
-    public ShapelessRecipeBuilder setResult(Block result) {
+    public FurnaceRecipeBuilder setResult(Block result) {
         return this.setResult(result.asItem());
     }
-    public ShapelessRecipeBuilder setBaseName(String baseName) {
+    public FurnaceRecipeBuilder setBaseName(String baseName) {
         this.baseName = baseName;
         return this;
     }
 
     public JsonFile getFile(String name) {
         JsonObject json = new JsonObject();
-
         json.addProperty("type", TYPE_ID.toString());
-
-        JsonArray ingredientsArray = new JsonArray();
-        for (IRecipeIngredient ingredient : ingredients) {
-            ingredientsArray.add(ingredient.getJson());
-        }
-        json.add("ingredients", ingredientsArray);
-
+        json.add("ingredient", this.ingredient.getJson());
         json.add("result", ItemStackHelpers.stackToJson(result));
-
         return JsonFile.of(name, json);
     }
 

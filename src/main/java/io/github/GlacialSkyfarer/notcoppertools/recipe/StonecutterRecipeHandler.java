@@ -31,6 +31,9 @@ public abstract class StonecutterRecipeHandler {
     }
 
     public static void registerRecipes() {
+        register(new StonecutterRecipe(Blocks.COPPER_BLOCK.asItem(), new ItemStack[] {
+                new ItemStack(Blocks.COPPER_TILES, 4)
+        }));
         register(new StonecutterRecipe(Block.STONE.asItem(), new ItemStack[]{
                 new ItemStack(Blocks.STONE_BRICKS),
                 new ItemStack(Blocks.CARVED_STONE),
