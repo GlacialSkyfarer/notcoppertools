@@ -34,6 +34,8 @@ public class Blocks {
     public static Block COPPER_BLOCK,
             COPPER_ORE,
             COPPER_TILES,
+            COPPER_TILE_STAIRS,
+            COPPER_TILE_SLAB,
             COAL_BLOCK,
             REDSTONE_BLOCK,
             ANVIL,
@@ -243,11 +245,22 @@ public class Blocks {
                 .setSoundGroup(Block.METAL_SOUND_GROUP)
                 .setHardness(3.0f)
                 .setResistance(7.0f);
+        COPPER_TILE_SLAB = new NCTSlabBlock(NAMESPACE.id("copper_tile_slab"), Material.METAL)
+                .setTranslationKey(NAMESPACE.id("copper_tile_slab"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(7.0f);
+        COPPER_TILE_STAIRS = new NCTStairsBlock(NAMESPACE.id("copper_tile_stairs"), Material.METAL)
+                .setTranslationKey(NAMESPACE.id("copper_tile_stairs"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .setResistance(7.0f);
         COPPER_ORE = new TemplateBlock(NAMESPACE.id("copper_ore"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("copper_ore"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(3.0f)
                 .setResistance(5.0f);
+
         COAL_BLOCK = new TemplateBlock(NAMESPACE.id("coal_block"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("coal_block"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
@@ -258,6 +271,7 @@ public class Blocks {
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(3.0f)
                 .setResistance(7.0f);
+
         ANVIL = new AnvilBlock(NAMESPACE.id("anvil"), Material.METAL)
                 .setTranslationKey(NAMESPACE.id("anvil"))
                 .setSoundGroup(Block.METAL_SOUND_GROUP)
@@ -268,6 +282,7 @@ public class Blocks {
                 .setSoundGroup(Block.STONE_SOUND_GROUP)
                 .setHardness(5.0f)
                 .setResistance(10.0f);
+
         BRICK_SLAB = new NCTSlabBlock(NAMESPACE.id("brick_slab"), Material.STONE)
                 .setTranslationKey(NAMESPACE.id("brick_slab"))
                 .setSoundGroup(Block.STONE_SOUND_GROUP)

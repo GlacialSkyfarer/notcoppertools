@@ -24,7 +24,6 @@ public class StairsBlockstateBuilder implements IJsonBuilder {
     public JsonFile[] getFiles() {
         return new JsonFile[] {
                 new VariantBlockstateBuilder()
-                        .setBaseName("conifer_stairs")
                         .addVariant("facing=east,top=false", new VariantDataBuilder(this.model).getJson())
                         .addVariant("facing=west,top=false", new VariantDataBuilder(this.model).setY(180).setUVLock().getJson())
                         .addVariant("facing=south,top=false", new VariantDataBuilder(this.model).setY(90).setUVLock().getJson())

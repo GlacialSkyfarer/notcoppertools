@@ -5,6 +5,8 @@ import com.google.gson.JsonObject;
 import io.github.GlacialSkyfarer.notcoppertools.NotCopperTools;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
 import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.FenceBlockstateBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.GratingBlockstateBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.SlabBlockstateBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.StairsBlockstateBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.FenceModelBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.GratingModelBuilder;
@@ -157,6 +159,13 @@ public abstract class NCTDatagen {
                         "brick_stairs"
                 )
         );
+        recipeBuilders.add(
+                new StairsRecipeBuilder(
+                        ItemIngredient.of(Blocks.COPPER_TILES),
+                        new ItemStack(Blocks.COPPER_TILE_STAIRS, 6),
+                        "copper_tile_stairs"
+                )
+        );
         //endregion
         //region slabs
         recipeBuilders.add(
@@ -229,6 +238,13 @@ public abstract class NCTDatagen {
                         "brick_slab"
                 )
         );
+        recipeBuilders.add(
+                new SlabRecipeBuilder(
+                        ItemIngredient.of(Blocks.COPPER_TILES),
+                        new ItemStack(Blocks.COPPER_TILE_SLAB, 6),
+                        "copper_tile_slab"
+                )
+        );
         //endregion
         //region ores
         recipeBuilders.add(
@@ -288,6 +304,9 @@ public abstract class NCTDatagen {
                         "brick_stairs"
                 )
         );
+        modelBuilders.add(
+                new StairsModelBuilder("notcoppertools:block/copper_tiles", "copper_tile_stairs")
+        );
         //endregion
         //region slabs
         modelBuilders.add(
@@ -328,6 +347,9 @@ public abstract class NCTDatagen {
                         "notcoppertools:block/brick_slab_top",
                         "brick_slab"
                 )
+        );
+        modelBuilders.add(
+                new SlabModelBuilder("notcoppertools:block/copper_tiles", "copper_tile_slab")
         );
         //endregion
         //region fences
@@ -397,11 +419,29 @@ public abstract class NCTDatagen {
         blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/stone_brick_stairs", "stone_brick_stairs"));
         blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/sandstone_brick_stairs", "sandstone_brick_stairs"));
         blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/brick_stairs", "brick_stairs"));
+        blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/copper_tile_stairs", "copper_tile_stairs"));
+        //endregion
+        //region slabs
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/oak_slab", "oak_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/conifer_slab", "conifer_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/birch_slab", "birch_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/cobblestone_slab", "cobblestone_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/stone_slab", "stone_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/sandstone_slab", "sandstone_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/stone_brick_slab", "stone_brick_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/sandstone_brick_slab", "sandstone_brick_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/brick_slab", "brick_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/copper_tile_slab", "copper_tile_slab"));
         //endregion
         //region fences
         blockstateBuilders.add(new FenceBlockstateBuilder("notcoppertools:block/oak_fence", "oak_fence"));
         blockstateBuilders.add(new FenceBlockstateBuilder("notcoppertools:block/conifer_fence", "conifer_fence"));
         blockstateBuilders.add(new FenceBlockstateBuilder("notcoppertools:block/birch_fence", "birch_fence"));
+        //endregion
+        //region gratings
+        blockstateBuilders.add(new GratingBlockstateBuilder("notcoppertools:block/iron_grating", "iron_grating"));
+        blockstateBuilders.add(new GratingBlockstateBuilder("notcoppertools:block/gold_grating", "gold_grating"));
+        blockstateBuilders.add(new GratingBlockstateBuilder("notcoppertools:block/copper_grating", "copper_grating"));
         //endregion
 
         for (IJsonBuilder blockstate : blockstateBuilders) {

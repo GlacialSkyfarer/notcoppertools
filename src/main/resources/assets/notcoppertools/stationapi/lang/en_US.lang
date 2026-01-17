@@ -14,6 +14,10 @@ tile.@.copper_block.name=Block of Copper
 tile.@.copper_block.desc=A block of solid copper.\nFavorite of the steampunk.
 tile.@.copper_tiles.name=Copper Tiles
 tile.@.copper_tiles.desc=Tiles carved from a copper block.
+tile.@.copper_tile_slab.name=Copper Tile Slab
+tile.@.copper_tile_slab.desc=A half-step fashioned from copper tiles.
+tile.@.copper_tile_stairs.name=Copper Tile Stairs
+tile.@.copper_tile_stairs.desc=Stairs fashioned from copper tiles.\nGood condition; unwaxed, light weathering.
 tile.@.copper_ore.name=Copper Ore
 tile.@.copper_ore.desc=Oxidizing chunks of copper\nembedded in stone.
 

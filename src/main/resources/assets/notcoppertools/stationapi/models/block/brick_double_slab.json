@@ -1,7 +1,0 @@
-{
-  "parent": "block/cube_column",
-  "textures": {
-    "side": "notcoppertools:block/brick_slab_side",
-    "end": "notcoppertools:block/brick_slab_top"
-  }
-}

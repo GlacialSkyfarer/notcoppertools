@@ -58,7 +58,7 @@ public class SlabModelBuilder implements IJsonBuilder {
                         .addTexture("bottom", this.bottom)
                         .getFile("block/" + this.baseName + "_top"),
                 new ModelBuilder()
-                        .setParent(Identifier.of("block/cube_column"))
+                        .setParent(Identifier.of("block/cube_bottom_top"))
                         .addTexture("side", this.side)
                         .addTexture("top", this.top)
                         .addTexture("bottom", this.bottom)
