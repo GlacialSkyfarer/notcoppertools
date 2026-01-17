@@ -25,6 +25,33 @@ loom {
     mixin {
         useLegacyMixinAp = false
     }
+    runs {
+        register("data") {
+            property("runDatagen", "true") // replace with your mod's id
+            property("datagen.path", project.projectDir.toPath().resolve("src/generated/resources/").toAbsolutePath().toString())
+            client()
+        }
+    }
+}
+
+tasks.withType(Jar).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+tasks.withType(Copy).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir("src/main/java")
+        }
+        resources {
+            srcDir("src/main/resources")
+            srcDir("src/generated/resources")
+        }
+    }
 }
 
 repositories {

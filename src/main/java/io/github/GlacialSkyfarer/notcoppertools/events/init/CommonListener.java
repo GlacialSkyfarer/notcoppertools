@@ -13,6 +13,7 @@ import io.github.GlacialSkyfarer.notcoppertools.recipe.AnvilRecipeHandler;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.modificationstation.stationapi.api.event.block.FireBurnableRegisterEvent;
 import net.modificationstation.stationapi.api.event.block.entity.BlockEntityRegisterEvent;
 import net.modificationstation.stationapi.api.event.mod.InitEvent;
 import net.modificationstation.stationapi.api.event.network.packet.PacketRegisterEvent;
@@ -149,6 +150,49 @@ public class CommonListener {
     public static void registerBlockEntities(BlockEntityRegisterEvent event) {
         event.register(AnvilBlockEntity.class, NAMESPACE.id("anvil").toString());
         event.register(StonecutterBlockEntity.class, NAMESPACE.id("stonecutter").toString());
+    }
+
+    @EventListener
+    public static void registerFlammableBlocks(FireBurnableRegisterEvent event) {
+        event.addBurnable(Blocks.CONIFER_PLANKS.id, 5, 20);
+        event.addBurnable(Blocks.BIRCH_PLANKS.id, 5, 20);
+
+        event.addBurnable(Blocks.OAK_SLAB.id, 5, 20);
+        event.addBurnable(Blocks.CONIFER_SLAB.id, 5, 20);
+        event.addBurnable(Blocks.BIRCH_SLAB.id, 5, 20);
+
+        event.addBurnable(Blocks.OAK_STAIRS.id, 5, 20);
+        event.addBurnable(Blocks.CONIFER_STAIRS.id, 5, 20);
+        event.addBurnable(Blocks.BIRCH_STAIRS.id, 5, 20);
+
+        event.addBurnable(Blocks.OAK_FENCE.id, 5, 20);
+        event.addBurnable(Blocks.CONIFER_FENCE.id, 5, 20);
+        event.addBurnable(Blocks.BIRCH_FENCE.id, 5, 20);
+
+        event.addBurnable(Blocks.OAK_LOG.id, 5, 5);
+        event.addBurnable(Blocks.CONIFER_LOG.id, 5, 5);
+        event.addBurnable(Blocks.BIRCH_LOG.id, 5, 5);
+
+        event.addBurnable(Blocks.OAK_LEAVES.id, 30, 60);
+        event.addBurnable(Blocks.CONIFER_LEAVES.id, 30, 60);
+        event.addBurnable(Blocks.BIRCH_LEAVES.id, 30, 60);
+
+        event.addBurnable(Blocks.WHITE_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.BLACK_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.BROWN_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.GRAY_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.LIGHT_GRAY_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.RED_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.ORANGE_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.YELLOW_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.LIME_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.GREEN_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.CYAN_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.LIGHT_BLUE_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.BLUE_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.PURPLE_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.MAGENTA_WOOL.id, 30, 60);
+        event.addBurnable(Blocks.PINK_WOOL.id, 30, 60);
     }
 
 }

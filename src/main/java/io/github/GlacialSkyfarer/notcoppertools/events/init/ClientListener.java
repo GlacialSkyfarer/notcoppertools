@@ -5,6 +5,7 @@ import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
 import io.github.GlacialSkyfarer.notcoppertools.block.NCTLeavesBlock;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.AnvilBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.StonecutterBlockEntity;
+import io.github.GlacialSkyfarer.notcoppertools.data.NCTData;
 import io.github.GlacialSkyfarer.notcoppertools.gui.AnvilScreen;
 import io.github.GlacialSkyfarer.notcoppertools.gui.StonecutterScreen;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
@@ -22,6 +23,7 @@ import net.modificationstation.stationapi.api.client.event.color.item.ItemColors
 import net.modificationstation.stationapi.api.client.event.render.model.BlockModelPredicateProviderRegistryEvent;
 import net.modificationstation.stationapi.api.client.event.render.model.ItemModelPredicateProviderRegistryEvent;
 import net.modificationstation.stationapi.api.client.gui.screen.GuiHandler;
+import net.modificationstation.stationapi.api.event.registry.AfterBlockAndItemRegisterEvent;
 import net.modificationstation.stationapi.api.event.registry.GuiHandlerRegistryEvent;
 
 @Environment(EnvType.CLIENT)
@@ -84,6 +86,11 @@ public class ClientListener {
                 NotCopperTools.NAMESPACE.id("graphics"),
                 (blockState, blockView, blockPos, i) -> Minecraft.isFancyGraphicsEnabled() ? 1.0F : 0.0F
         );
+    }
+
+    @EventListener
+    public void runDatagen(AfterBlockAndItemRegisterEvent event) {
+        NCTData.dataGen();
     }
 
 }
