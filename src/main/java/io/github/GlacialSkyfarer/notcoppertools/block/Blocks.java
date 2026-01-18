@@ -10,7 +10,7 @@ import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 
 import static io.github.GlacialSkyfarer.notcoppertools.NotCopperTools.NAMESPACE;
 
-public class Blocks {
+public abstract class Blocks {
 
     //Vanilla replacements
     public static Block OAK_LOG,

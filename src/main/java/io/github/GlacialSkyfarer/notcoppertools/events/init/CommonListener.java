@@ -40,7 +40,6 @@ public class CommonListener {
     @EventListener
     public static void registerBlocks(BlockRegistryEvent event) {
         Blocks.registerBlocks(event);
-        ReefBiomeBlocks.registerBlocks(event);
     }
 
     @EventListener
@@ -50,7 +49,6 @@ public class CommonListener {
 
     @EventListener
     public static void afterBlockItemInit(AfterBlockAndItemRegisterEvent event) {
-        ReefBiomeBlocks.ReefwoodDoor.asItem().setMaxCount(1);
 
         //Vanilla repair materials
 
@@ -135,10 +133,7 @@ public class CommonListener {
                 Block.WOODEN_STAIRS,
                 Block.SLAB,
                 Item.DYE,
-                Block.STONE_PRESSURE_PLATE,
-                Block.WOODEN_PRESSURE_PLATE,
                 Block.FENCE,
-                Block.BUTTON,
                 Item.IRON_DOOR
         );
 

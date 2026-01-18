@@ -51,11 +51,6 @@ public class NCTFenceBlock extends TemplateBlock {
         super.appendProperties(builder);
     }
 
-    @Override
-    public BlockState getPlacementState(ItemPlacementContext context) {
-        return getDefaultState();
-    }
-
     private BlockState updateState(BlockState state, World world, BlockPos pos) {
         state = state.with(NORTH, world.getBlockState(pos.offset(Directions.NORTH)).isIn(connectTag));
         state = state.with(SOUTH, world.getBlockState(pos.offset(Directions.SOUTH)).isIn(connectTag));

@@ -6,6 +6,7 @@ import io.github.GlacialSkyfarer.notcoppertools.block.NCTLeavesBlock;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.AnvilBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.StonecutterBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.data.NCTDatagen;
+import io.github.GlacialSkyfarer.notcoppertools.datafixer.NCTDatafixer;
 import io.github.GlacialSkyfarer.notcoppertools.gui.AnvilScreen;
 import io.github.GlacialSkyfarer.notcoppertools.gui.StonecutterScreen;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
@@ -23,6 +24,7 @@ import net.modificationstation.stationapi.api.client.event.color.item.ItemColors
 import net.modificationstation.stationapi.api.client.event.render.model.BlockModelPredicateProviderRegistryEvent;
 import net.modificationstation.stationapi.api.client.event.render.model.ItemModelPredicateProviderRegistryEvent;
 import net.modificationstation.stationapi.api.client.gui.screen.GuiHandler;
+import net.modificationstation.stationapi.api.event.datafixer.DataFixerRegisterEvent;
 import net.modificationstation.stationapi.api.event.registry.AfterBlockAndItemRegisterEvent;
 import net.modificationstation.stationapi.api.event.registry.GuiHandlerRegistryEvent;
 

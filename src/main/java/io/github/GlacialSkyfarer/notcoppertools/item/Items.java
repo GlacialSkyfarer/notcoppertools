@@ -10,7 +10,7 @@ import net.modificationstation.stationapi.api.template.item.*;
 
 import static io.github.GlacialSkyfarer.notcoppertools.Util.setRepairMaterial;
 
-public class Items {
+public abstract class Items {
 
     public static Item COPPER_INGOT,
 
