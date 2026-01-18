@@ -13,6 +13,7 @@ import net.modificationstation.stationapi.impl.world.chunk.ChunkSection;
 public abstract class NCTDatafixer {
 
     static Block[] woodBlocks = new Block[] { Blocks.OAK_LOG, Blocks.CONIFER_LOG, Blocks.BIRCH_LOG };
+    static Block[] saplingBlocks = new Block[] { Blocks.OAK_SAPLING, Blocks.CONIFER_SAPLING, Blocks.BIRCH_SAPLING };
     static Block[] leafBlocks = new Block[] { Blocks.OAK_LEAVES, Blocks.CONIFER_LEAVES, Blocks.BIRCH_LEAVES };
     static Block[] woolBlocks = new Block[] { Blocks.WHITE_WOOL, Blocks.ORANGE_WOOL, Blocks.MAGENTA_WOOL, Blocks.LIGHT_BLUE_WOOL, Blocks.YELLOW_WOOL, Blocks.LIME_WOOL, Blocks.PINK_WOOL, Blocks.GRAY_WOOL, Blocks.LIGHT_GRAY_WOOL, Blocks.CYAN_WOOL, Blocks.PURPLE_WOOL, Blocks.BLUE_WOOL, Blocks.BROWN_WOOL, Blocks.GREEN_WOOL, Blocks.RED_WOOL, Blocks.BLACK_WOOL };
     static Block[] slabBlocks = new Block[] { Blocks.STONE_SLAB, Blocks.SANDSTONE_SLAB, Blocks.OAK_SLAB, Blocks.COBBLESTONE_SLAB };
@@ -56,6 +57,9 @@ public abstract class NCTDatafixer {
                 Direction[] metaToDirection = new Direction[] { Direction.NORTH, Direction.SOUTH, Direction.WEST, Direction.EAST };
                 chunk.setBlockState(x,y,z, Blocks.COBBLESTONE_STAIRS.getDefaultState().with(NCTStairsBlock.TOP, false).with(NCTStairsBlock.FACING, Directions.toModern(metaToDirection[chunk.getMeta(x,y,z)])));
             }
+            if (state.getBlock() == Block.SAPLING) {
+                chunk.setBlockState(x,y,z, saplingBlocks[chunk.getMeta(x,y,z) & 3].getDefaultState());
+            }
         }
     }
     public static int fixItemStack(ItemStack stack) {
@@ -85,6 +89,9 @@ public abstract class NCTDatafixer {
         }
         if (id == Item.DYE.id) {
             return dyeItems[damage].id;
+        }
+        if (id == Block.SAPLING.asItem().id) {
+            return saplingBlocks[damage].asItem().id;
         }
 
         return id;

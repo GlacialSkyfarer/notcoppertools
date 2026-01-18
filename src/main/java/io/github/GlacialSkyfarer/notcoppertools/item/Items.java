@@ -81,7 +81,7 @@ public abstract class Items {
         setRepairMaterial(ROSE_GOLD_LEGGINGS, Item.GOLD_INGOT);
         setRepairMaterial(ROSE_GOLD_BOOTS, Item.GOLD_INGOT);
 
-        BONE_MEAL = new NCTDyeItem(NotCopperTools.NAMESPACE.id("bone_meal"), 15)
+        BONE_MEAL = new NCTBonemealItem(NotCopperTools.NAMESPACE.id("bone_meal"), 15)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("bone_meal"));
         INK_SAC = new NCTDyeItem(NotCopperTools.NAMESPACE.id("ink_sac"), 0)
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("ink_sac"));

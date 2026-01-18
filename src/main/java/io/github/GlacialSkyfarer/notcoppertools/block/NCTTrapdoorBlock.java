@@ -1,5 +1,6 @@
 package io.github.GlacialSkyfarer.notcoppertools.block;
 
+import io.github.GlacialSkyfarer.notcoppertools.Directions;
 import io.github.GlacialSkyfarer.notcoppertools.Util;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -76,7 +77,7 @@ public class NCTTrapdoorBlock extends TemplateBlock {
             }
 
         }
-        return result;
+        return Directions.toModern(result);
     }
 
     private boolean isTop(ItemPlacementContext context) {
@@ -112,10 +113,10 @@ public class NCTTrapdoorBlock extends TemplateBlock {
         Direction d = state.get(FACING);
 
         switch (d) {
-            case SOUTH -> setBoundingBox(0, 0, 0, 0.1875f, 1, 1);
-            case NORTH -> setBoundingBox(0.8125f, 0, 0, 1, 1, 1);
-            case EAST -> setBoundingBox(0, 0, 0.8125f, 1, 1, 1);
-            case WEST -> setBoundingBox(0, 0, 0, 1, 1, 0.1875f);
+            case WEST -> setBoundingBox(0, 0, 0, 0.1875f, 1, 1);
+            case EAST -> setBoundingBox(0.8125f, 0, 0, 1, 1, 1);
+            case SOUTH -> setBoundingBox(0, 0, 0.8125f, 1, 1, 1);
+            case NORTH -> setBoundingBox(0, 0, 0, 1, 1, 0.1875f);
             default -> setBoundingBox(0, 0, 0, 1, 1, 1);
         }
 
@@ -178,7 +179,7 @@ public class NCTTrapdoorBlock extends TemplateBlock {
         boolean shouldBreak = false;
 
         if (world.getBlockState(x,y,z).get(TOP)) {
-            BlockPos anchorPoint = new BlockPos(x,y,z).add(world.getBlockState(x,y,z).get(FACING).getOpposite().getVector());
+            BlockPos anchorPoint = new BlockPos(x,y,z).add(Directions.fromModern(world.getBlockState(x,y,z).get(FACING)).getOpposite().getVector());
             if (!world.shouldSuffocate(anchorPoint.x,anchorPoint.y,anchorPoint.z)) {
                 shouldBreak = true;
                 world.setBlock(x,y,z,0);
@@ -187,7 +188,7 @@ public class NCTTrapdoorBlock extends TemplateBlock {
 
             if (!world.shouldSuffocate(x,y-1,z)) {
 
-                BlockPos anchorPoint = new BlockPos(x,y,z).add(world.getBlockState(x,y,z).get(FACING).getOpposite().getVector());
+                BlockPos anchorPoint = new BlockPos(x,y,z).add(Directions.fromModern(world.getBlockState(x,y,z).get(FACING)).getOpposite().getVector());
                 if (!world.shouldSuffocate(anchorPoint.x,anchorPoint.y,anchorPoint.z)) {
                     shouldBreak = true;
                     world.setBlock(x,y,z,0);

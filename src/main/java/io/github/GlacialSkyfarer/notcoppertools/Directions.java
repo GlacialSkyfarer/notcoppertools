@@ -10,5 +10,7 @@ public abstract class Directions {
     public static final Direction WEST = Direction.NORTH;
 
     public static Direction toModern(Direction direction) { return direction.rotateYClockwise(); }
+    public static Direction fromModern(Direction direction) { return direction.rotateYCounterclockwise(); }
+
 
 }

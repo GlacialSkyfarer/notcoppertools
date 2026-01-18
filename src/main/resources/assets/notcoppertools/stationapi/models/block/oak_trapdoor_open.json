@@ -1,0 +1,10 @@
+{
+
+  "parent": "notcoppertools:block/template_orientable_trapdoor_open",
+  "textures": {
+
+    "texture": "block/oak_trapdoor"
+
+  }
+
+}

@@ -5,6 +5,7 @@ import io.github.GlacialSkyfarer.notcoppertools.tag.NCTBlockTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
+import net.minecraft.world.gen.feature.*;
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 
@@ -29,7 +30,10 @@ public abstract class Blocks {
             BIRCH_LEAVES,
             OAK_FENCE,
             CONIFER_FENCE,
-            BIRCH_FENCE;
+            BIRCH_FENCE,
+            OAK_SAPLING,
+            CONIFER_SAPLING,
+            BIRCH_SAPLING;
     //Gamma
     public static Block COPPER_BLOCK,
             COPPER_ORE,
@@ -146,6 +150,23 @@ public abstract class Blocks {
                 .setTranslationKey(NAMESPACE.id("birch_fence"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(2.0f);
+        OAK_SAPLING = new NCTSaplingBlock(NAMESPACE.id("oak_sapling"))
+                .addTree(new OakTreeFeature(), 10)
+                .addTree(new LargeOakTreeFeature(), 1)
+                .setTranslationKey(NAMESPACE.id("oak_sapling"))
+                .setSoundGroup(Block.SAPLING.soundGroup)
+                .setHardness(0.0f);
+        CONIFER_SAPLING = new NCTSaplingBlock(NAMESPACE.id("conifer_sapling"))
+                .addTree(new PineTreeFeature(), 1)
+                .addTree(new SpruceTreeFeature(), 1)
+                .setTranslationKey(NAMESPACE.id("conifer_sapling"))
+                .setSoundGroup(Block.SAPLING.soundGroup)
+                .setHardness(0.0f);
+        BIRCH_SAPLING = new NCTSaplingBlock(NAMESPACE.id("birch_sapling"))
+                .addTree(new BirchTreeFeature(), 1)
+                .setTranslationKey(NAMESPACE.id("birch_sapling"))
+                .setSoundGroup(Block.SAPLING.soundGroup)
+                .setHardness(0.0f);
         //region wool
         WHITE_WOOL = new TemplateBlock(NAMESPACE.id("white_wool"), Material.WOOL)
                 .setTranslationKey(NAMESPACE.id("white_wool"))
@@ -214,21 +235,21 @@ public abstract class Blocks {
         //endregion
         OAK_LEAVES = new NCTLeavesBlock(NAMESPACE.id("oak_leaves"), Material.LEAVES)
                 .setColorType(NCTLeavesBlock.ColorType.OAK)
-                .setSapling(Item.STICK)
+                .setSapling(Blocks.OAK_SAPLING.asItem())
                 .setRareDrop(Item.APPLE)
                 .setTranslationKey(NAMESPACE.id("oak_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
                 .setHardness(0.2f);
         CONIFER_LEAVES = new NCTLeavesBlock(NAMESPACE.id("conifer_leaves"), Material.LEAVES)
                 .setColorType(NCTLeavesBlock.ColorType.SPRUCE)
-                .setSapling(Item.STICK)
+                .setSapling(Blocks.CONIFER_SAPLING.asItem())
                 .setRareDrop(Items.SPRUCE_RESIN)
                 .setTranslationKey(NAMESPACE.id("conifer_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
                 .setHardness(0.2f);
         BIRCH_LEAVES = new NCTLeavesBlock(NAMESPACE.id("birch_leaves"), Material.LEAVES)
                 .setColorType(NCTLeavesBlock.ColorType.BIRCH)
-                .setSapling(Item.STICK)
+                .setSapling(Blocks.BIRCH_SAPLING.asItem())
                 .setRareDrop(Items.BAGWORM_SILK)
                 .setTranslationKey(NAMESPACE.id("birch_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
