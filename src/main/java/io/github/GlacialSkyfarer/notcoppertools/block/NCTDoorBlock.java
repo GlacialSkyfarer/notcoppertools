@@ -1,5 +1,6 @@
 package io.github.GlacialSkyfarer.notcoppertools.block;
 
+import io.github.GlacialSkyfarer.notcoppertools.Directions;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.LivingEntity;
@@ -52,7 +53,7 @@ public class NCTDoorBlock extends TemplateBlock {
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext context) {
-        return getDefaultState().with(TOP, false).with(FACING, context.getHorizontalPlayerFacing().getOpposite()).with(FLIPPED, isFlipped(context)).with(OPEN, false);
+        return getDefaultState().with(TOP, false).with(FACING, Directions.toModern(context.getHorizontalPlayerFacing().getOpposite())).with(FLIPPED, isFlipped(context)).with(OPEN, false);
     }
 
     @Override
@@ -66,10 +67,9 @@ public class NCTDoorBlock extends TemplateBlock {
         Direction toRight = playerDirection.rotateYClockwise();
         BlockPos rightBlock = context.getBlockPos().add(toRight.getVector());
         int rightId = context.getWorld().getBlockId(rightBlock.x, rightBlock.y, rightBlock.z);
-        if (rightId == id) return false;
+        if (rightId != 0 && rightId != this.id) return true;
         BlockPos leftBlock = context.getBlockPos().add(toRight.getOpposite().getVector());
-        int leftId = context.getWorld().getBlockId(leftBlock.x, leftBlock.y, leftBlock.z);
-        return !(leftId != 0 && leftId != id);
+        return context.getWorld().getBlockId(leftBlock.x, leftBlock.y, leftBlock.z) == this.id;
 
     }
 
@@ -85,10 +85,10 @@ public class NCTDoorBlock extends TemplateBlock {
         }
 
         switch (d) {
-            case EAST -> setBoundingBox(0, 0, 0.8125f, 1, 1, 1);
-            case WEST -> setBoundingBox(0, 0, 0, 1, 1, 0.1875f);
-            case NORTH -> setBoundingBox(0.8125f, 0, 0, 1, 1, 1);
-            case SOUTH -> setBoundingBox(0, 0, 0, 0.1875f, 1, 1);
+            case SOUTH -> setBoundingBox(0, 0, 0.8125f, 1, 1, 1);
+            case NORTH -> setBoundingBox(0, 0, 0, 1, 1, 0.1875f);
+            case EAST -> setBoundingBox(0.8125f, 0, 0, 1, 1, 1);
+            case WEST -> setBoundingBox(0, 0, 0, 0.1875f, 1, 1);
             default -> setBoundingBox(0, 0, 0, 1, 1, 1);
         }
 

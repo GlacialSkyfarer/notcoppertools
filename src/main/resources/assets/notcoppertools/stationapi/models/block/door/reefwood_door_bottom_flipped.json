@@ -1,6 +1,0 @@
-{
-  "parent": "notcoppertools:block/door/door_bottom_rh",
-  "textures": {
-    "bottom": "notcoppertools:block/reefwood_door_bottom"
-  }
-}

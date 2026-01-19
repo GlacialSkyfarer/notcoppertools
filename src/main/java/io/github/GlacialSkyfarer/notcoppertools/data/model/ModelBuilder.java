@@ -1,8 +1,8 @@
-package io.github.GlacialSkyfarer.notcoppertools.data.model.builder;
+package io.github.GlacialSkyfarer.notcoppertools.data.model;
 
 import com.google.gson.JsonObject;
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.IJsonBuilder;
 import net.modificationstation.stationapi.api.util.Identifier;
 
 import java.util.HashMap;

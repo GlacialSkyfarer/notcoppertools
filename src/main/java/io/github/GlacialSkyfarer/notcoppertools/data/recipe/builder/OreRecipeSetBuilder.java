@@ -1,8 +1,11 @@
 package io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder;
 
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.IJsonBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.FurnaceRecipeBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ItemIngredient;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ShapedRecipeBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ShapelessRecipeBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

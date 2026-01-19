@@ -1,7 +1,8 @@
 package io.github.GlacialSkyfarer.notcoppertools.data.model.builder;
 
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.model.ModelBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.IJsonBuilder;
 import net.modificationstation.stationapi.api.util.Identifier;
 
 public class TrapdoorModelBuilder implements IJsonBuilder {

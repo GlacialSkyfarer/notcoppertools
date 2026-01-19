@@ -1,11 +1,10 @@
-package io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder;
+package io.github.GlacialSkyfarer.notcoppertools.data.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.github.EmmaTheMartian.ItemStackHelpers;
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IRecipeIngredient;
+import io.github.GlacialSkyfarer.notcoppertools.data.IJsonBuilder;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

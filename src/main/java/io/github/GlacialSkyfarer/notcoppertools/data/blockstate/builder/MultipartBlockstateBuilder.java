@@ -3,12 +3,10 @@ package io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import io.github.GlacialSkyfarer.notcoppertools.data.JsonFile;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.IJsonBuilder;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MultipartBlockstateBuilder implements IJsonBuilder {
     protected List<JsonObject> parts = new ArrayList<>();

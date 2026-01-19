@@ -7,16 +7,11 @@ import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
 import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.*;
 import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.*;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ItemIngredient;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.OreRecipeSetBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.SlabRecipeBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.StairsRecipeBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.TrapdoorRecipeBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.*;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
-import net.modificationstation.stationapi.api.util.Identifier;
 import org.apache.commons.io.FileUtils;
 
 import java.io.IOException;
@@ -291,6 +286,15 @@ public abstract class NCTDatagen {
                 "birch_trapdoor")
         );
         //endregion
+        //region doors
+        recipeBuilders.add(
+                new DoorRecipeBuilder(
+                        ItemIngredient.of(Block.PLANKS),
+                        Blocks.OAK_DOOR,
+                        "oak_door"
+                )
+        );
+        //endregion
 
         for (IJsonBuilder recipe : recipeBuilders) {
             JsonFile[] files = recipe.getFiles();
@@ -460,6 +464,9 @@ public abstract class NCTDatagen {
         modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/conifer_trapdoor", "conifer_trapdoor"));
         modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/birch_trapdoor", "birch_trapdoor"));
         //endregion
+        //region doors
+        modelBuilders.add(new DoorModelBuilder("block/oak_door_bottom", "block/oak_door_top", "item/oak_door", "oak_door"));
+        //endregion
 
         for (IJsonBuilder model : modelBuilders) {
             JsonFile[] files = model.getFiles();
@@ -516,6 +523,9 @@ public abstract class NCTDatagen {
         blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/oak_trapdoor", "oak_trapdoor"));
         blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/conifer_trapdoor", "conifer_trapdoor"));
         blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/birch_trapdoor", "birch_trapdoor"));
+        //endregion
+        //region doors
+        blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/oak_door", "oak_door"));
         //endregion
 
         for (IJsonBuilder blockstate : blockstateBuilders) {
