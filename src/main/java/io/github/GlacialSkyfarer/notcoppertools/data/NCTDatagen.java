@@ -161,6 +161,20 @@ public abstract class NCTDatagen {
                         "copper_tile_stairs"
                 )
         );
+        recipeBuilders.add(
+                new StairsRecipeBuilder(
+                        ItemIngredient.of(Blocks.CARVED_NETHERRACK),
+                        new ItemStack(Blocks.NETHERRACK_STAIRS, 6),
+                        "netherrack_stairs"
+                )
+        );
+        recipeBuilders.add(
+                new StairsRecipeBuilder(
+                        ItemIngredient.of(Blocks.NETHERRACK_BRICKS),
+                        new ItemStack(Blocks.NETHERRACK_BRICK_STAIRS, 6),
+                        "netherrack_brick_stairs"
+                )
+        );
         //endregion
         //region slabs
         recipeBuilders.add(
@@ -238,6 +252,20 @@ public abstract class NCTDatagen {
                         ItemIngredient.of(Blocks.COPPER_TILES),
                         new ItemStack(Blocks.COPPER_TILE_SLAB, 6),
                         "copper_tile_slab"
+                )
+        );
+        recipeBuilders.add(
+                new SlabRecipeBuilder(
+                        ItemIngredient.of(Blocks.CARVED_NETHERRACK),
+                        new ItemStack(Blocks.NETHERRACK_SLAB, 6),
+                        "netherrack_slab"
+                )
+        );
+        recipeBuilders.add(
+                new SlabRecipeBuilder(
+                        ItemIngredient.of(Blocks.NETHERRACK_BRICKS),
+                        new ItemStack(Blocks.NETHERRACK_BRICK_SLAB, 6),
+                        "netherrack_brick_slab"
                 )
         );
         //endregion
@@ -319,6 +347,16 @@ public abstract class NCTDatagen {
         modelBuilders.add(
                 new StairsModelBuilder("notcoppertools:block/copper_tiles", "copper_tile_stairs")
         );
+        modelBuilders.add(
+                new StairsModelBuilder(
+                        "notcoppertools:block/netherrack_slab_side",
+                        "notcoppertools:block/carved_netherrack",
+                        "netherrack_stairs"
+                )
+        );
+        modelBuilders.add(
+                new StairsModelBuilder("notcoppertools:block/netherrack_bricks", "netherrack_brick_stairs")
+        );
         //endregion
         //region slabs
         modelBuilders.add(
@@ -362,6 +400,16 @@ public abstract class NCTDatagen {
         );
         modelBuilders.add(
                 new SlabModelBuilder("notcoppertools:block/copper_tiles", "copper_tile_slab")
+        );
+        modelBuilders.add(
+                new SlabModelBuilder(
+                        "notcoppertools:block/netherrack_slab_side",
+                        "notcoppertools:block/carved_netherrack",
+                        "netherrack_slab"
+                )
+        );
+        modelBuilders.add(
+                new SlabModelBuilder("notcoppertools:block/netherrack_bricks", "netherrack_brick_slab")
         );
         //endregion
         //region fences
@@ -437,6 +485,8 @@ public abstract class NCTDatagen {
         blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/sandstone_brick_stairs", "sandstone_brick_stairs"));
         blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/brick_stairs", "brick_stairs"));
         blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/copper_tile_stairs", "copper_tile_stairs"));
+        blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/netherrack_stairs", "netherrack_stairs"));
+        blockstateBuilders.add(new StairsBlockstateBuilder("notcoppertools:block/netherrack_brick_stairs", "netherrack_brick_stairs"));
         //endregion
         //region slabs
         blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/oak_slab", "oak_slab"));
@@ -449,6 +499,8 @@ public abstract class NCTDatagen {
         blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/sandstone_brick_slab", "sandstone_brick_slab"));
         blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/brick_slab", "brick_slab"));
         blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/copper_tile_slab", "copper_tile_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/netherrack_slab", "netherrack_slab"));
+        blockstateBuilders.add(new SlabBlockstateBuilder("notcoppertools:block/netherrack_brick_slab", "netherrack_brick_slab"));
         //endregion
         //region fences
         blockstateBuilders.add(new FenceBlockstateBuilder("notcoppertools:block/oak_fence", "oak_fence"));

@@ -41,11 +41,11 @@ public abstract class StonecutterRecipeHandler {
                 new ItemStack(Blocks.COPPER_TILE_STAIRS)
         }));
         register(new StonecutterRecipe(Block.STONE.asItem(), new ItemStack[]{
+                new ItemStack(Blocks.STONE_SLAB, 2),
+                new ItemStack(Blocks.STONE_STAIRS),
                 new ItemStack(Blocks.STONE_BRICKS),
                 new ItemStack(Blocks.CARVED_STONE),
-                new ItemStack(Blocks.CHISELED_STONE),
-                new ItemStack(Blocks.STONE_SLAB, 2),
-                new ItemStack(Blocks.STONE_STAIRS)
+                new ItemStack(Blocks.CHISELED_STONE)
             }
         ));
         register(new StonecutterRecipe(Blocks.CARVED_STONE.asItem(), new ItemStack[] {
@@ -57,10 +57,11 @@ public abstract class StonecutterRecipeHandler {
                 new ItemStack(Blocks.BRICK_STAIRS)
         }));
         register(new StonecutterRecipe(Block.SANDSTONE.asItem(), new ItemStack[]{
+                new ItemStack(Blocks.SANDSTONE_SLAB, 2),
+                new ItemStack(Blocks.SANDSTONE_STAIRS),
                 new ItemStack(Blocks.SANDSTONE_BRICKS),
                 new ItemStack(Blocks.CARVED_SANDSTONE),
-                new ItemStack(Blocks.CHISELED_SANDSTONE),
-                new ItemStack(Blocks.SANDSTONE_SLAB, 2)
+                new ItemStack(Blocks.CHISELED_SANDSTONE)
         }));
         register(new StonecutterRecipe(Blocks.CARVED_SANDSTONE.asItem(), new ItemStack[]{
                 new ItemStack(Blocks.SANDSTONE_SLAB, 2),
@@ -75,11 +76,19 @@ public abstract class StonecutterRecipeHandler {
                 new ItemStack(Blocks.STONE_BRICK_STAIRS)
         }));
         register(new StonecutterRecipe(Block.NETHERRACK.asItem(), new ItemStack[]{
+                new ItemStack(Blocks.NETHERRACK_SLAB, 2),
+                new ItemStack(Blocks.NETHERRACK_STAIRS),
                 new ItemStack(Blocks.NETHERRACK_BRICKS),
-                new ItemStack(Blocks.CARVED_NETHERRACK)
+                new ItemStack(Blocks.CARVED_NETHERRACK),
+                new ItemStack(Blocks.CHISELED_NETHERRACK)
+        }));
+        register(new StonecutterRecipe(Blocks.CARVED_NETHERRACK.asItem(), new ItemStack[]{
+                new ItemStack(Blocks.NETHERRACK_SLAB, 2),
+                new ItemStack(Blocks.NETHERRACK_STAIRS)
         }));
         register(new StonecutterRecipe(Blocks.NETHERRACK_BRICKS.asItem(), new ItemStack[]{
-                new ItemStack(Blocks.NETHERRACK_BRICK_SLAB, 2)
+                new ItemStack(Blocks.NETHERRACK_BRICK_SLAB, 2),
+                new ItemStack(Blocks.NETHERRACK_BRICK_STAIRS)
         }));
     }
 
