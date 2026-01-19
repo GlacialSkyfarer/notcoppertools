@@ -1,6 +1,7 @@
 package io.github.GlacialSkyfarer.notcoppertools.item;
 
 import io.github.GlacialSkyfarer.notcoppertools.NotCopperTools;
+import io.github.GlacialSkyfarer.notcoppertools.sound.VanillaSounds;
 import net.minecraft.item.Item;
 import net.minecraft.item.ToolMaterial;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
@@ -10,32 +11,44 @@ import net.modificationstation.stationapi.api.template.item.*;
 
 import static io.github.GlacialSkyfarer.notcoppertools.Util.setRepairMaterial;
 
-public abstract class Items {
+public abstract class  Items {
 
-    public static Item COPPER_INGOT,
+public static Item
+COPPER_INGOT,
 
-        ROSE_GOLD_SWORD,
-        ROSE_GOLD_PICKAXE,
-        ROSE_GOLD_AXE,
-        ROSE_GOLD_SHOVEL,
-        ROSE_GOLD_HOE,
+ROSE_GOLD_SWORD,
+ROSE_GOLD_PICKAXE,
+ROSE_GOLD_AXE,
+ROSE_GOLD_SHOVEL,
+ROSE_GOLD_HOE,
 
-        ROSE_GOLD_HELMET,
-        ROSE_GOLD_CHESTPLATE,
-        ROSE_GOLD_LEGGINGS,
-        ROSE_GOLD_BOOTS,
+ROSE_GOLD_HELMET,
+ROSE_GOLD_CHESTPLATE,
+ROSE_GOLD_LEGGINGS,
+ROSE_GOLD_BOOTS,
 
-        BONE_MEAL,
-        INK_SAC,
-        LAPIS_LAZULI,
-        COCOA_BEANS,
-        GRAY_DYE, LIGHT_GRAY_DYE, ROSE_RED, DANDELION_YELLOW, ORANGE_DYE,
-        LIME_DYE, CACTUS_GREEN, CYAN_DYE, LIGHT_BLUE_DYE, PURPLE_DYE,
-        MAGENTA_DYE, PINK_DYE,
+BONE_MEAL,
+INK_SAC,
+LAPIS_LAZULI,
+COCOA_BEANS,
+GRAY_DYE, LIGHT_GRAY_DYE, ROSE_RED, DANDELION_YELLOW, ORANGE_DYE,
+LIME_DYE, CACTUS_GREEN, CYAN_DYE, LIGHT_BLUE_DYE, PURPLE_DYE,
+MAGENTA_DYE, PINK_DYE,
 
-        BAGWORM_SILK,
-        SPRUCE_RESIN,
-        APPLE_PIE;
+BAGWORM_SILK,
+SPRUCE_RESIN,
+APPLE_PIE,
+
+MUSIC_DISC_BLOCKS,
+MUSIC_DISC_CHIRP,
+MUSIC_DISC_FAR,
+MUSIC_DISC_MALL,
+MUSIC_DISC_MELLOHI,
+MUSIC_DISC_STAL,
+MUSIC_DISC_STRAD,
+MUSIC_DISC_WARD,
+MUSIC_DISC_11,
+MUSIC_DISC_WAIT;
 
     public static final ToolMaterial ROSE_GOLD_MATERIAL = ToolMaterialFactory.create(
             "rose_gold",
@@ -120,6 +133,37 @@ public abstract class Items {
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("bagworm_silk"));
         APPLE_PIE = new ApplePieItem(NotCopperTools.NAMESPACE.id("apple_pie"))
                 .setTranslationKey(NotCopperTools.NAMESPACE.id("apple_pie"));
+
+        MUSIC_DISC_BLOCKS = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_blocks"), VanillaSounds.MUSIC_BLOCKS)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_blocks"))
+                .setMaxCount(1);
+        MUSIC_DISC_CHIRP = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_chirp"), VanillaSounds.MUSIC_CHIRP)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_chirp"))
+                .setMaxCount(1);
+        MUSIC_DISC_FAR = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_far"), VanillaSounds.MUSIC_FAR)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_far"))
+                .setMaxCount(1);
+        MUSIC_DISC_MALL = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_mall"), VanillaSounds.MUSIC_MALL)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_mall"))
+                .setMaxCount(1);
+        MUSIC_DISC_MELLOHI = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_mellohi"), VanillaSounds.MUSIC_MELLOHI)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_mellohi"))
+                .setMaxCount(1);
+        MUSIC_DISC_STAL = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_stal"), VanillaSounds.MUSIC_STAL)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_stal"))
+                .setMaxCount(1);
+        MUSIC_DISC_STRAD = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_strad"), VanillaSounds.MUSIC_STRAD)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_strad"))
+                .setMaxCount(1);
+        MUSIC_DISC_WARD = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_ward"), VanillaSounds.MUSIC_WARD)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_ward"))
+                .setMaxCount(1);
+        MUSIC_DISC_11 = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_11"), VanillaSounds.MUSIC_11)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_11"))
+                .setMaxCount(1);
+        MUSIC_DISC_WAIT = new NCTMusicDiscItem(NotCopperTools.NAMESPACE.id("music_disc_wait"), VanillaSounds.MUSIC_WAIT)
+                .setTranslationKey(NotCopperTools.NAMESPACE.id("music_disc_wait"))
+                .setMaxCount(1);
 
     }
 

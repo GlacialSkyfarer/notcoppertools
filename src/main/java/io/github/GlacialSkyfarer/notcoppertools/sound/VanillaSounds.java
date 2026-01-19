@@ -1,4 +1,4 @@
-package io.github.GlacialSkyfarer.notcoppertools;
+package io.github.GlacialSkyfarer.notcoppertools.sound;
 
 public abstract class VanillaSounds {
 
@@ -118,7 +118,7 @@ public abstract class VanillaSounds {
     public static final String MUSIC_MELLOHI = "mellohi";
     public static final String MUSIC_STAL = "stal";
     public static final String MUSIC_STRAD = "strad";
-    public static final String MUSIC_WAIT = "where are we now";
+    public static final String MUSIC_WAIT = "wait";
     public static final String MUSIC_WARD = "ward";
     public static final String MUSIC_11 = "11";
     public static final String MUSIC_13 = "13";

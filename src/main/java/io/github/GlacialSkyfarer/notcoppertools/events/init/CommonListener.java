@@ -1,11 +1,14 @@
 package io.github.GlacialSkyfarer.notcoppertools.events.init;
 
+import com.jcraft.jogg.Packet;
 import io.github.DanyGames2014.CraftingHelper;
 import io.github.GlacialSkyfarer.notcoppertools.NotCopperTools;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
+import io.github.GlacialSkyfarer.notcoppertools.block.NCTLeavesBlock;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.AnvilBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.block.entity.StonecutterBlockEntity;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
+import io.github.GlacialSkyfarer.notcoppertools.packet.MusicPacket;
 import io.github.GlacialSkyfarer.notcoppertools.packet.SoundPacket;
 import io.github.GlacialSkyfarer.notcoppertools.recipe.StonecutterRecipeHandler;
 import io.github.GlacialSkyfarer.notcoppertools.reef_biome.block.ReefBiomeBlocks;
@@ -116,6 +119,7 @@ public class CommonListener {
     @EventListener
     public static void registerPackets(PacketRegisterEvent event) {
         Registry.register(PacketTypeRegistry.INSTANCE, NAMESPACE.id("play_sound"), SoundPacket.TYPE);
+        Registry.register(PacketTypeRegistry.INSTANCE, NAMESPACE.id("play_music"), MusicPacket.TYPE);
     }
 
     @EventListener
@@ -141,6 +145,19 @@ public class CommonListener {
             CraftingHelper.removeRecipe(recipeItem.asItem());
         }
     }
+
+    @EventListener
+    public static void afterItemSetup(AfterBlockAndItemRegisterEvent event) {
+        Blocks.OAK_DOOR.asItem().setMaxCount(1);
+
+        ((NCTLeavesBlock)Blocks.OAK_LEAVES).setSapling(Blocks.OAK_SAPLING.asItem());
+        ((NCTLeavesBlock)Blocks.CONIFER_LEAVES).setSapling(Blocks.CONIFER_SAPLING.asItem());
+        ((NCTLeavesBlock)Blocks.BIRCH_LEAVES).setSapling(Blocks.BIRCH_SAPLING.asItem());
+
+        Item.RECORD_CAT.setTranslationKey("music_disc_cat");
+        Item.RECORD_THIRTEEN.setTranslationKey("music_disc_13");
+    }
+
     @EventListener
     public static void registerBlockEntities(BlockEntityRegisterEvent event) {
         event.register(AnvilBlockEntity.class, NAMESPACE.id("anvil").toString());

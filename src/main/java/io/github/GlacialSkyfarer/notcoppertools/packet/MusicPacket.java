@@ -19,7 +19,7 @@ public class MusicPacket extends Packet implements ManagedPacket<MusicPacket> {
     int y;
     int z;
     public MusicPacket() {}
-    public MusicPacket(String music, int x, int y, int z, float volume, float pitch) {
+    public MusicPacket(String music, int x, int y, int z) {
         this.music = music;
         this.x = x;
         this.y = y;

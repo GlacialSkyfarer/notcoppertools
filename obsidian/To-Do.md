@@ -2,13 +2,15 @@ ALPHA 1.0
 
 More copper blocks (doors, trapdoors)
 replace iron doors
-Add other music discs
 Falling anvil
 Anvil sounds
 Hardened clay
 Wood variant doors
+make fuel items fuel
 
 ALPHA 1.1
+Maybe change jukebox to use identifiers
+upped world height
 Ravines
 wandering farlanders
 farmable pumpkins/melons/cocoa beans
@@ -20,7 +22,6 @@ add actual trinkets to use
 Fix Redstone
 Copper coil
 Nether fortress
-Creative mode
 Journey mode
 Colored lighting?
 Backported surface biomes

@@ -1,13 +1,16 @@
 package io.github.GlacialSkyfarer.notcoppertools.sound;
 
+import io.github.GlacialSkyfarer.notcoppertools.packet.MusicPacket;
 import io.github.GlacialSkyfarer.notcoppertools.packet.SoundPacket;
 import net.modificationstation.stationapi.api.network.packet.PacketHelper;
 
 public abstract class SoundHelper {
 
     public static void playSound(String sound, double x, double y, double z, float volume, float pitch) {
-
         PacketHelper.send(new SoundPacket(sound,x,y,z,volume,pitch));
+    }
+    public static void playMusic(String sound, int x, int y, int z) {
+        PacketHelper.send(new MusicPacket(sound,x,y,z));
     }
 
 }

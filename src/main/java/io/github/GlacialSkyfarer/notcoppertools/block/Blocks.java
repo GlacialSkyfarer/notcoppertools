@@ -151,21 +151,18 @@ public abstract class Blocks {
 
         OAK_LEAVES = new NCTLeavesBlock(NAMESPACE.id("oak_leaves"), Material.LEAVES)
                 .setColorType(NCTLeavesBlock.ColorType.OAK)
-                .setSapling(Blocks.OAK_SAPLING.asItem())
                 .setRareDrop(Item.APPLE)
                 .setTranslationKey(NAMESPACE.id("oak_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
                 .setHardness(0.2f);
         CONIFER_LEAVES = new NCTLeavesBlock(NAMESPACE.id("conifer_leaves"), Material.LEAVES)
                 .setColorType(NCTLeavesBlock.ColorType.SPRUCE)
-                .setSapling(Blocks.CONIFER_SAPLING.asItem())
                 .setRareDrop(Items.SPRUCE_RESIN)
                 .setTranslationKey(NAMESPACE.id("conifer_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
                 .setHardness(0.2f);
         BIRCH_LEAVES = new NCTLeavesBlock(NAMESPACE.id("birch_leaves"), Material.LEAVES)
                 .setColorType(NCTLeavesBlock.ColorType.BIRCH)
-                .setSapling(Blocks.BIRCH_SAPLING.asItem())
                 .setRareDrop(Items.BAGWORM_SILK)
                 .setTranslationKey(NAMESPACE.id("birch_leaves"))
                 .setSoundGroup(Block.LEAVES.soundGroup)
