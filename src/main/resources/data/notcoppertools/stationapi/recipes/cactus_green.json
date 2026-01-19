@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "cactus"
+  },
+  "result": {
+    "item": "notcoppertools:cactus_green"
+  }
+}
