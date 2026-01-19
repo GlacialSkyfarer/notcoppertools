@@ -4,19 +4,14 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 import io.github.GlacialSkyfarer.notcoppertools.NotCopperTools;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
-import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.FenceBlockstateBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.GratingBlockstateBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.SlabBlockstateBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.StairsBlockstateBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.FenceModelBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.GratingModelBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.SlabModelBuilder;
-import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.StairsModelBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.*;
+import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.*;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ItemIngredient;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.IJsonBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.OreRecipeSetBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.SlabRecipeBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.StairsRecipeBuilder;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.TrapdoorRecipeBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
@@ -251,6 +246,23 @@ public abstract class NCTDatagen {
                 new OreRecipeSetBuilder(Blocks.COPPER_ORE, Items.COPPER_INGOT, Blocks.COPPER_BLOCK, "copper")
         );
         //endregion
+        //region trapdoors
+        recipeBuilders.add(new TrapdoorRecipeBuilder(
+                ItemIngredient.of(Block.PLANKS),
+                new ItemStack(Blocks.OAK_TRAPDOOR, 2),
+                "oak_trapdoor")
+        );
+        recipeBuilders.add(new TrapdoorRecipeBuilder(
+                ItemIngredient.of(Blocks.CONIFER_PLANKS),
+                new ItemStack(Blocks.CONIFER_TRAPDOOR, 2),
+                "conifer_trapdoor")
+        );
+        recipeBuilders.add(new TrapdoorRecipeBuilder(
+                ItemIngredient.of(Blocks.BIRCH_PLANKS),
+                new ItemStack(Blocks.BIRCH_TRAPDOOR, 2),
+                "birch_trapdoor")
+        );
+        //endregion
 
         for (IJsonBuilder recipe : recipeBuilders) {
             JsonFile[] files = recipe.getFiles();
@@ -395,6 +407,11 @@ public abstract class NCTDatagen {
                 )
         );
         //endregion
+        //region trapdoors
+        modelBuilders.add(new TrapdoorModelBuilder("block/oak_trapdoor", "oak_trapdoor"));
+        modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/conifer_trapdoor", "conifer_trapdoor"));
+        modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/birch_trapdoor", "birch_trapdoor"));
+        //endregion
 
         for (IJsonBuilder model : modelBuilders) {
             JsonFile[] files = model.getFiles();
@@ -442,6 +459,11 @@ public abstract class NCTDatagen {
         blockstateBuilders.add(new GratingBlockstateBuilder("notcoppertools:block/iron_grating", "iron_grating"));
         blockstateBuilders.add(new GratingBlockstateBuilder("notcoppertools:block/gold_grating", "gold_grating"));
         blockstateBuilders.add(new GratingBlockstateBuilder("notcoppertools:block/copper_grating", "copper_grating"));
+        //endregion
+        //region trapdoors
+        blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/oak_trapdoor", "oak_trapdoor"));
+        blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/conifer_trapdoor", "conifer_trapdoor"));
+        blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/birch_trapdoor", "birch_trapdoor"));
         //endregion
 
         for (IJsonBuilder blockstate : blockstateBuilders) {

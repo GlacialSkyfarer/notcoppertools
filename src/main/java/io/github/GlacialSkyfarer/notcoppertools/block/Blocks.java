@@ -19,6 +19,8 @@ public abstract class Blocks {
             BIRCH_LOG,
             OAK_DOOR,
             OAK_TRAPDOOR,
+            CONIFER_TRAPDOOR,
+            BIRCH_TRAPDOOR,
             OAK_SLAB,
             CONIFER_SLAB,
             BIRCH_SLAB,
@@ -96,6 +98,14 @@ public abstract class Blocks {
                 .disableTrackingStatistics();
         OAK_TRAPDOOR = new NCTTrapdoorBlock(NAMESPACE.id("oak_trapdoor"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("oak_trapdoor"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(3.0f);
+        CONIFER_TRAPDOOR = new NCTTrapdoorBlock(NAMESPACE.id("conifer_trapdoor"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("conifer_trapdoor"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(3.0f);
+        BIRCH_TRAPDOOR = new NCTTrapdoorBlock(NAMESPACE.id("birch_trapdoor"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("birch_trapdoor"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(3.0f);
         OAK_SLAB = new NCTSlabBlock(NAMESPACE.id("oak_slab"), Material.WOOD)

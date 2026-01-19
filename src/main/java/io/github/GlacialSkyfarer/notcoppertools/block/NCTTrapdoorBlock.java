@@ -69,7 +69,7 @@ public class NCTTrapdoorBlock extends TemplateBlock {
 
                 if (world.shouldSuffocate(pos.x,pos.y,pos.z)) {
 
-                    return result;
+                    return Directions.toModern(result);
 
                 }
                 result = result.rotateYClockwise();
