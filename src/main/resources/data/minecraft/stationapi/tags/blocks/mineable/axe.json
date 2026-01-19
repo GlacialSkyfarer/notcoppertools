@@ -4,17 +4,27 @@
     "notcoppertools:oak_log",
     "notcoppertools:conifer_log",
     "notcoppertools:birch_log",
-    "notcoppertools:oak_door",
-    "notcoppertools:oak_trapdoor",
-    "notcoppertools:oak_slab",
+
     "notcoppertools:conifer_planks",
     "notcoppertools:birch_planks",
-    "notcoppertools:oak_fence",
-    "notcoppertools:conifer_fence",
-    "notcoppertools:birch_fence",
+
+    "notcoppertools:oak_slab",
+    "notcoppertools:conifer_slab",
+    "notcoppertools:birch_slab",
+
     "notcoppertools:oak_stairs",
     "notcoppertools:conifer_stairs",
-    "notcoppertools:birch_stairs"
+    "notcoppertools:birch_stairs",
+
+    "notcoppertools:oak_door",
+
+    "notcoppertools:oak_trapdoor",
+    "notcoppertools:conifer_trapdoor",
+    "notcoppertools:birch_trapdoor",
+
+    "notcoppertools:oak_fence",
+    "notcoppertools:conifer_fence",
+    "notcoppertools:birch_fence"
 
   ]
 }

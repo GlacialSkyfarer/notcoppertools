@@ -1,19 +1,17 @@
 ALPHA 1.0
 
-More copper blocks (Tile stairs, doors)
-replace pressure plate
-replace button
-replace saplings
+More copper blocks (doors, trapdoors)
 replace iron doors
-Netherrack bricks, carved netherrack, chiseled netherrack
 Add other music discs
 Falling anvil
 Anvil sounds
 Hardened clay
-farmable pumpkins/melons/cocoa beans
-Wood variant doors, trapdoors
+Wood variant doors
 
 ALPHA 1.1
+Ravines
+wandering farlanders
+farmable pumpkins/melons/cocoa beans
 Customizable music system
 Block loot table system
 rework block placement

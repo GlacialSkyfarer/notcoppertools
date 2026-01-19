@@ -1,34 +1,51 @@
 {
   "values": [
 
-    "notcoppertools:copper_block",
-    "notcoppertools:copper_tiles",
-    "notcoppertools:copper_ore",
-    "notcoppertools:redstone_block",
-    "notcoppertools:coal_block",
-    "notcoppertools:stone_slab",
     "notcoppertools:cobblestone_slab",
-    "notcoppertools:sandstone_slab",
-    "notcoppertools:anvil",
-    "notcoppertools:brick_slab",
-    "notcoppertools:stonecutter",
+    "notcoppertools:cobblestone_stairs",
+
+    "notcoppertools:stone_slab",
+    "notcoppertools:stone_stairs",
     "notcoppertools:stone_bricks",
     "notcoppertools:chiseled_stone",
     "notcoppertools:carved_stone",
     "notcoppertools:stone_brick_slab",
+    "notcoppertools:stone_brick_stairs",
+
+    "notcoppertools:sandstone_slab",
+    "notcoppertools:sandstone_stairs",
     "notcoppertools:sandstone_bricks",
-    "notcoppertools:sandstone_brick_slab",
     "notcoppertools:chiseled_sandstone",
     "notcoppertools:carved_sandstone",
+    "notcoppertools:sandstone_brick_slab",
+    "notcoppertools:sandstone_brick_stairs",
+
+    "notcoppertools:netherrack_slab",
+    "notcoppertools:netherrack_stairs",
+    "notcoppertools:netherrack_bricks",
+    "notcoppertools:chiseled_netherrack",
+    "notcoppertools:carved_netherrack",
+    "notcoppertools:netherrack_brick_slab",
+    "notcoppertools:netherrack_brick_stairs",
+
+    "notcoppertools:brick_slab",
+    "notcoppertools:brick_stairs",
+
+
+    "notcoppertools:copper_block",
+    "notcoppertools:copper_tiles",
+    "notcoppertools:copper_ore",
+
+    "notcoppertools:redstone_block",
+    "notcoppertools:coal_block",
+
+
+    "notcoppertools:anvil",
+    "notcoppertools:stonecutter",
+
     "notcoppertools:iron_grating",
     "notcoppertools:gold_grating",
-    "notcoppertools:copper_grating",
-    "notcoppertools:cobblestone_stairs",
-    "notcoppertools:stone_stairs",
-    "notcoppertools:sandstone_stairs",
-    "notcoppertools:stone_brick_stairs",
-    "notcoppertools:sandstone_brick_stairs",
-    "notcoppertools:brick_stairs"
+    "notcoppertools:copper_grating"
 
   ]
 }
