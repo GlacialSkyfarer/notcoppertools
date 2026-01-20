@@ -93,6 +93,12 @@ public abstract class NCTDatafixer {
         if (id == Block.SAPLING.asItem().id) {
             return saplingBlocks[damage].asItem().id;
         }
+        if (id == Block.TRAPDOOR.id) {
+            return Blocks.OAK_TRAPDOOR.asItem().id;
+        }
+        if (id == Item.IRON_DOOR.id) {
+            return Blocks.IRON_DOOR.asItem().id;
+        }
 
         return id;
     }
