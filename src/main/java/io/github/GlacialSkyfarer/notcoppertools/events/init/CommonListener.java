@@ -117,6 +117,8 @@ public class CommonListener {
         setRepairMaterial(Item.FLINT_AND_STEEL, Item.FLINT);
 
         Blocks.OAK_DOOR.asItem().setMaxCount(1);
+        Blocks.CONIFER_DOOR.asItem().setMaxCount(1);
+        Blocks.BIRCH_DOOR.asItem().setMaxCount(1);
 
         Blocks.IRON_DOOR.asItem().setMaxCount(1);
         Blocks.COPPER_DOOR.asItem().setMaxCount(1);

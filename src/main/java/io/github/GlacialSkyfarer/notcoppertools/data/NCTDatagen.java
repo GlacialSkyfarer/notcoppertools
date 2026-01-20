@@ -310,6 +310,20 @@ public abstract class NCTDatagen {
         );
         recipeBuilders.add(
                 new DoorRecipeBuilder(
+                        ItemIngredient.of(Blocks.CONIFER_PLANKS),
+                        Blocks.CONIFER_DOOR,
+                        "conifer_door"
+                )
+        );
+        recipeBuilders.add(
+                new DoorRecipeBuilder(
+                        ItemIngredient.of(Blocks.BIRCH_PLANKS),
+                        Blocks.BIRCH_DOOR,
+                        "birch_door"
+                )
+        );
+        recipeBuilders.add(
+                new DoorRecipeBuilder(
                         ItemIngredient.of(Item.IRON_INGOT),
                         Blocks.IRON_DOOR,
                         "iron_door"
@@ -547,6 +561,8 @@ public abstract class NCTDatagen {
         //endregion
         //region doors
         modelBuilders.add(new DoorModelBuilder("block/oak_door_bottom", "block/oak_door_top", "item/oak_door", "oak_door"));
+        modelBuilders.add(new DoorModelBuilder("notcoppertools:block/conifer_door_bottom", "notcoppertools:block/conifer_door_top", "notcoppertools:item/conifer_door", "conifer_door"));
+        modelBuilders.add(new DoorModelBuilder("notcoppertools:block/birch_door_bottom", "notcoppertools:block/birch_door_top", "notcoppertools:item/birch_door", "birch_door"));
         modelBuilders.add(new DoorModelBuilder("block/iron_door_bottom", "block/iron_door_top", "item/iron_door", "iron_door"));
         modelBuilders.add(new DoorModelBuilder("notcoppertools:block/copper_door_bottom", "notcoppertools:block/copper_door_top", "notcoppertools:item/copper_door", "copper_door"));
         //endregion
@@ -629,6 +645,8 @@ public abstract class NCTDatagen {
         //endregion
         //region doors
         blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/oak_door", "oak_door"));
+        blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/conifer_door", "conifer_door"));
+        blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/birch_door", "birch_door"));
         blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/iron_door", "iron_door"));
         blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/copper_door", "copper_door"));
         //endregion

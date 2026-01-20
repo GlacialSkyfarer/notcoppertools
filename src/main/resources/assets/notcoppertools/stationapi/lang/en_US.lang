@@ -49,6 +49,10 @@ tile.@.birch_stairs.desc=Wooden stairs made from birch.
 
 tile.@.oak_door.name=Oak Door
 tile.@.oak_door.desc=A sturdy door built from oak.\nA solid defense against the outside world.
+tile.@.conifer_door.name=Conifer Door
+tile.@.conifer_door.desc=A sturdy door built from conifer.\nA solid defense against the outside world.
+tile.@.birch_door.name=Birch Door
+tile.@.birch_door.desc=A sturdy door built from birch.\nA solid defense against the outside world.
 
 tile.@.iron_door.name=Iron Door
 tile.@.iron_door.desc=A sturdy door built from iron.\nCan only be opened by redstone signals.

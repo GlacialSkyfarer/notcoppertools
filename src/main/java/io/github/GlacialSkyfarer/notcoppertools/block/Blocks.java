@@ -216,6 +216,16 @@ public abstract class Blocks {
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
                 .setHardness(3.0f)
                 .disableTrackingStatistics();
+        CONIFER_DOOR = new NCTDoorBlock(NAMESPACE.id("conifer_door"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("conifer_door"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(3.0f)
+                .disableTrackingStatistics();
+        BIRCH_DOOR = new NCTDoorBlock(NAMESPACE.id("birch_door"), Material.WOOD)
+                .setTranslationKey(NAMESPACE.id("birch_door"))
+                .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(3.0f)
+                .disableTrackingStatistics();
 
         IRON_DOOR = new NCTDoorBlock(NAMESPACE.id("iron_door"), Material.METAL)
                 .setIgnoreHand()
