@@ -1,6 +1,5 @@
 ALPHA 1.0
-
-Wood variant doors
+# RELEASED
 
 ALPHA 1.1
 Anvil sounds

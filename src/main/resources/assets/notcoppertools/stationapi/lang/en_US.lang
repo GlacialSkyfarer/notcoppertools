@@ -54,6 +54,13 @@ tile.@.conifer_door.desc=A sturdy door built from conifer.\nA solid defense agai
 tile.@.birch_door.name=Birch Door
 tile.@.birch_door.desc=A sturdy door built from birch.\nA solid defense against the outside world.
 
+tile.@.oak_sapling.name=Oak Sapling
+tile.@.oak_sapling.desc=A small cutting from an oak tree.\nGrows with time into a mighty tree!
+tile.@.conifer_sapling.name=Conifer Sapling
+tile.@.conifer_sapling.desc=A small cutting from a coniferous tree.\nGrows with time into a mighty tree!
+tile.@.birch_sapling.name=Birch Sapling
+tile.@.birch_sapling.desc=A small cutting from a birch tree.\nGrows with time into a mighty tree!
+
 tile.@.iron_door.name=Iron Door
 tile.@.iron_door.desc=A sturdy door built from iron.\nCan only be opened by redstone signals.
 tile.@.copper_door.name=Copper Door
