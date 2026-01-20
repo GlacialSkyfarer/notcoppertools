@@ -1,14 +1,12 @@
 ALPHA 1.0
 
-More copper blocks (doors, trapdoors)
-replace iron doors
-Falling anvil
-Anvil sounds
 Hardened clay
 Wood variant doors
 make fuel items fuel
 
 ALPHA 1.1
+Anvil sounds
+Falling anvils
 Maybe change jukebox to use identifiers
 upped world height
 Ravines

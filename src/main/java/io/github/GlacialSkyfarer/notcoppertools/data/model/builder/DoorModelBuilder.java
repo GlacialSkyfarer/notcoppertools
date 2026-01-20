@@ -39,10 +39,12 @@ public class DoorModelBuilder implements IJsonBuilder {
                 new ModelBuilder()
                         .setParent(Identifier.of("notcoppertools:block/door_top"))
                         .addTexture("top", this.top)
+                        .addTexture("bottom", this.bottom)
                         .getFile("block/" + this.baseName + "_top"),
                 new ModelBuilder()
                         .setParent(Identifier.of("notcoppertools:block/door_top_rh"))
                         .addTexture("top", this.top)
+                        .addTexture("bottom", this.bottom)
                         .getFile("block/" + this.baseName + "_top_rh"),
                 new ModelBuilder()
                         .setParent(Identifier.of("item/generated"))

@@ -11,6 +11,7 @@ import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.*;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import org.apache.commons.io.FileUtils;
 
@@ -285,6 +286,16 @@ public abstract class NCTDatagen {
                 new ItemStack(Blocks.BIRCH_TRAPDOOR, 2),
                 "birch_trapdoor")
         );
+        recipeBuilders.add(new TrapdoorRecipeBuilder(
+                ItemIngredient.of(Item.IRON_INGOT),
+                new ItemStack(Blocks.IRON_TRAPDOOR, 2),
+                "iron_trapdoor")
+        );
+        recipeBuilders.add(new TrapdoorRecipeBuilder(
+                ItemIngredient.of(Items.COPPER_INGOT),
+                new ItemStack(Blocks.COPPER_TRAPDOOR, 2),
+                "copper_trapdoor")
+        );
         //endregion
         //region doors
         recipeBuilders.add(
@@ -292,6 +303,20 @@ public abstract class NCTDatagen {
                         ItemIngredient.of(Block.PLANKS),
                         Blocks.OAK_DOOR,
                         "oak_door"
+                )
+        );
+        recipeBuilders.add(
+                new DoorRecipeBuilder(
+                        ItemIngredient.of(Item.IRON_INGOT),
+                        Blocks.IRON_DOOR,
+                        "iron_door"
+                )
+        );
+        recipeBuilders.add(
+                new DoorRecipeBuilder(
+                        ItemIngredient.of(Items.COPPER_INGOT),
+                        Blocks.COPPER_DOOR,
+                        "copper_door"
                 )
         );
         //endregion
@@ -463,9 +488,13 @@ public abstract class NCTDatagen {
         modelBuilders.add(new TrapdoorModelBuilder("block/oak_trapdoor", "oak_trapdoor"));
         modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/conifer_trapdoor", "conifer_trapdoor"));
         modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/birch_trapdoor", "birch_trapdoor"));
+        modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/iron_trapdoor", "iron_trapdoor"));
+        modelBuilders.add(new TrapdoorModelBuilder("notcoppertools:block/copper_trapdoor", "copper_trapdoor"));
         //endregion
         //region doors
         modelBuilders.add(new DoorModelBuilder("block/oak_door_bottom", "block/oak_door_top", "item/oak_door", "oak_door"));
+        modelBuilders.add(new DoorModelBuilder("block/iron_door_bottom", "block/iron_door_top", "item/iron_door", "iron_door"));
+        modelBuilders.add(new DoorModelBuilder("notcoppertools:block/copper_door_bottom", "notcoppertools:block/copper_door_top", "notcoppertools:item/copper_door", "copper_door"));
         //endregion
 
         for (IJsonBuilder model : modelBuilders) {
@@ -523,9 +552,13 @@ public abstract class NCTDatagen {
         blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/oak_trapdoor", "oak_trapdoor"));
         blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/conifer_trapdoor", "conifer_trapdoor"));
         blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/birch_trapdoor", "birch_trapdoor"));
+        blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/iron_trapdoor", "iron_trapdoor"));
+        blockstateBuilders.add(new TrapdoorBlockstateBuilder("notcoppertools:block/copper_trapdoor", "copper_trapdoor"));
         //endregion
         //region doors
         blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/oak_door", "oak_door"));
+        blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/iron_door", "iron_door"));
+        blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/copper_door", "copper_door"));
         //endregion
 
         for (IJsonBuilder blockstate : blockstateBuilders) {

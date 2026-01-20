@@ -39,10 +39,18 @@ public abstract class Blocks {
     BIRCH_STAIRS,
 
     OAK_DOOR,
+    CONIFER_DOOR,
+    BIRCH_DOOR,
+
+    IRON_DOOR,
+    COPPER_DOOR,
 
     OAK_TRAPDOOR,
     CONIFER_TRAPDOOR,
     BIRCH_TRAPDOOR,
+
+    IRON_TRAPDOOR,
+    COPPER_TRAPDOOR,
 
     OAK_FENCE,
     CONIFER_FENCE,
@@ -203,6 +211,20 @@ public abstract class Blocks {
                 .setHardness(3.0f)
                 .disableTrackingStatistics();
 
+        IRON_DOOR = new NCTDoorBlock(NAMESPACE.id("iron_door"), Material.METAL)
+                .setIgnoreHand()
+                .setTranslationKey(NAMESPACE.id("iron_door"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(5.0f)
+                .disableTrackingStatistics();
+        COPPER_DOOR = new NCTDoorBlock(NAMESPACE.id("copper_door"), Material.METAL)
+                .setIgnoreRedstone()
+                .setTranslationKey(NAMESPACE.id("copper_door"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(3.0f)
+                .disableTrackingStatistics();
+
+
 
         OAK_TRAPDOOR = new NCTTrapdoorBlock(NAMESPACE.id("oak_trapdoor"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("oak_trapdoor"))
@@ -215,6 +237,17 @@ public abstract class Blocks {
         BIRCH_TRAPDOOR = new NCTTrapdoorBlock(NAMESPACE.id("birch_trapdoor"), Material.WOOD)
                 .setTranslationKey(NAMESPACE.id("birch_trapdoor"))
                 .setSoundGroup(Block.WOOD_SOUND_GROUP)
+                .setHardness(3.0f);
+
+        IRON_TRAPDOOR = new NCTTrapdoorBlock(NAMESPACE.id("iron_trapdoor"), Material.METAL)
+                .setIgnoreHand()
+                .setTranslationKey(NAMESPACE.id("iron_trapdoor"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
+                .setHardness(5.0f);
+        COPPER_TRAPDOOR = new NCTTrapdoorBlock(NAMESPACE.id("copper_trapdoor"), Material.METAL)
+                .setIgnoreRedstone()
+                .setTranslationKey(NAMESPACE.id("copper_trapdoor"))
+                .setSoundGroup(Block.METAL_SOUND_GROUP)
                 .setHardness(3.0f);
 
 

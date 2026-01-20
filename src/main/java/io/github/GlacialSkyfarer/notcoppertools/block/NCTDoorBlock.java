@@ -41,6 +41,18 @@ public class NCTDoorBlock extends TemplateBlock {
 
     }
 
+    protected boolean ignoreHand = false;
+    protected boolean ignoreRedstone = false;
+
+    public NCTDoorBlock setIgnoreHand() {
+        this.ignoreHand = true;
+        return this;
+    }
+    public NCTDoorBlock setIgnoreRedstone() {
+        this.ignoreRedstone = true;
+        return this;
+    }
+
     @Override
     public boolean isOpaque() {
         return false;
@@ -165,7 +177,7 @@ public class NCTDoorBlock extends TemplateBlock {
             }
 
             if (!shouldBreak) {
-                if (id > 0 && Block.BLOCKS[id].canEmitRedstonePower()) {
+                if (!ignoreRedstone && id > 0 && Block.BLOCKS[id].canEmitRedstonePower()) {
                     boolean isPowered = world.isEmittingRedstonePower(x, y, z) || world.isEmittingRedstonePower(x, y + 1, z);
                     this.setOpen(world, x, y, z, isPowered);
                 }
@@ -177,6 +189,7 @@ public class NCTDoorBlock extends TemplateBlock {
 
     @Override
     public boolean onUse(World world, int x, int y, int z, PlayerEntity player) {
+        if (ignoreHand) return false;
         BlockState currentState = world.getBlockState(x,y,z);
         boolean isOpen = !currentState.get(OPEN);
         setOpen(world, x,y,z, isOpen);

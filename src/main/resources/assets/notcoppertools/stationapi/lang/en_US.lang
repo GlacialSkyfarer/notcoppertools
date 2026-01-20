@@ -50,12 +50,23 @@ tile.@.birch_stairs.desc=Wooden stairs made from birch.
 tile.@.oak_door.name=Oak Door
 tile.@.oak_door.desc=A sturdy door built from oak.\nA solid defense against the outside world.
 
+tile.@.iron_door.name=Iron Door
+tile.@.iron_door.desc=A sturdy door built from iron.\nCan only be opened by redstone signals.
+tile.@.copper_door.name=Copper Door
+tile.@.copper_door.desc=A sturdy door built from copper.\nCannot be opened by redstone signals.
+
+
 tile.@.oak_trapdoor.name=Oak Trapdoor
 tile.@.oak_trapdoor.desc=A hatch fashioned from oak.\nIt's this lever, right?
 tile.@.conifer_trapdoor.name=Conifer Trapdoor
 tile.@.conifer_trapdoor.desc=A hatch fashioned from conifer wood.
 tile.@.birch_trapdoor.name=Birch Trapdoor
 tile.@.birch_trapdoor.desc=A hatch fashioned from birch.
+
+tile.@.iron_trapdoor.name=Iron Trapdoor
+tile.@.iron_trapdoor.desc=A heavy hatch made from iron.\nCan only be opened by redstone signals.
+tile.@.copper_trapdoor.name=Copper Trapdoor
+tile.@.copper_trapdoor.desc=A hatch made from copper.\nCannot be opened by redstone signals.
 
 tile.@.oak_fence.name=Oak Fence
 tile.@.oak_fence.desc=A hardy fence made from oak.
@@ -139,7 +150,7 @@ tile.@.redstone_block.desc=A block of solid redstone.\nThrums with latent energy
 
 
 tile.@.anvil.name=Anvil
-tile.@.anvil.desc=A hefty anvil used for\nenhancing and repairing equipment.\nOr dropping on people.
+tile.@.anvil.desc=A hefty anvil used for\nenhancing and repairing equipment.
 tile.@.stonecutter.name=Stonecutter
 tile.@.stonecutter.desc=A workstation made for shaping stone.\nPocket Edition special.
 

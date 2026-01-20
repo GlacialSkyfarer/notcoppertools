@@ -150,6 +150,9 @@ public class CommonListener {
     public static void afterItemSetup(AfterBlockAndItemRegisterEvent event) {
         Blocks.OAK_DOOR.asItem().setMaxCount(1);
 
+        Blocks.IRON_DOOR.asItem().setMaxCount(1);
+        Blocks.COPPER_DOOR.asItem().setMaxCount(1);
+
         ((NCTLeavesBlock)Blocks.OAK_LEAVES).setSapling(Blocks.OAK_SAPLING.asItem());
         ((NCTLeavesBlock)Blocks.CONIFER_LEAVES).setSapling(Blocks.CONIFER_SAPLING.asItem());
         ((NCTLeavesBlock)Blocks.BIRCH_LEAVES).setSapling(Blocks.BIRCH_SAPLING.asItem());
