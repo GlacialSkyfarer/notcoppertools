@@ -1,7 +1,6 @@
 ALPHA 1.0
 
 Wood variant doors
-make fuel items fuel
 
 ALPHA 1.1
 Anvil sounds

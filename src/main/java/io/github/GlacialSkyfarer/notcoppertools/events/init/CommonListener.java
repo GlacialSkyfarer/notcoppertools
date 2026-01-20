@@ -13,6 +13,7 @@ import io.github.GlacialSkyfarer.notcoppertools.packet.SoundPacket;
 import io.github.GlacialSkyfarer.notcoppertools.recipe.StonecutterRecipeHandler;
 import io.github.GlacialSkyfarer.notcoppertools.reef_biome.block.ReefBiomeBlocks;
 import io.github.GlacialSkyfarer.notcoppertools.recipe.AnvilRecipeHandler;
+import io.github.GlacialSkyfarer.notcoppertools.tag.NCTItemTags;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -25,6 +26,7 @@ import net.modificationstation.stationapi.api.event.registry.AfterBlockAndItemRe
 import net.modificationstation.stationapi.api.event.registry.BlockRegistryEvent;
 import net.modificationstation.stationapi.api.event.registry.ItemRegistryEvent;
 import net.modificationstation.stationapi.api.item.ItemConvertible;
+import net.modificationstation.stationapi.api.recipe.FuelRegistry;
 import net.modificationstation.stationapi.api.registry.PacketTypeRegistry;
 import net.modificationstation.stationapi.api.registry.Registry;
 
@@ -114,6 +116,28 @@ public class CommonListener {
         setRepairMaterial(Item.FISHING_ROD, Item.STRING);
         setRepairMaterial(Item.FLINT_AND_STEEL, Item.FLINT);
 
+        Blocks.OAK_DOOR.asItem().setMaxCount(1);
+
+        Blocks.IRON_DOOR.asItem().setMaxCount(1);
+        Blocks.COPPER_DOOR.asItem().setMaxCount(1);
+
+        ((NCTLeavesBlock)Blocks.OAK_LEAVES).setSapling(Blocks.OAK_SAPLING.asItem());
+        ((NCTLeavesBlock)Blocks.CONIFER_LEAVES).setSapling(Blocks.CONIFER_SAPLING.asItem());
+        ((NCTLeavesBlock)Blocks.BIRCH_LEAVES).setSapling(Blocks.BIRCH_SAPLING.asItem());
+
+        Item.RECORD_CAT.setTranslationKey("music_disc_cat");
+        Item.RECORD_THIRTEEN.setTranslationKey("music_disc_13");
+
+        FuelRegistry.addFuelTag(NCTItemTags.LOGS_THAT_BURN, 300);
+        FuelRegistry.addFuelTag(NCTItemTags.PLANKS, 300);
+        FuelRegistry.addFuelTag(NCTItemTags.WOODEN_STAIRS, 300);
+        FuelRegistry.addFuelTag(NCTItemTags.WOODEN_FENCES, 300);
+        FuelRegistry.addFuelTag(NCTItemTags.WOODEN_SLABS, 150);
+        FuelRegistry.addFuelTag(NCTItemTags.WOODEN_TRAPDOORS, 300);
+        FuelRegistry.addFuelTag(NCTItemTags.WOODEN_DOORS, 600);
+
+        FuelRegistry.addFuelItem(Blocks.COAL_BLOCK.asItem(), 16000);
+
     }
 
     @EventListener
@@ -144,21 +168,6 @@ public class CommonListener {
         for (ItemConvertible recipeItem : recipeRemovals) {
             CraftingHelper.removeRecipe(recipeItem.asItem());
         }
-    }
-
-    @EventListener
-    public static void afterItemSetup(AfterBlockAndItemRegisterEvent event) {
-        Blocks.OAK_DOOR.asItem().setMaxCount(1);
-
-        Blocks.IRON_DOOR.asItem().setMaxCount(1);
-        Blocks.COPPER_DOOR.asItem().setMaxCount(1);
-
-        ((NCTLeavesBlock)Blocks.OAK_LEAVES).setSapling(Blocks.OAK_SAPLING.asItem());
-        ((NCTLeavesBlock)Blocks.CONIFER_LEAVES).setSapling(Blocks.CONIFER_SAPLING.asItem());
-        ((NCTLeavesBlock)Blocks.BIRCH_LEAVES).setSapling(Blocks.BIRCH_SAPLING.asItem());
-
-        Item.RECORD_CAT.setTranslationKey("music_disc_cat");
-        Item.RECORD_THIRTEEN.setTranslationKey("music_disc_13");
     }
 
     @EventListener
