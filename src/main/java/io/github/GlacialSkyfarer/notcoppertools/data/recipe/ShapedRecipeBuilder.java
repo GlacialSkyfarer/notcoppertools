@@ -29,7 +29,7 @@ public class ShapedRecipeBuilder implements IJsonBuilder {
         return this;
     }
     public ShapedRecipeBuilder setResult(Item result) {
-        return this.setResult(new ItemStack(result, 6));
+        return this.setResult(new ItemStack(result, 1));
     }
     public ShapedRecipeBuilder setResult(Block result) {
         return this.setResult(result.asItem());

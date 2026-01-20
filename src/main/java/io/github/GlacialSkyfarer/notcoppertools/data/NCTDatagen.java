@@ -6,10 +6,13 @@ import io.github.GlacialSkyfarer.notcoppertools.NotCopperTools;
 import io.github.GlacialSkyfarer.notcoppertools.block.Blocks;
 import io.github.GlacialSkyfarer.notcoppertools.data.blockstate.builder.*;
 import io.github.GlacialSkyfarer.notcoppertools.data.model.builder.*;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.FurnaceRecipeBuilder;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.ItemIngredient;
+import io.github.GlacialSkyfarer.notcoppertools.data.recipe.TagIngredient;
 import io.github.GlacialSkyfarer.notcoppertools.data.recipe.builder.*;
 import io.github.GlacialSkyfarer.notcoppertools.item.Items;
 import net.fabricmc.loader.api.FabricLoader;
+import net.glasslauncher.mods.alwaysmoreitems.plugins.vanilla.furnace.SmeltingRecipe;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -320,6 +323,57 @@ public abstract class NCTDatagen {
                 )
         );
         //endregion
+        //region dye recipes
+        recipeBuilders.add(new DyeRecipeBuilder(
+                TagIngredient.of("notcoppertools:wool"),
+                new Block[] {
+                        Blocks.WHITE_WOOL,
+                        Blocks.BLACK_WOOL,
+                        Blocks.GRAY_WOOL,
+                        Blocks.LIGHT_GRAY_WOOL,
+                        Blocks.BROWN_WOOL,
+                        Blocks.RED_WOOL,
+                        Blocks.ORANGE_WOOL,
+                        Blocks.YELLOW_WOOL,
+                        Blocks.LIME_WOOL,
+                        Blocks.GREEN_WOOL,
+                        Blocks.CYAN_WOOL,
+                        Blocks.LIGHT_BLUE_WOOL,
+                        Blocks.BLUE_WOOL,
+                        Blocks.PURPLE_WOOL,
+                        Blocks.MAGENTA_WOOL,
+                        Blocks.PINK_WOOL
+                },
+                DyeRecipeBuilder.RecipeType.SHAPELESS,
+                "wool"));
+        recipeBuilders.add(new DyeRecipeBuilder(
+                TagIngredient.of("notcoppertools:stained_clay"),
+                new Block[] {
+                        Blocks.WHITE_STAINED_CLAY,
+                        Blocks.BLACK_STAINED_CLAY,
+                        Blocks.GRAY_STAINED_CLAY,
+                        Blocks.LIGHT_GRAY_STAINED_CLAY,
+                        Blocks.BROWN_STAINED_CLAY,
+                        Blocks.RED_STAINED_CLAY,
+                        Blocks.ORANGE_STAINED_CLAY,
+                        Blocks.YELLOW_STAINED_CLAY,
+                        Blocks.LIME_STAINED_CLAY,
+                        Blocks.GREEN_STAINED_CLAY,
+                        Blocks.CYAN_STAINED_CLAY,
+                        Blocks.LIGHT_BLUE_STAINED_CLAY,
+                        Blocks.BLUE_STAINED_CLAY,
+                        Blocks.PURPLE_STAINED_CLAY,
+                        Blocks.MAGENTA_STAINED_CLAY,
+                        Blocks.PINK_STAINED_CLAY
+                },
+                DyeRecipeBuilder.RecipeType.EIGHT,
+                "stained_clay"));
+        //endregion
+
+        recipeBuilders.add(new FurnaceRecipeBuilder()
+                .setIngredient(ItemIngredient.of(Block.CLAY))
+                .setResult(Blocks.HARDENED_CLAY)
+                .setBaseName("hardened_clay"));
 
         for (IJsonBuilder recipe : recipeBuilders) {
             JsonFile[] files = recipe.getFiles();
@@ -497,6 +551,24 @@ public abstract class NCTDatagen {
         modelBuilders.add(new DoorModelBuilder("notcoppertools:block/copper_door_bottom", "notcoppertools:block/copper_door_top", "notcoppertools:item/copper_door", "copper_door"));
         //endregion
 
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/hardened_clay", "hardened_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/white_stained_clay", "white_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/black_stained_clay", "black_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/gray_stained_clay", "gray_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/light_gray_stained_clay", "light_gray_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/brown_stained_clay", "brown_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/red_stained_clay", "red_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/orange_stained_clay", "orange_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/yellow_stained_clay", "yellow_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/lime_stained_clay", "lime_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/green_stained_clay", "green_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/cyan_stained_clay", "cyan_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/light_blue_stained_clay", "light_blue_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/blue_stained_clay", "blue_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/purple_stained_clay", "purple_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/magenta_stained_clay", "magenta_stained_clay"));
+        modelBuilders.add(new BlockItemPairBuilder("notcoppertools:block/pink_stained_clay", "pink_stained_clay"));
+
         for (IJsonBuilder model : modelBuilders) {
             JsonFile[] files = model.getFiles();
 
@@ -560,6 +632,24 @@ public abstract class NCTDatagen {
         blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/iron_door", "iron_door"));
         blockstateBuilders.add(new DoorBlockstateBuilder("notcoppertools:block/copper_door", "copper_door"));
         //endregion
+
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/hardened_clay", "hardened_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/white_stained_clay", "white_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/black_stained_clay", "black_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/gray_stained_clay", "gray_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/light_gray_stained_clay", "light_gray_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/brown_stained_clay", "brown_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/red_stained_clay", "red_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/orange_stained_clay", "orange_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/yellow_stained_clay", "yellow_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/lime_stained_clay", "lime_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/green_stained_clay", "green_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/cyan_stained_clay", "cyan_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/light_blue_stained_clay", "light_blue_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/blue_stained_clay", "blue_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/purple_stained_clay", "purple_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/magenta_stained_clay", "magenta_stained_clay"));
+        blockstateBuilders.add(new GenericBlockBuilder("notcoppertools:block/pink_stained_clay", "pink_stained_clay"));
 
         for (IJsonBuilder blockstate : blockstateBuilders) {
             JsonFile[] files = blockstate.getFiles();

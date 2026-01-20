@@ -25,7 +25,7 @@ public class FurnaceRecipeBuilder implements IJsonBuilder {
         return this;
     }
     public FurnaceRecipeBuilder setResult(Item result) {
-        return this.setResult(new ItemStack(result, 6));
+        return this.setResult(new ItemStack(result, 1));
     }
     public FurnaceRecipeBuilder setResult(Block result) {
         return this.setResult(result.asItem());

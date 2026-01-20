@@ -73,23 +73,20 @@ public class NCTTrapdoorBlock extends TemplateBlock {
 
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
-        if (!world.shouldSuffocate(blockPos.x,blockPos.y-1,blockPos.z)) {
+        if (world.shouldSuffocate(blockPos.x,blockPos.y-1,blockPos.z) && !isTop(context)) return Directions.toModern(result);
+        for (int i = 0; i < 4; i++) {
 
-            for (int i = 0; i < 4; i++) {
+            BlockPos pos = blockPos.offset(result.getOpposite());
 
-                BlockPos pos = blockPos.add(result.getOpposite().getVector());
+            if (world.shouldSuffocate(pos.x,pos.y,pos.z)) {
 
-                if (world.shouldSuffocate(pos.x,pos.y,pos.z)) {
-
-                    return Directions.toModern(result);
-
-                }
-                result = result.rotateYClockwise();
+                return Directions.toModern(result);
 
             }
+            result = result.rotateYClockwise();
 
         }
-        return Directions.toModern(result);
+        return null;
     }
 
     private boolean isTop(ItemPlacementContext context) {

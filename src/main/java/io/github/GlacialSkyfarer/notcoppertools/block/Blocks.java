@@ -87,6 +87,12 @@ public abstract class Blocks {
     BRICK_SLAB,
     BRICK_STAIRS,
 
+    HARDENED_CLAY,
+    WHITE_STAINED_CLAY, BLACK_STAINED_CLAY, GRAY_STAINED_CLAY, LIGHT_GRAY_STAINED_CLAY, BROWN_STAINED_CLAY,
+    RED_STAINED_CLAY, ORANGE_STAINED_CLAY, YELLOW_STAINED_CLAY, LIME_STAINED_CLAY, GREEN_STAINED_CLAY,
+    CYAN_STAINED_CLAY, LIGHT_BLUE_STAINED_CLAY, BLUE_STAINED_CLAY, PURPLE_STAINED_CLAY, MAGENTA_STAINED_CLAY,
+    PINK_STAINED_CLAY,
+
 
     COPPER_ORE,
     COPPER_BLOCK,
@@ -381,7 +387,76 @@ public abstract class Blocks {
                 .setHardness(2.0f)
                 .setResistance(10.0f);
 
-
+        //region clay
+        HARDENED_CLAY = new TemplateBlock(NAMESPACE.id("hardened_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("hardened_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        WHITE_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("white_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("white_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        BLACK_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("black_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("black_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        GRAY_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("gray_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("gray_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        LIGHT_GRAY_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("light_gray_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("light_gray_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        BROWN_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("brown_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("brown_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        RED_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("red_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("red_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        ORANGE_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("orange_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("orange_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        YELLOW_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("yellow_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("yellow_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        LIME_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("lime_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("lime_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        GREEN_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("green_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("green_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        CYAN_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("cyan_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("cyan_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        LIGHT_BLUE_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("light_blue_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("light_blue_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        BLUE_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("blue_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("blue_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        PURPLE_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("purple_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("purple_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        MAGENTA_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("magenta_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("magenta_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        PINK_STAINED_CLAY = new TemplateBlock(NAMESPACE.id("pink_stained_clay"), Material.STONE)
+                .setTranslationKey(NAMESPACE.id("pink_stained_clay"))
+                .setSoundGroup(Block.STONE_SOUND_GROUP)
+                .setHardness(2.0f);
+        //endregion
         //endregion
         //region ores
         COPPER_BLOCK = new TemplateBlock(NAMESPACE.id("copper_block"), Material.METAL)

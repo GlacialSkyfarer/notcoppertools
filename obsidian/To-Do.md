@@ -1,6 +1,5 @@
 ALPHA 1.0
 
-Hardened clay
 Wood variant doors
 make fuel items fuel
 

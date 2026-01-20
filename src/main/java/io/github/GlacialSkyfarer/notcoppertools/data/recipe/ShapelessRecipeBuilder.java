@@ -29,7 +29,7 @@ public class ShapelessRecipeBuilder implements IJsonBuilder {
         return this;
     }
     public ShapelessRecipeBuilder setResult(Item result) {
-        return this.setResult(new ItemStack(result, 6));
+        return this.setResult(new ItemStack(result, 1));
     }
     public ShapelessRecipeBuilder setResult(Block result) {
         return this.setResult(result.asItem());
